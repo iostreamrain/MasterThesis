@@ -1,10 +1,41 @@
 \chapter{Basic principles of IPT}
- Lorem ipsum dolor sit amet, consectetur adipisicing elit,
- sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
- Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
- Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
- Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
- 
- \section{Compensation network technology}
+% 本章将首先从物理层面介绍 MRC-WPT 技术的原理，再从电路层面介绍MRC-WPT 技术的原理，分析不同等效模型之间的关系，由此推导出可以代表系统性能的系统能量传输指标，并分析相关设计参数对系统传输性能的影响。分析在 WPT 过程中，介质对系统性能的影响，提出水下工作环境中的等效模型。对所述推导进行仿真分析，确保为后文更详尽的理论研究与新型 MRC-WPT 技术研究提供完整的理论支持。  
+This chapter will first introduce the principle of IPT technology from the physical level, and then introduce the principle of IPT technology from the circuit level, analyze the relationship between different equivalent models, and derive system energy transmission indicators that can represent system performance. And analyze the influence of relevant design parameters on system transmission performance. Analyze the influence of the medium on the system performance in the WPT process, and propose an equivalent model in the underwater working environment. Perform simulation analysis on the derivation to ensure that complete theoretical support is provided for more detailed theoretical research and research on new IPT technology.
+Fig. 1(a) depicts the circuit model of IPT systems [4]-[5]where the transmitting coil L1 and the receiving coil L2 are
+directly connected to the power source and the load impedance
+ZL, respectively. Denote M12 as the mutual inductance, R1 and
+R2 as the equivalent AC resistance of coils.
 
- \section{Underwater WPT system model}
+\begin{figure}
+    \centering
+    \begin{tikzpicture} [scale=1, every node/.style={scale=1}, american voltages]
+        % --------------- help positioning the draw in paper
+% \draw[step=0.5cm,red,very thin] (-0.4,-0.4) grid (12.4,5.4);
+% \draw[red,very thick,->] (0,0) -- (12.5,0) node[anchor=north west] {$x$};
+% \draw[red,very thick,->] (0,0) -- (0,5.5) node[anchor=south east] {$y$};
+% \foreach \x in {0,2,4,6,8, 10,12}
+% \draw [red] (\x cm,1pt) -- (\x cm,-1pt) node[anchor=north] {$\x$};
+% \foreach \y in {0,1,2,3,4,5}
+% \draw [red] (1pt,\y cm) -- (-1pt,\y cm) node[anchor=east] {$\y$};
+% ---------------
+        \draw
+        (0,0) to [short] (4,0)
+        to [L, l=$L_1$, mirror] (4,4)
+        to [short] (0,4)
+        to [sI, l=$V_0$] (0,0);
+        % \draw[line width = 0.5mm, red, dashed](2,-1)--(5,-1)--(5,5)--(2,5)--cycle;
+        \draw
+        (5,0) to [L, l_=$L_2$] (5,4)
+        to [short] (9,4) 
+        to [R, l=$R$] (9,0)
+        to [short] (5,0);
+    \end{tikzpicture}
+    \caption{test}
+\end{figure}
+
+\section{Compensation network technology}
+
+
+% 常见的补偿网络有
+SS, SP, LCL ...
+\section{Underwater WPT system model}
