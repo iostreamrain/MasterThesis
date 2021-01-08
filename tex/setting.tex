@@ -17,6 +17,14 @@
 \usepackage{subcaption}
 \captionsetup{compatibility=false}
 \usepackage{tabularx}
+\makeatletter
+\newcommand{\thickhline}{%
+\noalign {\ifnum 0=`}\fi \hrule height 1pt
+    \futurelet \reserved@a \@xhline
+}
+\newcolumntype{"}{@{\hskip\tabcolsep\vrule width 1pt\hskip\tabcolsep}}
+\makeatother
+
 
 \usepackage[%
  bookmarks=true,%
