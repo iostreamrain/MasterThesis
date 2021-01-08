@@ -6,7 +6,7 @@ The ocean itself and its surroundings contain a lot of energy, such as tidal ene
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.9\linewidth]{images/1_underwater_sensor_networks.png}
+    \includegraphics[width=0.7\linewidth]{images/1_underwater_sensor_networks.png}
     \caption{Underwater sensor networks architecture \cite{Nayyar}.}
 \end{figure}
 
@@ -24,18 +24,20 @@ The ocean itself and its surroundings contain a lot of energy, such as tidal ene
 
 \section{Wireless power transfer technologies}
 
-Broadly speaking, energy transmission without direct "electrical contact" between the primary and secondary is wireless energy transmission. Wireless energy technology can be divided into two main categories, Near-field (nonradiative region) power transfer and Far-field (radiative region) power transfer. 
+Broadly speaking, power transfer without direct "electrical contact" between the primary and secondary is wireless power transfer. Wireless energy technology can be divided into two main categories, Near-field (nonradiative region) power transfer and Far-field (radiative region) power transfer. 
 Near-field means the area within about 1 wavelength ($\lambda$) of the antenna.  The range of near-field devices is conventionally divided into two categories:
 \begin{itemize}
-    \item  Short range – up to about one antenna diameter: $D_{range} \leq D_{ant}$.
-    \item Mid-range – up to 10 times the antenna diameter: Drange $\leq$ 10 Dant.
-  \end{itemize} 
+    \item  Short range – up to about one antenna diameter: $D_{range} \leq D_{ant}$. This is the range over which ordinary nonresonant capacitive or inductive coupling can transfer practical amounts of power.
+    \item Mid-range – up to 10 times the antenna diameter:  $D_{range} \leq 10 D_{ant}$. This is the range over which resonant capacitive or inductive coupling can transfer practical amounts of power.
+\end{itemize} 
+Far-field or radiative region – Beyond about 1 wavelength ($\lambda$) of the antenna, the electric and magnetic fields are perpendicular to each other and propagate as an electromagnetic wave; examples are radio waves, microwaves, or light waves.
+$D_{ant} << \lambda$.
 
-Long-distance wireless energy transmission includes microwave, light, and sound wireless energy transmission. Short-distance wireless energy transmission includes short-distance magnetic field transmission using inductive coupling or electric field using capacitive coupling transmission. The respective characteristics are shown in the table ~\ref{table:differentWPT}.
+Therefore, long-distance wireless power transmission includes microwave, light, and sound wireless power transfer. Short-distance wireless power transfer includes short-distance magnetic field transmission using inductive coupling or electric field using capacitive coupling transmission. The respective characteristics are shown in the table ~\ref{table:differentWPT}.
 
 \begin{table}[htbp]
     \centering
-    \caption{The different wireless power technologies.}
+    \caption{The different wireless power transmission technologies.}
     \begin{tabular}{ |c|c|c|m{3.5cm}<{\centering}|m{3.5cm}<{\centering}| }
         % \thickhline
         \hline
@@ -69,7 +71,7 @@ Inductive           & mm - m         & Hz – GHz                   & Tuned wire
     \end{subfigure}
 
     \caption{Far-field wireless power transfer.}
-    \label{fig:image2}
+    \label{fig:far-fieldwpt}
 \end{figure}
 
 \begin{figure}[htbp]
@@ -87,13 +89,24 @@ Inductive           & mm - m         & Hz – GHz                   & Tuned wire
     \end{subfigure}
 
     \caption{Near-field wireless power transfer.}
-    \label{fig:image2}
+    \label{fig:near-fieldwpt}
 \end{figure}
 
 \section{Underwater wireless power transfer}
-
+WPT technology has unique advantages in special environments, and along with the continuous development of landing application research and the emergence of a large number of results, it has attracted the attention of underwater technology researchers. As early as 2000, he et al. developed a sub-level rail-type charging device. As shown in the figure, the transmission efficiency is about about. At the same time, the study launched a preliminary discussion on the loss in seawater.
+The difference between water and air
 
 
 \section{The main research content of this thesis}
+Research on the characteristics of underwater wireless energy transmission.
+The design of the underwater wireless energy transmission coil, this research obtained by changing the size, spacing and distribution of the coil
+It provides reference materials for the subsequent research on the wpt system of multiple coil groups.
 
 \section{Roadmap}
+The first chapter analyzes the background of this research and its research purpose and significance, analyzes the characteristics and advantages and disadvantages of mainstream WPT technology, and provides a basis for using IPT technology as an underwater wireless energy transmission system in the following text. A detailed summary and analysis of the current research status of related technologies at home and abroad, including underwater wired energy transmission technology, WPT technology in underwater and air media, and an explanation of the research focus of this article.
+
+The second chapter focuses on the analysis of the basic theory of wireless energy transmission. The equivalent circuit model and network port model are used to derive the main transmission performance indicators of the system, and the influence of design parameters on the system performance is analyzed to provide theoretical support for subsequent design. Take sea water as an example to simulate the working environment of the system under water. And through simulation software to simulate and analyze related models.
+
+Chapter 3 first analyzes the basic principle of the parallel MRC-WPT circuit, and then based on the WPT model of the ordinary air-core coil, respectively, to address the horizontal offset and angular offset of the transmitter coil and the receiver coil, a new type of battery that can meet the charging requirements is proposed. The wireless energy transmission method of two-dimensional air-core coil and three-dimensional air-core coil enables the transmission efficiency of the underwater MRC-WPT system to be steadily improved. According to the structural characteristics of each method, the corresponding underwater wireless robot model is designed to meet the application conditions.
+
+The fourth chapter first studies the magnetic field characteristics of the air gap coil, focusing on the analysis of the magnetic core's restraining effect on the coil magnetic field, and simulates the magnetic field distribution of the coil containing the air gap core, and proposes a new type of four-phase core coil. The method of wireless energy transmission. By studying the transmitting phase of the four transmitting coils, the induced magnetic fields in the four receiving coils will not cancel each other, and stable energy transmission can be carried out. Then the four-phase magnetic core coil transmission scheme is simulated. Aiming at the characteristics of its magnetic field distribution, the AUV model proposed in the previous article is taken as an example, and a universal application model of the structure is designed under water.
