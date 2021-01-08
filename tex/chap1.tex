@@ -60,6 +60,33 @@ Far field power transfer
     \label{fig:image2}
 \end{figure}
 
+\makeatletter
+\newcommand{\thickhline}{%
+\noalign {\ifnum 0=`}\fi \hrule height 1pt
+    \futurelet \reserved@a \@xhline
+}
+\newcolumntype{"}{@{\hskip\tabcolsep\vrule width 1pt\hskip\tabcolsep}}
+\makeatother
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{ |c|c|c|m{3.5cm}<{\centering}|m{3.5cm}<{\centering}| }
+        % \thickhline
+        \hline
+        \textbf{Technology} & \textbf{Range} & \textbf{Frequency}         & \textbf{Antenna devices}                    & \textbf{Applications}                             \\\hline
+        % \thickhline
+Microwaves          & hm - km        & GHz                        & Parabolic dishes, phased arrays, rectennas  & Satellite, Drone aircraft                         \\ \hline
+Optical             & dam - km
+                    & $\geq$THz      & Lasers, photocells, lenses & Drone aircraft, Space elevator                                                                  \\ \hline
+Capacitive          & cm - m         & kHz – MHz                  & Metal plate electrodes                      & Smartcards, Biomedical implant
+\\ \hline
+Inductive           & mm - m         & Hz – GHz                   & Tuned wire coils, lumped element resonators & Electric toothbrush, Smartphone, Electric vehicle
+\\ \hline
+    \end{tabular}
+    \caption{The different wireless power technologies.}
+
+\end{table}
+
 \section{Underwater wireless power transfer}
 
 
