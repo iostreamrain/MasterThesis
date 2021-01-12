@@ -9,43 +9,43 @@ R2 as the equivalent AC resistance of coils.
 \begin{figure}
     \centering
     \begin{tikzpicture} [scale=1, every node/.style={scale=1}, american voltages]
-% --------------- help positioning the draw in paper
-% \draw[step=0.5cm,red,very thin] (-0.4,-0.4) grid (12.4,5.4);
-% \draw[red,very thick,->] (0,0) -- (12.5,0) node[anchor=north west] {$x$};
-% \draw[red,very thick,->] (0,0) -- (0,5.5) node[anchor=south east] {$y$};
-% \foreach \x in {0,2,4,6,8, 10,12}
-% \draw [red] (\x cm,1pt) -- (\x cm,-1pt) node[anchor=north] {$\x$};
-% \foreach \y in {0,1,2,3,4,5}
-% \draw [red] (1pt,\y cm) -- (-1pt,\y cm) node[anchor=east] {$\y$};
-% ---------------
+        % --------------- help positioning the draw in paper
+        % \draw[step=0.5cm,red,very thin] (-0.4,-0.4) grid (12.4,5.4);
+        % \draw[red,very thick,->] (0,0) -- (12.5,0) node[anchor=north west] {$x$};
+        % \draw[red,very thick,->] (0,0) -- (0,5.5) node[anchor=south east] {$y$};
+        % \foreach \x in {0,2,4,6,8, 10,12}
+        % \draw [red] (\x cm,1pt) -- (\x cm,-1pt) node[anchor=north] {$\x$};
+        % \foreach \y in {0,1,2,3,4,5}
+        % \draw [red] (1pt,\y cm) -- (-1pt,\y cm) node[anchor=east] {$\y$};
+        % ---------------
 
-\draw
-(-0.5,0) to [short] (4,0)
-to [L, l=$L_1$, mirror] (4,4)
-to [short] (-0.5,4)
-to [sI, l_=$V_0$] (-0.5,0);
-% \draw[line width = 0.5mm, red, dashed](2,-1)--(5,-1)--(5,5)--(2,5)--cycle;
-\draw
-(5,0) to [L, l_=$L_2$] (5,4)
-to [short] (9.5,4) 
-to [R, l=$R$] (9.5,0)
-to [short] (5,0);
-\fill [color=white] (1,-0.5)rectangle(3,4.5);
-\draw(1,-0.5)rectangle(3,4.5) node [pos=0.5]{or};  
-\fill [color=white] (6,-0.5)rectangle(8,4.5);  
-\draw(6,-0.5)rectangle(8,4.5) node [pos=0.5]{or};  
-\draw (1.5,3.5) to [C] (2.5,3.5) ;
-\draw (6.5,3.5) to [C] (7.5,3.5) ;
-\draw (2,1) to [C] (2,0) ;
-\draw (7,0) to [C] (7,1) ;
-\draw (-0.5,4) to[short, f_=$I_p$, current arrow scale=24] ++(1.5,0) ;
-\draw (8,4) to[short, f_=$I_s$, current arrow scale=24] ++(1.5,0) ;
+        \draw
+        (-0.5,0) to [short] (4,0)
+        to [L, l=$L_1$, mirror] (4,4)
+        to [short] (-0.5,4)
+        to [sI, l_=$V_0$] (-0.5,0);
+        % \draw[line width = 0.5mm, red, dashed](2,-1)--(5,-1)--(5,5)--(2,5)--cycle;
+        \draw
+        (5,0) to [L, l_=$L_2$] (5,4)
+        to [short] (9.5,4)
+        to [R, l=$R$] (9.5,0)
+        to [short] (5,0);
+        \fill [color=white] (1,-0.5)rectangle(3,4.5);
+        \draw(1,-0.5)rectangle(3,4.5) node [pos=0.5]{or};
+        \fill [color=white] (6,-0.5)rectangle(8,4.5);
+        \draw(6,-0.5)rectangle(8,4.5) node [pos=0.5]{or};
+        \draw (1.5,3.5) to [C] (2.5,3.5) ;
+        \draw (6.5,3.5) to [C] (7.5,3.5) ;
+        \draw (2,1) to [C] (2,0) ;
+        \draw (7,0) to [C] (7,1) ;
+        \draw (-0.5,4) to[short, f_=$I_p$, current arrow scale=24] ++(1.5,0) ;
+        \draw (8,4) to[short, f_=$I_s$, current arrow scale=24] ++(1.5,0) ;
 
-\node[below] at (2,5) {Compensation Circuit};
-\node[below] at (7,5) {Compensation Circuit};
+        \node[below] at (2,5.2) {Compensation Circuit};
+        \node[below] at (7,5.2) {Compensation Circuit};
 
-\node[below] at (4.5,4.5) {M};
-\draw [{<->}](4.117,3.8214) arc (139.9978:40:0.5);
+        \node[below] at (4.5,4.5) {M};
+        \draw [{<->}](4.117,3.8214) arc (139.9978:40:0.5);
 
     \end{tikzpicture}
     \caption{test}
@@ -53,7 +53,45 @@ to [short] (5,0);
 
 \section{Compensation network technology}
 
+\begin{figure}
+    \centering
+    \begin{tikzpicture}
 
+        \draw
+        (-0.5,0) to [short] (3.5,0)
+        to [L, l=$L_1$, mirror] (3.5,4)
+        to [C, l_=$C_1$] (-0.5,4)
+        to [sI, l_=$V_0$] (-0.5,0);
+        % \draw[line width = 0.5mm, red, dashed](2,-1)--(5,-1)--(5,5)--(2,5)--cycle;
+        \draw
+        (5.5,0) to [L, l_=$L_2$] (5.5,4)
+        to [C, l=$C_2$] (9.5,4)
+        to [R, l=$R$] (9.5,0)
+        to [short] (5.5,0);
+        %\fill [color=white] (1,-0.5)rectangle(3,4.5);
+        %\draw(1,-0.5)rectangle(3,4.5) node [pos=0.5]{or};  
+        %\fill [color=white] (6,-0.5)rectangle(8,4.5);  
+        %\draw(6,-0.5)rectangle(8,4.5) node [pos=0.5]{or};  
+        %\draw (1.5,3.5) to [C] (2.5,3.5) ;
+        %\draw (6.5,3.5) to [C] (7.5,3.5) ;
+        %\draw (2,1) to [C] (2,0) ;
+        %\draw (7,0) to [C] (7,1) ;
+        %\draw (-0.5,4) to[short, f_=$I_p$, current arrow scale=24] ++(1.5,0) ;
+        %\draw (8,4) to[short, f_=$I_s$, current arrow scale=24] ++(1.5,0) ;
+
+        %\node[below] at (2,5.2) {Compensation Circuit};
+        %\node[below] at (7,5.2) {Compensation Circuit};
+
+        \node[below] at (4.5,4.5) {M};
+        %\draw [{<->}](4.117,3.8214) arc (139.9978:40:0.5);
+
+        \draw [{<->}](3.734,3.6428) arc (139.9978:40:1);
+    \end{tikzpicture}
+    \caption{SS.}
+
+\end{figure}
 % 常见的补偿网络有
 SS, SP, LCL ...
+
+$$k=\frac{M}{\sqrt{L_1L_2}}$$
 \section{Underwater WPT system model}
