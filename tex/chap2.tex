@@ -1,10 +1,69 @@
 \chapter{Basic principles of IPT}
 % 本章将首先从物理层面介绍 MRC-WPT 技术的原理，再从电路层面介绍MRC-WPT 技术的原理，分析不同等效模型之间的关系，由此推导出可以代表系统性能的系统能量传输指标，并分析相关设计参数对系统传输性能的影响。分析在 WPT 过程中，介质对系统性能的影响，提出水下工作环境中的等效模型。对所述推导进行仿真分析，确保为后文更详尽的理论研究与新型 MRC-WPT 技术研究提供完整的理论支持。  
 This chapter will first introduce the principle of IPT technology from the physical level, and then introduce the principle of IPT technology from the circuit level, analyze the relationship between different equivalent models, and derive system energy transmission indicators that can represent system performance. And analyze the influence of relevant design parameters on system transmission performance. Analyze the influence of the medium on the system performance in the WPT process, and propose an equivalent model in the underwater working environment. Perform simulation analysis on the derivation to ensure that complete theoretical support is provided for more detailed theoretical research and research on new IPT technology.
-Fig. 1(a) depicts the circuit model of IPT systems [4]-[5]where the transmitting coil L1 and the receiving coil L2 are
+\section{Inductive coupling model}
+Figure \ref{WPT} depicts the circuit model of IPT systems [4]-[5]where the transmitting coil L1 and the receiving coil L2 are
 directly connected to the power source and the load impedance
 ZL, respectively. Denote M12 as the mutual inductance, R1 and
 R2 as the equivalent AC resistance of coils.
+
+\begin{figure}
+    \centering
+    \begin{tikzpicture}[scale=1, every node/.style={scale=1}, american voltages]
+        \draw
+        (0,3.5) to [R, l_=$r_1$, o-, f_=$I_p$, current arrow scale=24] (4,3.5)
+        to [L, l=$L_1$] (4,0)
+        to [short, -o] (0,0);
+        \draw
+        (6,3.5) to [L, l_=$L_2$, mirror] (6,0)
+        to [short, -o] (10,0) ;
+        \draw (10,3.5) to [R, l=$r_2$,o-, f=$I_s$, current arrow scale=24] (6,3.5);
+
+        % source
+        \node[below] at (5,3.5) {M};
+        \draw [{<->}](4.234,2.6428) arc (139.9978:40:1);
+        \draw [->,thick] (0,0.5) -- (0,3);
+        \node[below] at (0.5,2) {$V_p$};
+
+        \draw [->,thick] (10,0.5) -- (10,3);
+        \node[below] at (10.5,2) {$V_s$};
+
+    \end{tikzpicture}
+    \caption{Inductive coupling model.}
+    \label{WPT}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \begin{tikzpicture}[scale=1, every node/.style={scale=1}, american voltages]
+    
+         
+        \draw
+        (0,3.5) to [R, l_=$r_1$, o-, f_=$I_p$, current arrow scale=24] (2.5,3.5)
+        to [L, l=$L_1-M$] (5,3.5)
+        to [L, l=$M$] (5,0)
+        to [short, -o] (0,0);
+        
+        \draw
+        (5,0)
+        to [short, -o] (10,0) ;
+        \draw (10,3.5) to [R, l=$r_2$,o-, f=$I_s$, current arrow scale=24] (7.5,3.5)
+        to [L, mirror, l_=$L_2-M$]  (5,3.5);
+        
+        \draw [->,thick] (0,0.5) -- (0,3);
+        \node[below] at (0.5,2) {$V_p$};
+        
+        \draw [->,thick] (10,0.5) -- (10,3);
+        \node[below] at (10.5,2) {$V_s$};
+        
+        \end{tikzpicture}
+        \caption{Equivalent circuit of inductive coupling model.}
+        \label{equivalent circuit}
+\end{figure}
+
+\section{Compensation network technology}
+% 补偿网络是进行一些调整以弥补系统缺陷的网络。如果只在初级或次级一侧使用电容补偿，称为单侧谐振补偿；在初、次级两侧同时使用电容补偿，称为双侧利、偿。单侧补偿的电容值计算较为简单，但是实际效果不如双侧补偿方式。因此本文仅针对双侧补偿展开讨论。如图所示，根据电容在两侧连接方式的不同，谐振补偿可分为初级串联次级串联、初级并联次级串联、初级串联次级并联以及切级并联次级并联四种结构。
+A compensation network is a network that makes some adjustments to compensate for system electrical defects. If capacitor compensation is used only on the primary or secondary side, it is called single-sided compensation topology; when capacitor compensation is used on both the primary and secondary sides at the same time, it is called double-sided compensation topology. The calculation of the capacitance value of single-sided compensation is relatively simple, but the actual effect is not as good as the double-sided compensation method. Therefore, this article only discusses bilateral compensation. As shown in the figure \ref{compensation network}, according to the different connection modes of the capacitors on both sides, resonance compensation can be divided into four structures: S-S (series), S-P (parallel), P-S, P-P.
 
 \begin{figure}
     \centering
@@ -48,50 +107,30 @@ R2 as the equivalent AC resistance of coils.
         \draw [{<->}](4.117,3.8214) arc (139.9978:40:0.5);
 
     \end{tikzpicture}
-    \caption{test}
+    \caption{Compensation networks.}
+    \label{compensation network}
 \end{figure}
 
-\section{Compensation network technology}
-
-\begin{figure}
-    \centering
-    \begin{tikzpicture}
-
-        \draw
-        (-0.5,0) to [short] (3.5,0)
-        to [L, l=$L_1$, mirror] (3.5,4)
-        to [C, l_=$C_1$] (-0.5,4)
-        to [sI, l_=$V_0$] (-0.5,0);
-        % \draw[line width = 0.5mm, red, dashed](2,-1)--(5,-1)--(5,5)--(2,5)--cycle;
-        \draw
-        (5.5,0) to [L, l_=$L_2$] (5.5,4)
-        to [C, l=$C_2$] (9.5,4)
-        to [R, l=$R$] (9.5,0)
-        to [short] (5.5,0);
-        %\fill [color=white] (1,-0.5)rectangle(3,4.5);
-        %\draw(1,-0.5)rectangle(3,4.5) node [pos=0.5]{or};  
-        %\fill [color=white] (6,-0.5)rectangle(8,4.5);  
-        %\draw(6,-0.5)rectangle(8,4.5) node [pos=0.5]{or};  
-        %\draw (1.5,3.5) to [C] (2.5,3.5) ;
-        %\draw (6.5,3.5) to [C] (7.5,3.5) ;
-        %\draw (2,1) to [C] (2,0) ;
-        %\draw (7,0) to [C] (7,1) ;
-        %\draw (-0.5,4) to[short, f_=$I_p$, current arrow scale=24] ++(1.5,0) ;
-        %\draw (8,4) to[short, f_=$I_s$, current arrow scale=24] ++(1.5,0) ;
-
-        %\node[below] at (2,5.2) {Compensation Circuit};
-        %\node[below] at (7,5.2) {Compensation Circuit};
-
-        \node[below] at (4.5,4.5) {M};
-        %\draw [{<->}](4.117,3.8214) arc (139.9978:40:0.5);
-
-        \draw [{<->}](3.734,3.6428) arc (139.9978:40:1);
-    \end{tikzpicture}
-    \caption{SS.}
-
-\end{figure}
-% 常见的补偿网络有
-SS, SP, LCL ...
 
 $$k=\frac{M}{\sqrt{L_1L_2}}$$
 \section{Underwater WPT system model}
+
+% 海水环境下，海水作为传输介质其电气参数与空气中的相比有很大的区别，如表所示。因此，如式与式的常规互感模型无法反映出海水介质对传输的影响，不能完全、准确地描述海水下的传输行为。
+In the seawater environment, the electrical parameters of seawater as the transmission medium are quite different from those in the air, as shown in the table. Therefore, the conventional mutual inductance model of Eq. and Eq. cannot reflect the influence of seawater media on transmission, and cannot completely and accurately describe the transmission behavior under seawater.
+
+\begin{table}[htbp]
+    \centering
+    \caption{The dielectric constant \& conductivity of some materials at 25$^\circ$C under 1kHz.}
+    \begin{tabular}{ |c|c|c|m{3.5cm}<{\centering}|m{3.5cm}<{\centering}| }
+        % \thickhline
+        \hline
+        \textbf{Material} & \textbf{Relative permittivity} & \textbf{Conductivity}    \\\hline
+        % \thickhline
+        Vacuum            & 1                              & 0 S/m                    \\ \hline
+        Air               & 1.0006                         & 0 S/m                    \\ \hline
+        Ultra pure water  & 81                             & $5.5 \times 10^{-6}$ S/m \\ \hline
+        Drinking water    & 81                             & 0.005 – 0.05 S/m         \\ \hline
+        Seawater          & 81                             & 5 S/m                    \\ \hline
+    \end{tabular}
+    \label{table:permittivity}
+\end{table}
