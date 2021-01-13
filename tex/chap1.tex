@@ -1,16 +1,19 @@
 \chapter{Introduction}
 \section{Background and research purpose}
-In the foreseeable future, the electrification of ocean systems, renewable ocean power sources, and ocean energy networks will be necessary, which will help accelerate the growth and deployment of ocean renewable energy and ways to explore and understand the ocean [1]. To achieve electrification in the ocean, it is necessary to deploy corresponding sensor networks underwater and process the data received by underwater sensors in a timely manner. At the same time, underwater sensors are also an essential tool for studying the marine environment. They can easily and flexibly explore underwater terrain and ecological environment, which provides convenience for the deployment of underwater sensor networks. An excellent underwater AUV needs to have good equipment waterproofness, long-distance underwater controllability, and power durability. For the water-resistance of the equipment, we can use high-performance waterproof and pressure-resistant materials. The remote controllability needs to solve the problems of long-distance underwater wireless communication. The durability of electrical equipment requires low energy consumption AUV and high-energy batteries or a continuous power supply. Sufficient power supply can keep underwater sensors and AUVs in an efficient and stable working state for a long time. Indirectly, reducing human interference when electrical equipment is working underwater can also improve work efficiency and reduce deployment costs. Therefore, the energy supply for underwater electrical equipment has become a novel research direction. Such methods can solve the energy supply problem of underwater equipment economically and ensure the system to perform long-term and stable work [3].
-
-In traditional marine engineering, power is supplied to underwater equipment through wet plug-in interfaces [4]. For the traditional wet plug interface technology, its high cost, complex docking method, poor safety performance, and easy to be corroded by seawater, make its disadvantages in marine engineering increasingly obvious. Wireless Power Transfer (WPT) simplifies the connection between underwater equipment and power supply, reduces the continuous operating cost of underwater equipment, saves a lot of resources, and gradually gains the favor of scholars.
-
-The ocean itself and its surroundings contain a lot of energy, such as tidal energy, wave energy, ocean current energy, sea temperature difference energy, and sea salt difference energy. Ocean energy is rich, widely distributed, clean, and pollution-free, but low energy density and strong regionality. These advantages make it attractive as grid-connected energy, and may also make it an isolated and remote ocean energy source, thereby providing a valuable source of ocean space. Continuous development provides power solutions that are attractive. The rapid development of distributed ocean energy applications (such as underwater sensor networks, ocean sensors and monitoring technologies, ocean automatic network buoys, and deep-sea and tsunami buoys) is beneficial. In particular, it can power an autonomous underwater vehicle (AUV) whose service life is limited by its battery power.
+In the foreseeable future, the electrification of ocean systems, renewable ocean power sources, and ocean energy networks will be necessary, which will help accelerate the growth and deployment of ocean renewable energy and ways to explore and understand the ocean [1]. To achieve electrification in the ocean, it is necessary to deploy corresponding sensor networks underwater and process the data received by underwater sensors in a timely manner (Figure \ref{fig:underwater sensor networks}). At the same time, underwater sensors are also an essential tool for studying the marine environment. They can easily and flexibly explore underwater terrain and ecological environment, which provides convenience for the deployment of underwater sensor networks. An excellent underwater AUV needs to have good equipment waterproofness, long-distance underwater controllability, and power durability. For the water-resistance of the equipment, we can use high-performance waterproof and pressure-resistant materials. The remote controllability needs to solve the problems of long-distance underwater wireless communication. The durability of electrical equipment requires low energy consumption AUV and high-energy batteries or a continuous power supply. Sufficient power supply can keep underwater sensors and AUVs in an efficient and stable working state for a long time. Indirectly, reducing human interference when electrical equipment is working underwater can also improve work efficiency and reduce deployment costs. Therefore, the energy supply for underwater electrical equipment has become a novel research direction. Such methods can solve the energy supply problem of underwater equipment economically and ensure the system to perform long-term and stable work [3].
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.7\linewidth]{images/1_underwater_sensor_networks.png}
     \caption{Underwater sensor networks architecture \cite{Nayyar}.}
+    \label{fig:underwater sensor networks}
 \end{figure}
+
+In traditional marine engineering, power is supplied to underwater equipment through wet plug-in interfaces [4]. For the traditional wet plug interface technology, its high cost, complex docking method, poor safety performance, and easy to be corroded by seawater, make its disadvantages in marine engineering increasingly obvious. Wireless Power Transfer (WPT) simplifies the connection between underwater equipment and power supply, reduces the continuous operating cost of underwater equipment, saves a lot of resources, and gradually gains the favor of scholars.
+
+The ocean itself and its surroundings contain a lot of energy, such as tidal energy, wave energy, ocean current energy, sea temperature difference energy, and sea salt difference energy. Ocean energy is rich, widely distributed, clean, and pollution-free, but low energy density and strong regionality. These advantages make it attractive as grid-connected energy, and may also make it an isolated and remote ocean energy source, thereby providing a valuable source of ocean space. Continuous development provides power solutions that are attractive. The rapid development of distributed ocean energy applications (such as underwater sensor networks, ocean sensors and monitoring technologies, ocean automatic network buoys, and deep-sea and tsunami buoys) is beneficial. In particular, it can power an autonomous underwater vehicle (AUV) whose service life is limited by its battery power.
+
+
 
 % \begin{figure}[htbp]
 %     \centering
@@ -26,16 +29,12 @@ The ocean itself and its surroundings contain a lot of energy, such as tidal ene
 
 \section{Wireless power transfer technologies}
 
-Broadly speaking, power transfer without direct "electrical contact" between the primary and secondary is wireless power transfer. Wireless energy technology can be divided into two main categories, Near-field (nonradiative region) power transfer and Far-field (radiative region) power transfer. 
-Near-field means the area within about 1 wavelength ($\lambda$) of the antenna.  The range of near-field devices is conventionally divided into two categories:
+Broadly speaking, power transfer without direct electrical contact between the primary and secondary is wireless power transfer. Wireless power technology can be divided into two main categories, near-field (nonradiative region) power transfer and far-field (radiative region) power transfer. 
+Near-field means the area within about 1 wavelength ($\lambda$) of the antenna. The range of near-field devices is conventionally divided into two categories [ref] (Suppose the distance between two antennas is represented by $D_{range}$, and the diameter of two antenna coils is represented by $D_{ant}$.):
 \begin{itemize}
-    \item  Short range – up to about one antenna diameter: $D_{range} \leq D_{ant}$. This is the range over which ordinary nonresonant capacitive or inductive coupling can transfer practical amounts of power.
-    \item Mid-range – up to 10 times the antenna diameter:  $D_{range} \leq 10 D_{ant}$. This is the range over which resonant capacitive or inductive coupling can transfer practical amounts of power.
+    \item  Short range, the distance between two antennas is less than the diameter of antenna: $D_{range} \leq D_{ant}$. In this range, power is usually transferred through non-resonant capacitive or inductive coupling.
+    \item Mid-range, the distance between two antennas is less than 10 times the diameter of antenna:  $D_{range} \leq 10 D_{ant}$. In this range, energy is usually transferred through resonant capacitive or inductive coupling.
 \end{itemize} 
-Far-field or radiative region – Beyond about 1 wavelength ($\lambda$) of the antenna, the electric and magnetic fields are perpendicular to each other and propagate as an electromagnetic wave; examples are radio waves, microwaves, or light waves.
-$D_{ant} << \lambda$.
-
-Therefore, long-distance wireless power transmission includes microwave, light, and sound wireless power transfer. Short-distance wireless power transfer includes short-distance magnetic field transmission using inductive coupling or electric field using capacitive coupling transmission. The respective characteristics are shown in the table ~\ref{table:differentWPT}.
 
 \begin{table}[htbp]
     \centering
@@ -55,7 +54,25 @@ Inductive           & mm – m         & Hz – GHz                   & Tuned wi
     \end{tabular}
     \label{table:differentWPT}
 \end{table}
+Far-field or radiative region, power is transmitted by means of electromagnetic waves, like radio waves, microwaves, or light waves. When the operating frequency ($f$) is relatively low, wavelength $\lambda = c/f$, at this time the diameter of the antenna is much smaller than the wavelength, $D_{ant} << \lambda$, and the radiated power will be very small. When the diameter of antenna is about wavelength, $D_{ant} \approx \lambda$, radiate power will be efficient. When the diameter of antenna is much great than wavelength, $D_{ant} >> \lambda$, we can using high-gain antennas to concentrate electromagnetic waves on a narrow beam and directly aim at the receiver to improve transmission efficiency.
 
+\begin{figure}[htbp]
+    \begin{subfigure}{0.5\textwidth}
+        \centering
+        \includegraphics[width=0.9\linewidth]{images/1_capacitive_power_transfer.png}
+        \caption{Capacitive power transfer \cite{Chun}.}
+        \label{fig:subim1}
+    \end{subfigure}
+    \begin{subfigure}{0.5\textwidth}
+        \centering
+        \includegraphics[width=0.9\linewidth]{images/1_inductive_power_transfer.png}
+        \caption{Inductive power transfer \cite{Chun}.}
+        \label{fig:subim2}
+    \end{subfigure}
+
+    \caption{Near-field wireless power transfer.}
+    \label{fig:near-fieldwpt}
+\end{figure}
 
 
 \begin{figure}[htbp]
@@ -76,27 +93,11 @@ Inductive           & mm – m         & Hz – GHz                   & Tuned wi
     \label{fig:far-fieldwpt}
 \end{figure}
 
-\begin{figure}[htbp]
-    \begin{subfigure}{0.5\textwidth}
-        \centering
-        \includegraphics[width=0.9\linewidth]{images/1_capacitive_power_transfer.png}
-        \caption{Capacitive power transfer \cite{Chun}.}
-        \label{fig:subim1}
-    \end{subfigure}
-    \begin{subfigure}{0.5\textwidth}
-        \centering
-        \includegraphics[width=0.9\linewidth]{images/1_inductive_power_transfer.png}
-        \caption{Inductive power transfer \cite{Chun}.}
-        \label{fig:subim2}
-    \end{subfigure}
+Therefore, near-field wireless power transfer systems mainly include inductive coupling power transfer and capacitive coupling power transfer (Figure \ref{fig:near-fieldwpt}). Far-field wireless power transfer systems mainly include microwave, optical, and acoustic power transfer (Figure \ref{fig:far-fieldwpt}).  The respective characteristics are shown in the table \ref{table:differentWPT}.
 
-    \caption{Near-field wireless power transfer.}
-    \label{fig:near-fieldwpt}
-\end{figure}
 
 \section{Underwater wireless power transfer}
-WPT technology has unique advantages in special environments, and along with the continuous development of landing application research and the emergence of a large number of results, it has attracted the attention of underwater technology researchers. As early as 2000, he et al. developed a sub-level rail-type charging device. As shown in the figure, the transmission efficiency is about about. At the same time, the study launched a preliminary discussion on the loss in seawater.
-The difference between water and air
+WPT technology has unique advantages in special environments, and along with the continuous development of landing application research and the emergence of a large number of results, it has attracted the attention of underwater technology researchers. 
 
 Underwater
 Seawater has a blocking effect on high-frequency electromagnetic waves. The distance of electromagnetic waves propagating underwater is inversely proportional to the frequency, making it difficult to achieve long-distance power transmission.
