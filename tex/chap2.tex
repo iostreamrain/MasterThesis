@@ -35,7 +35,7 @@ Figure \ref{WPT} depicts the circuit model of IPT systems, where the transmittin
     \caption{Inductive coupling model.}
     \label{WPT}
 \end{figure}
-Therefore, the equivalent circuit can be expressed as figure \ref{equivalent circuit}.
+Therefore, the equivalent circuit can be expressed as figure \ref{equivalent circuit}. According to the Kirchhoff's circuit laws. The following formulas can be easily found.
 \begin{figure}
     \centering
     \begin{tikzpicture}[scale=1, every node/.style={scale=1}, american voltages]
@@ -70,16 +70,28 @@ Therefore, the equivalent circuit can be expressed as figure \ref{equivalent cir
 \end{figure}
 
 \begin{equation}
-    V_p = I_p[r_1+j\omega(L_1-M)]+(I_p+I_s)j\omega M
+    \begin{align}
+        V_p & = I_p[r_1+j\omega(L_1-M)]+(I_p+I_s)j\omega M                           \\
+            & = r_1 I_p + j\omega L_1 I_p - j\omega M I_p+j \omega MI_p+j\omega MI_s \\
+            & = (r_1+j\omega L_1)I_p + j\omega MI_s                                  \\
+        V_s & = j\omega MI_p + (r_2+j \omega L_2)I_s
+    \end{align}
 \end{equation}
+The above equations can be expressed as the following matrix equation.
 \begin{equation}
-    V_p = r_1 I_p + j\omega L_1 I_p - j\omega M I_p+j \omega MI_p+j\omega MI_s
-\end{equation}
-\begin{equation}
-    V_p = (r_1+j\omega L_1)I_p + j\omega MI_s
-\end{equation}
-\begin{equation}
-    V_s = j\omega MI_p + (r_2+j \omega L_2)I_s
+    \begin{bmatrix}
+        V_p \\
+        V_s
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+        r_1 + j\omega L_1 & j\omega M \\
+        j\omega M & r_2+ j\omega L_2 
+    \end{bmatrix}
+    \begin{bmatrix}
+        I_p \\
+        I_s
+    \end{bmatrix}
 \end{equation}
 
 
