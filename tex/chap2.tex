@@ -1,11 +1,10 @@
 \chapter{Basic principles of IPT}
-% 本章将首先从物理层面介绍 MRC-WPT 技术的原理，再从电路层面介绍MRC-WPT 技术的原理，分析不同等效模型之间的关系，由此推导出可以代表系统性能的系统能量传输指标，并分析相关设计参数对系统传输性能的影响。分析在 WPT 过程中，介质对系统性能的影响，提出水下工作环境中的等效模型。对所述推导进行仿真分析，确保为后文更详尽的理论研究与新型 MRC-WPT 技术研究提供完整的理论支持。  
+
 This chapter will first introduce the principle of IPT technology from the physical level, and then introduce the principle of IPT technology from the circuit level, analyze the relationship between different equivalent models, and derive system energy transmission indicators that can represent system performance. And analyze the influence of relevant design parameters on system transmission performance. Analyze the influence of the medium on the system performance in the WPT process, and propose an equivalent model in the underwater working environment. Perform simulation analysis on the derivation to ensure that complete theoretical support is provided for more detailed theoretical research and research on new IPT technology.
+
+
 \section{Inductive coupling model}
-Figure \ref{WPT} depicts the circuit model of IPT systems [4]-[5]where the transmitting coil L1 and the receiving coil L2 are
-directly connected to the power source and the load impedance
-ZL, respectively. Denote M12 as the mutual inductance, R1 and
-R2 as the equivalent AC resistance of coils.
+Figure \ref{WPT} depicts the circuit model of IPT systems, where the transmitting coil L1 and the receiving coil L2 are directly connected to the power source and the load, respectively. Denote $M$ as the mutual inductance, $r_1$ and $r_2$ as the equivalent AC resistance of coils.
 
 \begin{figure}
     \centering
@@ -24,9 +23,13 @@ R2 as the equivalent AC resistance of coils.
         \draw [{<->}](4.234,2.6428) arc (139.9978:40:1);
         \draw [->,thick] (0,0.5) -- (0,3);
         \node[below] at (0.5,2) {$V_p$};
+        \node[below] at (0.5,3) {+};
+        \node[below] at (0.5,0.5) {–};
 
         \draw [->,thick] (10,0.5) -- (10,3);
         \node[below] at (10.5,2) {$V_s$};
+        \node[below] at (9.5,3) {+};
+        \node[below] at (9.5,0.5) {–};
 
     \end{tikzpicture}
     \caption{Inductive coupling model.}
@@ -36,39 +39,49 @@ Therefore, the equivalent circuit can be expressed as figure \ref{equivalent cir
 \begin{figure}
     \centering
     \begin{tikzpicture}[scale=1, every node/.style={scale=1}, american voltages]
-    
-         
+
+
         \draw
         (0,3.5) to [R, l_=$r_1$, o-, f_=$I_p$, current arrow scale=24] (2.5,3.5)
         to [L, l=$L_1-M$] (5,3.5)
         to [L, l=$M$] (5,0)
         to [short, -o] (0,0);
-        
+
         \draw
         (5,0)
         to [short, -o] (10,0) ;
         \draw (10,3.5) to [R, l=$r_2$,o-, f=$I_s$, current arrow scale=24] (7.5,3.5)
         to [L, mirror, l_=$L_2-M$]  (5,3.5);
-        
+
         \draw [->,thick] (0,0.5) -- (0,3);
         \node[below] at (0.5,2) {$V_p$};
-        
+
         \draw [->,thick] (10,0.5) -- (10,3);
         \node[below] at (10.5,2) {$V_s$};
-        
-        \end{tikzpicture}
-        \caption{Equivalent circuit of inductive coupling model.}
-        \label{equivalent circuit}
+
+        \node[below] at (0.5,3) {+};
+        \node[below] at (0.5,0.5) {–};
+        \node[below] at (9.5,3) {+};
+        \node[below] at (9.5,0.5) {–};
+
+    \end{tikzpicture}
+    \caption{Equivalent circuit of inductive coupling model.}
+    \label{equivalent circuit}
 \end{figure}
 
-$$V_p = I_p[r_1+j\omega(L_1-M)]+(I_p+I_s)j\omega M$$
-$$V_p = r_1 I_p + j\omega L_1 I_p - j\omega M I_p+j \omega MI_p+j\omega MI_s$$
-$$V_p = (r_1+j\omega L_1)I_p + j\omega MI_s$$
-$$V_s = j\omega MI_p + (r_2+j \omega L_2)I_s$$
-% $$V_p=𝐼_p [𝑟_1+𝑗\omega(𝐿_1−𝑀)]+(𝐼_p+𝐼_s )𝑗\omega𝑀$$
-% $$V_p=𝑟_1 𝐼_p+𝑗\omega𝐿_1 𝐼_p−𝑗\omega𝑀𝐼_p+𝑗\omega𝑀𝐼_p+𝑗\omega𝑀𝐼_s$$
-% $$V_p=(𝑟_1+𝑗\omega𝐿_1)𝐼_p+𝑗\omega𝑀𝐼_s$$
-% $$V_s=𝑗\omega𝑀𝐼_p+(𝑟_2+𝑗\omega𝐿_2)𝐼_s$$
+\begin{equation}
+    V_p = I_p[r_1+j\omega(L_1-M)]+(I_p+I_s)j\omega M
+\end{equation}
+\begin{equation}
+    V_p = r_1 I_p + j\omega L_1 I_p - j\omega M I_p+j \omega MI_p+j\omega MI_s
+\end{equation}
+\begin{equation}
+    V_p = (r_1+j\omega L_1)I_p + j\omega MI_s
+\end{equation}
+\begin{equation}
+    V_s = j\omega MI_p + (r_2+j \omega L_2)I_s
+\end{equation}
+
 
 \section{Compensation network technology}
 % 补偿网络是进行一些调整以弥补系统缺陷的网络。如果只在初级或次级一侧使用电容补偿，称为单侧谐振补偿；在初、次级两侧同时使用电容补偿，称为双侧利、偿。单侧补偿的电容值计算较为简单，但是实际效果不如双侧补偿方式。因此本文仅针对双侧补偿展开讨论。如图所示，根据电容在两侧连接方式的不同，谐振补偿可分为初级串联次级串联、初级并联次级串联、初级串联次级并联以及切级并联次级并联四种结构。
