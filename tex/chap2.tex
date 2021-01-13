@@ -32,7 +32,7 @@ R2 as the equivalent AC resistance of coils.
     \caption{Inductive coupling model.}
     \label{WPT}
 \end{figure}
-
+Therefore, the equivalent circuit can be expressed as figure \ref{equivalent circuit}.
 \begin{figure}
     \centering
     \begin{tikzpicture}[scale=1, every node/.style={scale=1}, american voltages]
@@ -60,6 +60,15 @@ R2 as the equivalent AC resistance of coils.
         \caption{Equivalent circuit of inductive coupling model.}
         \label{equivalent circuit}
 \end{figure}
+
+$$V_p = I_p[r_1+j\omega(L_1-M)]+(I_p+I_s)j\omega M$$
+$$V_p = r_1 I_p + j\omega L_1 I_p - j\omega M I_p+j \omega MI_p+j\omega MI_s$$
+$$V_p = (r_1+j\omega L_1)I_p + j\omega MI_s$$
+$$V_s = j\omega MI_p + (r_2+j \omega L_2)I_s$$
+% $$V_p=𝐼_p [𝑟_1+𝑗\omega(𝐿_1−𝑀)]+(𝐼_p+𝐼_s )𝑗\omega𝑀$$
+% $$V_p=𝑟_1 𝐼_p+𝑗\omega𝐿_1 𝐼_p−𝑗\omega𝑀𝐼_p+𝑗\omega𝑀𝐼_p+𝑗\omega𝑀𝐼_s$$
+% $$V_p=(𝑟_1+𝑗\omega𝐿_1)𝐼_p+𝑗\omega𝑀𝐼_s$$
+% $$V_s=𝑗\omega𝑀𝐼_p+(𝑟_2+𝑗\omega𝐿_2)𝐼_s$$
 
 \section{Compensation network technology}
 % 补偿网络是进行一些调整以弥补系统缺陷的网络。如果只在初级或次级一侧使用电容补偿，称为单侧谐振补偿；在初、次级两侧同时使用电容补偿，称为双侧利、偿。单侧补偿的电容值计算较为简单，但是实际效果不如双侧补偿方式。因此本文仅针对双侧补偿展开讨论。如图所示，根据电容在两侧连接方式的不同，谐振补偿可分为初级串联次级串联、初级并联次级串联、初级串联次级并联以及切级并联次级并联四种结构。
