@@ -14,9 +14,9 @@ The template:
 
 ## Usage
 
-    $ git clone git@github.com:kmiya/naist-thesis-tmpl-en.git
+    $ git clone https://github.com/iostreamrain/MasterThesis
 
-or [click this link](https://github.com/kmiya/naist-thesis-tmpl-en/archive/master.zip) to download as zip.
+or [click this link](https://github.com/iostreamrain/MasterThesis/archive/main.zip) to download as zip.
 
 ### Directory Structure
 
