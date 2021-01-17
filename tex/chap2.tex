@@ -77,7 +77,9 @@ Therefore, the equivalent circuit can be expressed as figure \ref{equivalent cir
         V_s & = j\omega MI_p + (r_2+j \omega L_2)I_s
     \end{align}
 \end{equation}
+
 The above equations can be expressed as the following matrix equation.
+
 \begin{equation}
     \begin{bmatrix}
         V_p \\
@@ -92,11 +94,20 @@ The above equations can be expressed as the following matrix equation.
         I_p \\
         I_s
     \end{bmatrix}
+    \label{formula: basic VI matrix formula}
+\end{equation}
+% 上述式子中的jwL1可以通过补偿网络将其去除
+
+If we use $\mathbf{V}$, $\mathbf{Z}$, $\mathbf{I}$ to express the corresponding matrices. The formula \ref{formula: basic VI matrix formula} can be represented as follows.
+\begin{equation}
+    \mathbf{V} = \mathbf{Z}\cdot\mathbf{I}
 \end{equation}
 
+Here, the imaginary part of $Z_{11}$ ($j\omega L_1$) and $Z_{22}$ ($j\omega L_2$) can be canceled by the compensation networks.
 
 \section{Compensation network technologies}
 % 补偿网络是进行一些调整以弥补系统缺陷的网络。如果只在初级或次级一侧使用电容补偿，称为单侧谐振补偿；在初、次级两侧同时使用电容补偿，称为双侧利、偿。单侧补偿的电容值计算较为简单，但是实际效果不如双侧补偿方式。因此本文仅针对双侧补偿展开讨论。如图所示，根据电容在两侧连接方式的不同，谐振补偿可分为初级串联次级串联、初级并联次级串联、初级串联次级并联以及切级并联次级并联四种结构。
+
 A compensation network is a network that makes some adjustments to compensate for system electrical defects. If capacitor compensation is used only on the primary or secondary side, it is called single-sided compensation topology; when capacitor compensation is used on both the primary and secondary sides at the same time, it is called double-sided compensation topology. The calculation of the capacitance value of single-sided compensation is relatively simple, but the actual effect is not as good as the double-sided compensation method. Therefore, this article only discusses bilateral compensation. As shown in the figure \ref{compensation network}, according to the different connection modes of the capacitors on both sides, common resonance compensation technologies can be divided into four structures: S-S, S-P, P-S, P-P (S: series, P: parallel). In addition, there are more complicated compensation networks such as CLC and LCC.
 
 Since only S-S topology and CLC-S topology are used in the following text, we only analyze these two compensation topologies in detail here.
@@ -161,10 +172,12 @@ When the inductors and the capacitors in the resonance state, we have,
     \omega=\omega _0=\frac{1}{\sqrt{LC}}
     \label{formula:resonant frequency}
 \end{equation}
+
 where $\omega$ represents the working frequency, $\omega _0$ represents the resonant angular frequency of the circuit. Here, to maximize the transmission efficiency of the WPT system, we need to make the resonant frequencies of the primary side and secondary side consistent. Therefore,
 \begin{equation}
     \omega _0 = \frac{1}{L_1C_1} = \frac{1}{L_2C_2}
 \end{equation}
+
 For any formed coil, we can measure its corresponding inductance value at a specified frequency. Thus, we can get the value of the compensation capacitor by formula \ref{formula:resonant frequency}.
 \begin{equation}
     C = \frac{1}{\omega_0^2 L}
@@ -175,10 +188,12 @@ For any formed coil, we can measure its corresponding inductance value at a spec
     k=\frac{M}{\sqrt{L_1L_2}}
 \end{equation}
 
+% 传输效率计算的式子
+
 \subsection{CLC-S compensation topology}
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.9\linewidth]{images/2_CLCS_topology.png}
+    \includegraphics[width=0.93\linewidth]{images/2_CLCS_topology.png}
     \caption{CLC-S structure.}
     \label{fig:clcs topology}
 \end{figure}
@@ -210,3 +225,5 @@ In the seawater environment, the electrical parameters of seawater as the transm
     \end{tabular}
     \label{table:permittivity}
 \end{table}
+
+% 电路图

@@ -6,9 +6,7 @@ In order to explore the similarities and differences between the wireless energy
 
 
 
-\section{Two ring coils WPT in the air}
-In order to design a wireless power transmission system suitable for underwater AUV, we will first use hollow cylindrical structure transmitter and cylindrical structure receiver to explore the performance of the UWPT system of this plug-in structure UWPT in water. For the convenience of writing, it will be referred to as a double ring structure in the following text. The coil structure as shown in figure \ref{fig:3_two_ring_coil}.
-
+\section{The first experiment}
 
 \begin{figure}[htbp]
     \begin{subfigure}{0.5\textwidth}
@@ -28,6 +26,8 @@ In order to design a wireless power transmission system suitable for underwater 
     \label{fig:3_two_ring_coil}
 \end{figure}
 
+In order to design a wireless power transmission system suitable for underwater AUV, we will first use hollow cylindrical structure transmitter and cylindrical structure receiver to explore the performance of the UWPT system of this plug-in structure UWPT in water. For the convenience of writing, it will be referred to as a double ring structure in the following text. The coil structure as shown in figure \ref{fig:3_two_ring_coil}.
+
 Its detailed parameters are shown in Table \ref{table:ring coil parameters}.
 
 \begin{table}[htbp]
@@ -36,17 +36,43 @@ Its detailed parameters are shown in Table \ref{table:ring coil parameters}.
     \begin{tabular}{ c|cc }
         \thickhline
         % \hline
-        \textbf{Items}                     & \textbf{Parameters}      \\
+        \textbf{Items}                    & \textbf{Parameters}      \\
         \thickhline
-        Environment                        & Air, tap water, seawater \\ \hline
-        Wire diameter                      & 0.8mm                    \\ \hline
-        Wire material                      & Copper                   \\ \hline
+        Environment                       & Air, tap water, seawater \\ \hline
+        Wire diameter                     & 0.8mm                    \\ \hline
+        Wire material                     & Copper                   \\
+        \hline
+        Tx coil diameter                  & 113mm                    \\ \hline
+        Rx coil diameter                  & 85mm                     \\ \hline
         Turns (Inner coil and outer coil) & 10                       \\ \hline
-        Frequency                          & 200kHz                   \\ \hline
+        Frequency                         & 200kHz                   \\ \hline
     \end{tabular}
     \label{table:ring coil parameters}
 \end{table}
 
+% 当我们使用VNA分析仪将线圈放置在空气中，自来水中，海水中进行测量时，可以得到以下数据
+When we use the VNA analyzer to place the coil in the air, tap water, or sea water for measurement, the following data can be obtained:
+\begin{equation*}
+    \begin{aligned}
+        Z_{Air}       & =
+        \begin{bmatrix}
+            0.4 +29.6i & 0.0 -10.0i \\
+            0.0 -10.0i & 0.3 +20.3i
+        \end{bmatrix} \\
+        Z_{Tap-water} & =
+        \begin{bmatrix}
+            3.0 +32.1i  & -1.5 -11.3i \\
+            -1.5 -11.3i & 1.5 +21.6i
+        \end{bmatrix} \\
+        Z_{Seawater}  & =
+        \begin{bmatrix}
+            7.2 +37.8i  & -6.0 -15.7i \\
+            -6.0 -15.7i & 6.5 +25.3i
+        \end{bmatrix}
+    \end{aligned}
+\end{equation*}
+
+In the above measurement results, we can find that as the transmission medium changes (Air to tap-water to seawater), each corresponding value is increasing.
 
 \section{Two ring coils structure}
 \subsection{Simulation evaluation}
