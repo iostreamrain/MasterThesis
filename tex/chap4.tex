@@ -18,11 +18,11 @@ Through the explanation in the previous chapter, we know the basic performance o
     \label{fig:3_coil_array_uwpt}
 \end{figure}
 
-\begin{figure}[htbp]
-    \centering
-    \includegraphics{images/3_mutual_inductance.png}
-    \caption{svg image}
-\end{figure}
+% \begin{figure}[htbp]
+%     \centering
+%     \includegraphics{images/3_mutual_inductance.png}
+%     \caption{svg image}
+% \end{figure}
 
 \section{Simulation evaluation}
 
@@ -34,8 +34,42 @@ Through the explanation in the previous chapter, we know the basic performance o
 
 % 改变内部线圈的偏移，双方向下的偏移。
 
-
 \subsection{Simulation evaluation}
+
+
 \section{Coil array WPT in the air}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=1.0\linewidth]{images/4_coil_5_10_with_ferrite.png}
+    \caption{Coil-array IPT structure.}
+\end{figure}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.6\linewidth]{images/4_coil_5_10_without_ferrite.png}
+    \caption{Coil-array IPT structure.}
+\end{figure}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.6\linewidth]{images/4_coil_6_10_without_ferrite.png}
+    \caption{Coil-array IPT structure.}
+\end{figure}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.6\linewidth]{images/4_coil_6_10_inner_with_ferrite.png}
+    \caption{Coil-array IPT structure.}
+\end{figure}
+
+\begin{table}[htbp]
+    \centering
+    \caption{Maximum power transfer efficiency.}
+    \begin{tabular}{|>{\centering\arraybackslash}m{3.3cm}|>{\centering\arraybackslash}m{2.5cm}|>{\centering\arraybackslash}m{2.5cm}|>{\centering\arraybackslash}m{2.5cm}|>{\centering\arraybackslash}m{2.5cm}|}
+        \hline
+        \textbf{Shift}                                    & \textbf{Numbers of coiL (Outer - Inner)} & \textbf{Both coils with ferrite} & \textbf{Both coils without ferrite} & \textbf{Outer coils without ferrite, inner coils with ferrite} \\ \hline
+        \multirow{2}{3.3cm}{Inner coil in the center}         & 10 - 5                             & 78.41\%                          & 76.75\%                             & 84.95\%                            \\ \cline{2-5}
+                                                          & 10 - 6                             &                                  & 77.03\%                             &                                    \\ \hline
+        \multirow{2}{3.3cm}{Inner coil close to the one side} & 10 - 5                             &                                  & 88.26\%                             & 78.80\%                            \\ \cline{2-5}
+                                                          & 10 - 6                             &                                  & 91.13\%                             &                                    \\ \hline
+    \end{tabular}
+\end{table}
 
 \section{Coil array WPT under seawater}
