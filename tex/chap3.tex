@@ -78,10 +78,12 @@ In the above measurement results, we can find that as the transmission medium ch
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.7\linewidth]{images/3_two_ring_coil_5cm_8cm.png}
-    \caption{Two ring structure ($Radius_{inner coil}=50mm$, $Radius_{outer coil}=80mm$).}
+    \includegraphics[width=0.9\linewidth]{images/3_two_ring_coil_5cm_8cm.png}
+    \caption{Two ring structure ($r_{inner}=50mm$, $r_{outer}=80mm$).}
     \label{fig:3_two_ring_coil_5cm_8cm}
 \end{figure}
+
+In order to explore the influence of the size of the internal coil and the distance between the two coils on the system (Figure \ref{fig:3_two_ring_coil_5cm_8cm}), the coil size is changed here to change the distance between the transmitter and the receiver. The specific parameters are as follows (Table \ref{table:ring coil parameters - different distance}).
 
 \begin{table}[htbp]
     \centering
@@ -103,25 +105,129 @@ In the above measurement results, we can find that as the transmission medium ch
     \label{table:ring coil parameters - different distance}
 \end{table}
 
+After changing the medium between the coils and the distance between the coils, the Z-parameters in different scenarios are measured by VNA, and we get the following results (Table \ref{table:Z-parameters in distance}).
+
+\begin{table}[htbp]
+    \centering
+    \caption{Z-parameters in different distance and media}
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        \textbf{Media}             & \textbf{Coil size (Radius)} & \textbf{Distance} & \textbf{Z-parameter}         \\ \hline
+        \multirow{3}{*}{Air}       & 80mm - 50mm                 & 30mm              & $\begin{bmatrix} 0.6826 + 46.4075i & -0.0411-8.9620i \\ -0.0382-8.9669i            &0.3423+24.2260i  \end{bmatrix}$  \\ \cline{2-4}
+                                   & 80mm - 60mm                 & 20mm              & $\begin{bmatrix} 0.7194	+46.1416i  & -0.0946	-15.0048i \\
+                -0.0906	-15.0155i & 0.5225	+32.5246i\end{bmatrix}$ \\ \cline{2-4}
+                                   & 80mm - 70mm                 & 10mm              & $\begin{bmatrix} 0.6657	+45.9561i & 0.0757	+24.2562i \\
+                0.0699	+24.2747i & 0.5651	+39.2948i\end{bmatrix}$ \\ \hline
+        \multirow{3}{*}{Tap-water} & 80mm - 50mm                 & 30mm              & $\begin{bmatrix} 5.4603	+53.0814i  & -2.4332	-11.7753i \\
+                -2.4304	-11.7859i & 1.7722	+26.0449i\end{bmatrix}$ \\ \cline{2-4}
+                                   & 80mm - 60mm                 & 20mm              & $\begin{bmatrix} 7.0513	+54.2993i  & -4.4889	-20.1926i \\
+                -4.4867	-20.2100i & 3.9114	+36.7652i\end{bmatrix}$ \\ \cline{2-4}
+                                   & 80mm - 70mm                 & 10mm              & $\begin{bmatrix} 2.8768	+49.8765i & 0.9991	+26.5644i \\
+                0.9946	+26.5864i & 1.9865	+42.0751i\end{bmatrix}$ \\ \hline
+        \multirow{3}{*}{Seawater}  & 80mm - 50mm                 & 30mm              & $\begin{bmatrix} 1.761	+58.2022i   & -0.554	-14.5303i \\
+                -0.5512	-14.5424i & 0.6543	+27.6708i\end{bmatrix}$ \\ \cline{2-4}
+                                   & 80mm - 60mm                 & 20mm              & $\begin{bmatrix} 2.0488	+61.1579i  & -0.9906	-25.1528i \\
+                -0.9814	-25.1736i & 1.2212	+40.4982i\end{bmatrix}$ \\ \cline{2-4}
+                                   & 80mm - 70mm                 & 10mm              & $\begin{bmatrix} 2.0347	+52.4298i & 0.4957	+27.1092i \\
+                0.4843	+27.1321i & 1.4439	+43.4828i\end{bmatrix}$ \\ \hline
+    \end{tabular}
+    \label{table:Z-parameters in distance}
+\end{table}
+
+% 结论
+
 \section{The system in different frequency}
 
+
+\begin{table}[htbp]
+    \centering
+    \caption{The parameters of ring coil structure.}
+    \begin{tabular}{ c|cc }
+        \thickhline
+        % \hline
+        \textbf{Items}                    & \textbf{Parameters}                    \\
+        \thickhline
+        Environment                       & Air, seawater                          \\ \hline
+        Wire diameter                     & 0.8mm                                  \\ \hline
+        Wire material                     & Copper                                 \\
+        \hline
+        Tx coil diameter                  & 160mm                                  \\ \hline
+        Rx coil diameter                  & 100mm                                  \\ \hline
+        Turns (Inner coil and outer coil) & 10                                     \\ \hline
+        Frequency                         & 100kHz, 150kHz, 200kHz, 250kHz, 300kHz \\ \hline
+    \end{tabular}
+    \label{table:ring coil parameters - different frequencies}
+\end{table}
+
 % 结果表格
+
+\begin{table}[htbp]
+    \centering
+    \caption{Z-parameters in different frequencies and media}
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        \textbf{Media}            & \textbf{Frequency} & \textbf{Z-parameter}                  \\ \hline
+        \multirow{5}{*}{Air}      & 100kHz             & $\begin{bmatrix}
+                0.3758 +23.2130i  & -0.0036 - 4.4495i \\
+                -0.0012 - 4.4520i & 0.2123 +12.1526i
+            \end{bmatrix}$          \\ \cline{2-3}
+                                  & 150kHz             & $\begin{bmatrix}
+                0.4789 +34.7320i  & -0.0074 - 6.6739i \\
+                -0.0037 - 6.6774i & 0.2575 +18.1971i
+            \end{bmatrix}$          \\ \cline{2-3}
+                                  & 200kHz             & $\begin{bmatrix}
+                0.5755 +46.2288i  & -0.0121 - 8.9004i \\
+                -0.0050 - 8.9065i & 0.3031 +24.2211i
+            \end{bmatrix}$          \\ \cline{2-3}
+                                  & 250kHz             & $\begin{bmatrix}
+                0.6737 +57.7432i  & -0.0153 -11.1342i \\
+                -0.0095 -11.1426i & 0.3423 +30.2465i
+            \end{bmatrix}$          \\ \cline{2-3}
+                                  & 300kHz             & $\begin{bmatrix}
+                0.7556 +69.2691i  & -0.0191 -13.3746i \\
+                -0.0100 -13.3859i & 0.3791 +36.2676i
+            \end{bmatrix}$          \\ \hline
+        \multirow{5}{*}{Seawater} & 100kHz             & $\begin{bmatrix}
+                0.5314 +24.3255i  & -0.0760 - 4.9832i \\
+                -0.0717 - 4.9862i & 0.2593 +12.5247i
+            \end{bmatrix}$          \\ \cline{2-3}
+                                  & 150kHz             & $\begin{bmatrix}
+                0.9900 +39.2700i  & -0.2453 - 8.8345i \\
+                -0.2392 - 8.8400i & 0.4080 +19.6434i
+            \end{bmatrix}$          \\ \cline{2-3}
+                                  & 200kHz             & $\begin{bmatrix}
+                2.0236 +59.0193i  & -0.7053 -15.0451i \\
+                -0.6942 -15.0581i & 0.7248 +28.1895i
+            \end{bmatrix}$          \\ \cline{2-3}
+                                  & 250kHz             & $\begin{bmatrix}
+                4.8486 +89.4034i  & -2.0763 -26.6084i \\
+                -2.0597 -26.6276i & 1.5345 +39.8440i
+            \end{bmatrix}$          \\ \cline{2-3}
+                                  & 300kHz             & $1.0e+02 *\begin{bmatrix}
+
+
+                0.1548 + 1.4909i  & -0.0751 - 0.5327i \\
+                -0.0749 - 0.5333i & 0.0450 + 0.5985i
+            \end{bmatrix}$ \\ \hline
+    \end{tabular}
+\end{table}
+\label{table:ring Z-parameters - different frequencies}
 
 \section{Conclusion}
 
 
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.4\linewidth]{images/3_mutual_inductance.png}
-    \caption{Underwater sensor networks architecture.}
-    \label{fig:3_mutual_inductance}
-\end{figure}
+% \begin{figure}[htbp]
+%     \centering
+%     \includegraphics[width=0.4\linewidth]{images/3_mutual_inductance.png}
+%     \caption{Underwater sensor networks architecture.}
+%     \label{fig:3_mutual_inductance}
+% \end{figure}
 
 
 
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.8\linewidth]{images/3_clc_s_scheme.png}
-    \caption{CLC-S Scheme.}
-    \label{fig:3_clc_s_scheme}
-\end{figure}
+% \begin{figure}[htbp]
+%     \centering
+%     \includegraphics[width=0.8\linewidth]{images/3_clc_s_scheme.png}
+%     \caption{CLC-S Scheme.}
+%     \label{fig:3_clc_s_scheme}
+% \end{figure}
