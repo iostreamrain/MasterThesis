@@ -201,7 +201,17 @@ For any formed coil, we can measure its corresponding inductance value at a spec
 
 
 \begin{equation}
-    V_s = -jX_cI_s + j X_{R_1}I_1
+\begin{align}
+    V_S &= -jX_CI_S + j X_{L}I_L \\
+    V_0 &= (-jX_{C_0}+jX_{L_0}+r_0)I_0 + j\omega MI_1 \\
+    V_R &= j\omega I_0 +(-jX_{C_1}+jX_{L_1}+r_1)I_1 \\
+    V_R &= -RI_1 \\
+    I_S &= I_L+I_0
+\end{align}
+\end{equation}
+
+\begin{equation}
+    V_R = - \frac{R}{R+r_1}\cdot \frac{\omega M}{X_L}V_S
 \end{equation}
 
 \section{Underwater WPT system model}
