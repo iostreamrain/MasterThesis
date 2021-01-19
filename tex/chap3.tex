@@ -110,31 +110,36 @@ After changing the medium between the coils and the distance between the coils, 
 \begin{table}[htbp]
     \centering
     \caption{Z-parameters in different distance and media}
+    \renewcommand{\arraystretch}{1.2}
     \begin{tabular}{|c|c|c|c|}
         \hline
-        \textbf{Media}             & \textbf{Coil size (Radius)} & \textbf{Distance} & \textbf{Z-parameter}         \\ \hline
-        \multirow{3}{*}{Air}       & 80mm - 50mm                 & 30mm              & $\begin{bmatrix} 0.6826 + 46.4075i & -0.0411-8.9620i \\ -0.0382-8.9669i            &0.3423+24.2260i  \end{bmatrix}$  \\ \cline{2-4}
-                                   & 80mm - 60mm                 & 20mm              & $\begin{bmatrix} 0.7194	+46.1416i  & -0.0946	-15.0048i \\
+        \textbf{Media}             & \textbf{\begin{tabular}[c]{@{}c@{}}Coil size\\ (Radius)\end{tabular}} & \textbf{Distance} & \textbf{Z-parameter}         \\ \hline
+        \multirow{3}{*}{Air}       & 80mm - 50mm                        & 30mm              & $\begin{bmatrix} 0.6826 + 46.4075i & -0.0411-8.9620i \\ -0.0382-8.9669i            &0.3423+24.2260i  \end{bmatrix}$ \\ \cline{2-4}
+                                   & 80mm - 60mm                        & 20mm              & $\begin{bmatrix} 0.7194	+46.1416i  & -0.0946	-15.0048i \\
                 -0.0906	-15.0155i & 0.5225	+32.5246i\end{bmatrix}$ \\ \cline{2-4}
-                                   & 80mm - 70mm                 & 10mm              & $\begin{bmatrix} 0.6657	+45.9561i & 0.0757	+24.2562i \\
+                                   & 80mm - 70mm                        & 10mm              & $\begin{bmatrix} 0.6657	+45.9561i & 0.0757	+24.2562i \\
                 0.0699	+24.2747i & 0.5651	+39.2948i\end{bmatrix}$ \\ \hline
-        \multirow{3}{*}{Tap-water} & 80mm - 50mm                 & 30mm              & $\begin{bmatrix} 5.4603	+53.0814i  & -2.4332	-11.7753i \\
+        \multirow{3}{*}{Tap-water} & 80mm - 50mm                        & 30mm              & $\begin{bmatrix} 5.4603	+53.0814i  & -2.4332	-11.7753i \\
                 -2.4304	-11.7859i & 1.7722	+26.0449i\end{bmatrix}$ \\ \cline{2-4}
-                                   & 80mm - 60mm                 & 20mm              & $\begin{bmatrix} 7.0513	+54.2993i  & -4.4889	-20.1926i \\
+                                   & 80mm - 60mm                        & 20mm              & $\begin{bmatrix} 7.0513	+54.2993i  & -4.4889	-20.1926i \\
                 -4.4867	-20.2100i & 3.9114	+36.7652i\end{bmatrix}$ \\ \cline{2-4}
-                                   & 80mm - 70mm                 & 10mm              & $\begin{bmatrix} 2.8768	+49.8765i & 0.9991	+26.5644i \\
+                                   & 80mm - 70mm                        & 10mm              & $\begin{bmatrix} 2.8768	+49.8765i & 0.9991	+26.5644i \\
                 0.9946	+26.5864i & 1.9865	+42.0751i\end{bmatrix}$ \\ \hline
-        \multirow{3}{*}{Seawater}  & 80mm - 50mm                 & 30mm              & $\begin{bmatrix} 1.761	+58.2022i   & -0.554	-14.5303i \\
+        \multirow{3}{*}{Seawater}  & 80mm - 50mm                        & 30mm              & $\begin{bmatrix} 1.761	+58.2022i   & -0.554	-14.5303i \\
                 -0.5512	-14.5424i & 0.6543	+27.6708i\end{bmatrix}$ \\ \cline{2-4}
-                                   & 80mm - 60mm                 & 20mm              & $\begin{bmatrix} 2.0488	+61.1579i  & -0.9906	-25.1528i \\
+                                   & 80mm - 60mm                        & 20mm              & $\begin{bmatrix} 2.0488	+61.1579i  & -0.9906	-25.1528i \\
                 -0.9814	-25.1736i & 1.2212	+40.4982i\end{bmatrix}$ \\ \cline{2-4}
-                                   & 80mm - 70mm                 & 10mm              & $\begin{bmatrix} 2.0347	+52.4298i & 0.4957	+27.1092i \\
+                                   & 80mm - 70mm                        & 10mm              & $\begin{bmatrix} 2.0347	+52.4298i & 0.4957	+27.1092i \\
                 0.4843	+27.1321i & 1.4439	+43.4828i\end{bmatrix}$ \\ \hline
     \end{tabular}
+    \renewcommand{\arraystretch}{1}
     \label{table:Z-parameters in distance}
 \end{table}
 
 % 结论
+% 在这个表格中，我们可以发现，在同种介质下，随着内部线圈减小，传输距离增加，我们可以看到Z11的虚部和Z22的虚部在增大，表明线圈的阻抗正在增大。
+
+In this table, we can find that under the same medium, as the internal coil decreases, the transmission distance increases. We can see that the imaginary part of Z11 and Z22 are increasing, indicating that the impedance of the coil is increasing .
 
 \section{The system in different frequency}
 Earlier we have studied the z-parameter changes of the two ring coil structure under different media and different distances. In this section we will study how z-parameters changes at different frequencies. Table \ref{table:ring coil parameters - different frequencies} a shows the parameters of the experiment.
