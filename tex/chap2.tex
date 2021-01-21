@@ -217,8 +217,7 @@ For any formed coil, we can measure its corresponding inductance value at a spec
 \section{Underwater WPT system model}
 
 % 海水环境下，海水作为传输介质其电气参数与空气中的相比有很大的区别，如表所示。因此，如式与式的常规互感模型无法反映出海水介质对传输的影响，不能完全、准确地描述海水下的传输行为。
-In the seawater environment, the electrical parameters of seawater as the transmission medium are quite different from those in the air, as shown in the table. Therefore, the conventional mutual inductance model of Eq. and Eq. cannot reflect the influence of seawater media on transmission, and cannot completely and accurately describe the transmission behavior under seawater.
-
+In the seawater environment, the electrical parameters of seawater as the transmission medium are quite different from those in the air, as shown in the table \ref{table:permittivity}. 
 \begin{table}[htbp]
     \centering
     \caption{The dielectric constant \& conductivity of some materials at 25$^\circ$C under 1kHz.}
@@ -236,4 +235,46 @@ In the seawater environment, the electrical parameters of seawater as the transm
     \label{table:permittivity}
 \end{table}
 
+It can be seen from table \ref{table:permittivity} that the relative permittivity of seawater is larger than that of air medium, resulting in a distributed capacitance between two conductors that are relatively close in seawater; at the same time, seawater has a certain conductivity , This is equivalent to connecting an eddy current loss resistor in series at both ends of the coil. Eddy current loss resistance and distributed capacitance will affect the impedance of the coil and generate additional power loss. Therefore, the conventional mutual inductance model of Eq. and Eq. cannot reflect the influence of seawater media on transmission, and cannot completely and accurately describe the transmission behavior under seawater.
+
 % 电路图
+
+\begin{figure}[htbp]
+    \centering
+    \resizebox*{.5\textwidth}{!}{
+    \begin{tikzpicture} [scale=1, every node/.style={scale=1}, american voltages]
+        
+        \draw
+        (0,6) to [R, l_=$R_{sea}$, o-] (3,6) to (4,6)
+        to [R, l=$R$] (4,3)
+        to [L, l=$L$] (4,0)
+        to [short, -o] (0,0);
+	\draw (3,6) to [C, l_=$C_{sea}$] (3,0);
+
+   	\node[single arrow,draw=black,fill=black!10,minimum height=2.5cm,shape border rotate=0] at (6,3) {};
+
+        \draw
+      (8,6) to [short, o-] (9.5,6)
+        to [R, l=$R_{eq}$] (9.5,3)
+        to [L, l=$L_{eq}$] (9.5,0)
+        to [short, -o] (8,0);
+	
+    \end{tikzpicture}
+    }
+    \caption{Equivalent circuit of the coil under seawater.}
+    \label{fig:coil under seawater}
+\end{figure}
+
+As shown in figure \ref{fig:coil under seawater}, $R_{sea}$ is the eddy current loss resistance, $C_{sea}$ is the distributed capacitance, both of which increase with the increase of operating frequency, $R$ is the internal resistance of the coil itself, and $L$ is the coil inductance. The mathematical expressions of equivalent inductance $L_{eq}$ and equivalent resistance $R_{eq}$ are as follows,
+
+\begin{equation}
+    L_{eq} = \frac{L-\omega ^2 L^2C_{sea}- C_{sea}R^2}{(1-\omega ^2 LC_{sea}^2 + \omega^2C_{sea}^2R^2)}
+    \label{formula: Leq}
+\end{equation}
+
+\begin{equation}
+    R_{eq} = R_{sea} + \frac{R}{(1-\omega^2LC_{sea})^2+\omega^2C_{sea}^2R^2}
+    \label{formula: Req}
+\end{equation}
+
+Among them, $\omega$ is the operating angular frequency. Generally speaking, eddy current loss resistance $R_{sea}$ and distributed capacitance $C_{sea}$ are affected by many factors and are difficult to measure. Therefore, equations \ref{formula: Leq} and \ref{formula: Req} are not easy to calculate, and they are usually obtained with three-dimensional electromagnetic field simulation software or experiments. Since $R_{eq}$ is generally larger at high frequencies, underwater magnetic coupling resonance wireless energy transmission generally uses a working frequency below 1 MHz.
