@@ -100,17 +100,27 @@ Therefore, near-field wireless power transfer systems mainly include inductive c
 \section{Underwater wireless power transfer}
 WPT technology has unique advantages in special environments, and along with the continuous development of landing application research and the emergence of a large number of results, it has attracted the attention of underwater technology researchers. 
 \subsection{Underwater environment}
-Underwater,
-Seawater has a blocking effect on high-frequency electromagnetic waves. The distance of electromagnetic waves propagating underwater is inversely proportional to the frequency, making it difficult to achieve long-distance power transmission.
+In the seawater environment, we usually need to consider the following points.
 
-Conductivity,
-Due to the electrical conductivity of seawater, traditional wireless power transmission analysis methods are no longer applicable. At present, the system modeling and related theoretical analysis of underwater wireless power transfer technology need to be improved.
+\begin{itemize}
+    \item Underwater, seawater has a blocking effect on high-frequency electromagnetic waves. The distance of electromagnetic waves propagating underwater is inversely proportional to the frequency, making it difficult to achieve long-distance power transmission.
+    \item Conductivity, due to the electrical conductivity of seawater, traditional wireless power transmission analysis methods are no longer applicable. At present, the system modeling and related theoretical analysis of underwater wireless power transfer technology need to be improved.
+    \item Undercurrent, the submarine landform is complex and there is undercurrent. The coupler core is liable to drift under water, and there are problems such as difficulty in docking, which results in low transmission efficiency.
+    \item Some other impects, like microbial enrichment, temperature, salinity, etc.
+    
+\end{itemize}
 
-Undercurrent,
-The submarine landform is complex and there is undercurrent. The coupler core is liable to drift under water, and there are problems such as difficulty in docking, which results in low transmission efficiency.
+% Underwater,
+% Seawater has a blocking effect on high-frequency electromagnetic waves. The distance of electromagnetic waves propagating underwater is inversely proportional to the frequency, making it difficult to achieve long-distance power transmission.
 
-Other Impact:
-Microbial enrichment, temperature, salinity
+% Conductivity,
+% Due to the electrical conductivity of seawater, traditional wireless power transmission analysis methods are no longer applicable. At present, the system modeling and related theoretical analysis of underwater wireless power transfer technology need to be improved.
+
+% Undercurrent,
+% The submarine landform is complex and there is undercurrent. The coupler core is liable to drift under water, and there are problems such as difficulty in docking, which results in low transmission efficiency.
+
+% Other Impact:
+% Microbial enrichment, temperature, salinity
 
 \subsection{Common UWPT systems}
 
@@ -120,20 +130,23 @@ Microbial enrichment, temperature, salinity
     \caption{Stacked UWPT system \cite{Song}.}
     \label{fig:stacked UWPT system}
 \end{figure}
+Figure \ref{fig:stacked UWPT system} shows a stacked UWPT system, this study was completed by Baowei Song et al \cite{Song}. They achieved a transmission efficiency of 72\% while maintaining 100w output power.
+They are using a saddle structure transmitter (Details as shown in figure \ref{fig:stacked UWPT system detail}) and a deformed cylindrical receiver. This structure is very convenient for AUT to park, but because there is no stable protection structure, it is also easy to shift when charging.
 
-Saddle structure transmitter
-Easy parking, but the receiver is easy to shift when charging
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.7\linewidth]{images/1_stacked_UWPT_system_details.png}
+    \caption{The primary and secondary coils of stacked UWPT system \cite{Song}.}
+    \label{fig:stacked UWPT system detail}
+\end{figure}
 
-
+Figure \ref{fig:plug in UWPT system} shows the plug-in UPWT system. We can observe that the AUV needs to be moved into a hollow cylindrical structure transmitter, which makes it difficult to park. However, this structure can maintain the stability of the AUV during AUV charging, so that the system charging is more secure. Another advantage of this structure is that the receiving coil is relatively large, which can make the mutual inductance high. And we can use this system to transmit larger power. Therefore, our coil-array structure UWPT system is built on this structure.
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.7\linewidth]{images/1_plugin_UWPT_system.png}
     \caption{Plug-in UWPT system \cite{Wang}.}
     \label{fig:plug in UWPT system}
 \end{figure}
-
-Hollow cylindrical structure transmitter
-Difficult parking, the receiver is not easy to shift when charging
 
 
 \section{The main research content of this thesis}
@@ -145,8 +158,13 @@ The first chapter analyzes the background of this research and its research purp
 
 The second chapter focuses on the analysis of the basic theory of wireless energy transmission. First, the basic IPT model is explained, and its working principle is analyzed. Then explained the related technology of compensation network. Finally, analyze the underwater IPT system model.
 
-% 第三章讲的水下的基本实验，得出了水下环境与空气环境中给wpt造成的影响
+% 第三章初步探究了水下环境对场景wpt系统的影响。首先，通过测量三种不同介质中的Z-paremeter来观察不同介质中wpt系统参数的变化情况。然后再通过改变内部线圈的大小从而改变线圈间距离，来判断不同距离下wpt系统参数的变化。最后通过改变不同的工作频率，来观察不同评论下系统的参数变化情况。
+The third chapter initially explores the influence of the underwater environment on the scene wpt system. First, by measuring the Z-paremeter in three different media to observe the changes of the wpt system parameters in different media. Then by changing the size of the internal coil to change the distance between the coils, to judge the change of the wpt system parameters at different distances. Finally, by changing different working frequencies, we can observe the changes of system parameters under different comments.
 
 % Chapter 3 first analyzes the basic principle of the parallel MRC-WPT circuit, and then based on the WPT model of the ordinary air-core coil, respectively, to address the horizontal offset and angular offset of the transmitter coil and the receiver coil, a new type of battery that can meet the charging requirements is proposed. The wireless energy transmission method of two-dimensional air-core coil and three-dimensional air-core coil enables the transmission efficiency of the underwater MRC-WPT system to be steadily improved. According to the structural characteristics of each method, the corresponding underwater wireless robot model is designed to meet the application conditions.
-
+% 第四章介绍了我们提出的coil-array线圈结构。通过Wipl-d软件进行模拟，比较了coil-array线圈结构与two-ring结构的磁场分布与系统传输效率。然后通过实验，比较了几种不同coil-array arrangements的表现。总结出不同arrangements的优劣。
+Chapter four introduces the coil-array coil structure we proposed. The simulation was carried out by Wipl-d software, and the magnetic field distribution and system transmission efficiency of the coil-array coil structure and the two-ring structure were compared. Then through experiments, we compared the performance of several different coil-array arrangements. Summarize the pros and cons of different arrangements.
 % The fourth chapter first studies the magnetic field characteristics of the air gap coil, focusing on the analysis of the magnetic core's restraining effect on the coil magnetic field, and simulates the magnetic field distribution of the coil containing the air gap core, and proposes a new type of four-phase core coil. The method of wireless energy transmission. By studying the transmitting phase of the four transmitting coils, the induced magnetic fields in the four receiving coils will not cancel each other, and stable energy transmission can be carried out. Then the four-phase magnetic core coil transmission scheme is simulated. Aiming at the characteristics of its magnetic field distribution, the AUV model proposed in the previous article is taken as an example, and a universal application model of the structure is designed under water.
+
+% 第五章总结了前文中的实验结果和一些不足。并针对这些不足提出了一些能将实验表现提高的建议，这些内容写在了未来工作里面。
+Chapter five summarizes the experimental results and some shortcomings in the previous article. In response to these shortcomings, some suggestions that can improve the performance of the experiment are put forward, which are written in the future work.
