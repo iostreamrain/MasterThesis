@@ -54,17 +54,17 @@ Its detailed parameters are shown in Table \ref{table:ring coil parameters}.
 When we use the VNA analyzer to place the coil in the air, tap water, or sea water for measurement, the following data can be obtained:
 \begin{equation*}
     \begin{aligned}
-        Z_{Air}       & =
+        Z_{air}       & =
         \begin{bmatrix}
             0.4 +29.6i & 0.0 -10.0i \\
             0.0 -10.0i & 0.3 +20.3i
         \end{bmatrix}, \\
-        Z_{Tap-water} & =
+        Z_{tap-water} & =
         \begin{bmatrix}
             3.0 +32.1i  & -1.5 -11.3i \\
             -1.5 -11.3i & 1.5 +21.6i
         \end{bmatrix}, \\
-        Z_{Seawater}  & =
+        Z_{seawater}  & =
         \begin{bmatrix}
             7.2 +37.8i  & -6.0 -15.7i \\
             -6.0 -15.7i & 6.5 +25.3i
@@ -72,7 +72,7 @@ When we use the VNA analyzer to place the coil in the air, tap water, or sea wat
     \end{aligned}
 \end{equation*}
 
-In the above measurement results, we can find that as the transmission medium changes (Air to tap-water to seawater), each corresponding value is increasing.
+In the above measurement results, we can find that as the transmission medium changes (From air to tap-water to seawater), each corresponding value is increasing.
 
 \section{The system in different distance}
 
@@ -139,7 +139,8 @@ After changing the medium between the coils and the distance between the coils, 
 % 结论
 % 在这个表格中，我们可以发现，在同种介质下，随着内部线圈减小，传输距离增加，我们可以看到Z11的虚部和Z22的虚部在增大，表明线圈的阻抗正在增大。
 
-In this table, we can find that under the same medium, as the internal coil decreases, the transmission distance increases. We can see that the imaginary part of Z11 and Z22 are increasing, indicating that the impedance of the coil is increasing .
+In table \ref{table:Z-parameters in distance}, we can find that under the same medium, as the internal coil decreases, the transmission distance increases. We can see that the imaginary part of $Z_{11}$ and $Z_{22}$ are increasing, indicating that the impedance of the coil is increasing.
+% 观察Z21
 
 \section{The system in different frequency}
 Earlier we have studied the z-parameter changes of the two ring coil structure under different media and different distances. In this section we will study how z-parameters changes at different frequencies. Table \ref{table:ring coil parameters - different frequencies} a shows the parameters of the experiment.
@@ -218,7 +219,7 @@ After using the above parameters, we got the following results (Table \ref{table
 \label{table:ring Z-parameters - different frequencies}
 
 \section{Conclusion}
-
+% 从3.1节，不同介质下的WPT系统，我们可以发现从空气到自来水到海水，Z-parameter的每个值都在增加。即表明海水导致发射端和接收端的内阻在增加。从3.2节不同传输距离下的结果可以看出。随着线圈间距离的增加，内部线圈的减小，在空气介质中各个参数的变化不是很明显，而海水下的Z参数变化幅度比较大。
 
 % \begin{figure}[htbp]
 %     \centering
