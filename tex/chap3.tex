@@ -107,31 +107,37 @@ In order to explore the influence of the size of the internal coil and the dista
 
 After changing the medium between the coils and the distance between the coils, the Z-parameters in different scenarios are measured by VNA, and we get the following results (Table \ref{table:Z-parameters in distance}).
 
+\newcommand\Tstrut{\rule{0pt}{2.3em}}         % = `top' strut
+\newcommand\Bstrut{\rule[-1.8em]{0pt}{0pt}}   % = `bottom' strut
+
 \begin{table}[htbp]
     \centering
     \caption{Z-parameters in different distance and media}
-    \renewcommand{\arraystretch}{1.2}
+    % \renewcommand{\arraystretch}{1}
+    % \setlength\extrarowheight{10pt}
+    \resizebox*{\textwidth}{!}{
     \begin{tabular}{|c|c|c|c|}
         \hline
         \textbf{Media}             & \textbf{\begin{tabular}[c]{@{}c@{}}Coil size\\ (Radius)\end{tabular}} & \textbf{Distance} & \textbf{Z-parameter}         \\ \hline
-        \multirow{3}{*}{Air}       & 80mm - 50mm                        & 30mm              & $\begin{bmatrix} 0.6826 + 46.4075i & -0.0411-8.9620i \\ -0.0382-8.9669i            &0.3423+24.2260i  \end{bmatrix}$ \\ \cline{2-4}
+        \multirow{3}{*}{Air}       & 80mm - 50mm                        & 30mm              & $\begin{bmatrix} 0.6826 + 46.4075i & -0.0411-8.9620i \\ -0.0382-8.9669i            &0.3423+24.2260i  \end{bmatrix}$ \Tstrut\Bstrut\\ \cline{2-4}
                                    & 80mm - 60mm                        & 20mm              & $\begin{bmatrix} 0.7194	+46.1416i  & -0.0946	-15.0048i \\
-                -0.0906	-15.0155i & 0.5225	+32.5246i\end{bmatrix}$ \\ \cline{2-4}
+                -0.0906	-15.0155i & 0.5225	+32.5246i\end{bmatrix}$ \Tstrut\Bstrut\\ \cline{2-4}
                                    & 80mm - 70mm                        & 10mm              & $\begin{bmatrix} 0.6657	+45.9561i & 0.0757	+24.2562i \\
-                0.0699	+24.2747i & 0.5651	+39.2948i\end{bmatrix}$ \\ \hline
+                0.0699	+24.2747i & 0.5651	+39.2948i\end{bmatrix}$ \Tstrut\Bstrut\\ \hline
         \multirow{3}{*}{Tap-water} & 80mm - 50mm                        & 30mm              & $\begin{bmatrix} 5.4603	+53.0814i  & -2.4332	-11.7753i \\
-                -2.4304	-11.7859i & 1.7722	+26.0449i\end{bmatrix}$ \\ \cline{2-4}
+                -2.4304	-11.7859i & 1.7722	+26.0449i\end{bmatrix}$ \Tstrut\Bstrut\\ \cline{2-4}
                                    & 80mm - 60mm                        & 20mm              & $\begin{bmatrix} 7.0513	+54.2993i  & -4.4889	-20.1926i \\
-                -4.4867	-20.2100i & 3.9114	+36.7652i\end{bmatrix}$ \\ \cline{2-4}
+                -4.4867	-20.2100i & 3.9114	+36.7652i\end{bmatrix}$ \Tstrut\Bstrut\\ \cline{2-4}
                                    & 80mm - 70mm                        & 10mm              & $\begin{bmatrix} 2.8768	+49.8765i & 0.9991	+26.5644i \\
-                0.9946	+26.5864i & 1.9865	+42.0751i\end{bmatrix}$ \\ \hline
+                0.9946	+26.5864i & 1.9865	+42.0751i\end{bmatrix}$ \Tstrut\Bstrut\\ \hline
         \multirow{3}{*}{Seawater}  & 80mm - 50mm                        & 30mm              & $\begin{bmatrix} 1.761	+58.2022i   & -0.554	-14.5303i \\
-                -0.5512	-14.5424i & 0.6543	+27.6708i\end{bmatrix}$ \\ \cline{2-4}
+                -0.5512	-14.5424i & 0.6543	+27.6708i\end{bmatrix}$ \Tstrut\Bstrut\\ \cline{2-4}
                                    & 80mm - 60mm                        & 20mm              & $\begin{bmatrix} 2.0488	+61.1579i  & -0.9906	-25.1528i \\
-                -0.9814	-25.1736i & 1.2212	+40.4982i\end{bmatrix}$ \\ \cline{2-4}
+                -0.9814	-25.1736i & 1.2212	+40.4982i\end{bmatrix}$ \Tstrut\Bstrut\\ \cline{2-4}
                                    & 80mm - 70mm                        & 10mm              & $\begin{bmatrix} 2.0347	+52.4298i & 0.4957	+27.1092i \\
-                0.4843	+27.1321i & 1.4439	+43.4828i\end{bmatrix}$ \\ \hline
+                0.4843	+27.1321i & 1.4439	+43.4828i\end{bmatrix}$ \Tstrut\Bstrut\\ \hline
     \end{tabular}
+    }
     \renewcommand{\arraystretch}{1}
     \label{table:Z-parameters in distance}
 \end{table}
@@ -210,7 +216,7 @@ After using the above parameters, we got the following results (Table \ref{table
                 4.8486 +89.4034i  & -2.0763 -26.6084i \\
                 -2.0597 -26.6276i & 1.5345 +39.8440i
             \end{bmatrix}$          \\ \cline{2-3}
-                                  & 300kHz             & $1.0e+02 *\begin{bmatrix}
+                                  & 300kHz             & $10^2 \times \begin{bmatrix}
                 0.1548 + 1.4909i  & -0.0751 - 0.5327i \\
                 -0.0749 - 0.5333i & 0.0450 + 0.5985i
             \end{bmatrix}$ \\ \hline

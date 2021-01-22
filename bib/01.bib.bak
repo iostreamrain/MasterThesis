@@ -1,0 +1,77 @@
+% Encoding: UTF-8
+
+@Book{Orekan,
+  author    = {Taofeek Orekan, Peng Zhang},
+  publisher = {Springer-Verlag GmbH},
+  title     = {Underwater Wireless Power Transfer},
+  year      = {2018},
+  isbn      = {3030025624},
+  month     = dec,
+  ean       = {9783030025625},
+  pagetotal = {106},
+  url       = {https://www.ebook.de/de/product/35055522/taofeek_orekan_peng_zhang_underwater_wireless_power_transfer.html},
+}
+
+@Article{Heidemann2012,
+  author    = {John Heidemann and Milica Stojanovic and Michele Zorzi},
+  journal   = {Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences},
+  title     = {Underwater sensor networks: applications, advances and challenges},
+  year      = {2012},
+  month     = {jan},
+  number    = {1958},
+  pages     = {158--175},
+  volume    = {370},
+  doi       = {10.1098/rsta.2011.0214},
+  publisher = {The Royal Society},
+}
+
+@Book{Nayyar,
+  author    = {Anand Nayyar, Valentina Emilia Balas},
+  publisher = {Springer-Verlag GmbH},
+  title     = {International Conference on Innovative Computing and Communications},
+  year      = {2018},
+  isbn      = {9811323240},
+  month     = nov,
+  ean       = {9789811323249},
+  pagetotal = {390},
+  url       = {https://www.ebook.de/de/product/34849820/international_conference_on_innovative_computing_and_communications.html},
+}
+
+@Book{ChunT.Rim2017,
+  author    = {Chun T. Rim, Chris Mi},
+  publisher = {IEEE COMPUTER SOC PR},
+  title     = {Wireless Power Transfer for Electric Vehicles and Mobile Devices},
+  year      = {2017},
+  isbn      = {1119329051},
+  month     = aug,
+  ean       = {9781119329053},
+  pagetotal = {626},
+  url       = {https://www.ebook.de/de/product/29045715/chun_t_rim_chris_mi_wireless_power_transfer_for_electric_vehicles_and_mobile_devices.html},
+}
+
+@Article{doi:10.1177/1687814018802563,
+  author   = {Baowei Song and Yushan Wang and Kehan Zhang and Zhaoyong Mao},
+  journal  = {Advances in Mechanical Engineering},
+  title    = {Research on wireless power transfer system for Torpedo autonomous underwater vehicles},
+  year     = {2018},
+  number   = {9},
+  pages    = {1687814018802563},
+  volume   = {10},
+  abstract = {The wireless power transfer shows great potential in the future for its safety and convenience. Autonomous underwater vehicle is one of the important tools to explore and develop oceans. In this study, we develop and analyze a wireless power transfer system based on magnetic resonance coupling to charge the autonomous underwater vehicle underwater. We have adopted a way that energy transmission underneath the vehicle and the coils in the wireless power transfer system were proposed to obtain a higher mutual inductance based on the shape of the vehicle in this study. In addition, we analyze the equivalent circuit model and propose a kind of impedance matching network to maintain system security. The coils we used in the proposed system are 20 turns and their radii are 70 mm. The system works well with 100 W output and 72\% efficiency.},
+  doi      = {10.1177/1687814018802563},
+  eprint   = {https://doi.org/10.1177/1687814018802563},
+  url      = {https://doi.org/10.1177/1687814018802563},
+}
+
+@Article{article,
+  author  = {Wang, and Song, Rui and Mao,},
+  journal = {Journal of Marine Science and Engineering},
+  title   = {Application of Shielding Coils in Underwater Wireless Power Transfer Systems},
+  year    = {2019},
+  month   = {08},
+  pages   = {267},
+  volume  = {7},
+  doi     = {10.3390/jmse7080267},
+}
+
+@Comment{jabref-meta: databaseType:bibtex;}

@@ -1,6 +1,6 @@
 \chapter{Introduction}
 \section{Background and research purpose}
-In the foreseeable future, the electrification of ocean systems, renewable ocean power sources, and ocean energy networks will be necessary, which will help accelerate the growth and deployment of ocean renewable energy and ways to explore and understand the ocean \cite{Orekan}. To achieve electrification in the ocean, it is necessary to deploy corresponding sensor networks underwater and process the data received by underwater sensors in a timely manner (Figure \ref{fig:underwater sensor networks}). At the same time, underwater sensors are also an essential tool for studying the marine environment \cite{doi:10.1098/rsta.2011.0214}. They can easily and flexibly explore underwater terrain and ecological environment, which provides convenience for the deployment of underwater sensor networks. An excellent underwater AUV needs to have good equipment waterproofness, long-distance underwater controllability, and power durability. For the water-resistance of the equipment, we can use high-performance waterproof and pressure-resistant materials. The remote controllability needs to solve the problems of long-distance underwater wireless communication. The durability of electrical equipment requires low energy consumption AUV and high-energy batteries or a continuous power supply. Sufficient power supply can keep underwater sensors and AUVs in an efficient and stable working state for a long time. Indirectly, reducing human interference when electrical equipment is working underwater can also improve work efficiency and reduce deployment costs. Therefore, the energy supply for underwater electrical equipment has become a novel research direction. Such methods can solve the energy supply problem of underwater equipment economically and ensure the system to perform long-term and stable work [3].
+In the foreseeable future, the electrification of ocean systems, renewable ocean power sources, and ocean energy networks will be necessary, which will help accelerate the growth and deployment of ocean renewable energy and ways to explore and understand the ocean \cite{Orekan}. To achieve electrification in the ocean, it is necessary to deploy corresponding sensor networks underwater and process the data received by underwater sensors in a timely manner (Figure \ref{fig:underwater sensor networks}). At the same time, underwater sensors are also an essential tool for studying the marine environment \cite{Heidemann2012}. They can easily and flexibly explore underwater terrain and ecological environment, which provides convenience for the deployment of underwater sensor networks. An excellent underwater AUV needs to have good equipment waterproofness, long-distance underwater controllability, and power durability. For the water-resistance of the equipment, we can use high-performance waterproof and pressure-resistant materials. The remote controllability needs to solve the problems of long-distance underwater wireless communication. The durability of electrical equipment requires low energy consumption AUV and high-energy batteries or a continuous power supply. Sufficient power supply can keep underwater sensors and AUVs in an efficient and stable working state for a long time. Indirectly, reducing human interference when electrical equipment is working underwater can also improve work efficiency and reduce deployment costs. Therefore, the energy supply for underwater electrical equipment has become a novel research direction. Such methods can solve the energy supply problem of underwater equipment economically and ensure the system to perform long-term and stable work [3].
 
 \begin{figure}[htbp]
     \centering
@@ -36,7 +36,7 @@ Near-field means the area within about 1 wavelength ($\lambda$) of the antenna. 
     \item Mid-range, the distance between two antennas is less than 10 times the diameter of antenna:  $D_{range} \leq 10 D_{ant}$. In this range, energy is usually transferred through resonant capacitive or inductive coupling.
 \end{itemize} 
 
-\begin{table}[htbp]
+\begin{table}[!b]
     \centering
     \caption{The different wireless power transmission technologies.}
     \begin{tabular}{ |c|c|c|m{3.5cm}<{\centering}|m{3.5cm}<{\centering}| }
@@ -55,9 +55,9 @@ Inductive           & mm – m         & Hz – GHz                   & Tuned wi
     \label{table:differentWPT}
 \end{table}
 
-Far-field or radiative region, power is transmitted by means of electromagnetic waves, like radio waves, microwaves, or light waves. When the operating frequency ($f$) is relatively low, wavelength $\lambda = c/f$, at this time the diameter of the antenna is much smaller than the wavelength, $D_{ant} << \lambda$, and the radiated power will be very small. When the diameter of antenna is about wavelength, $D_{ant} \approx \lambda$, radiate power will be efficient. When the diameter of antenna is much great than wavelength, $D_{ant} >> \lambda$, we can using high-gain antennas to concentrate electromagnetic waves on a narrow beam and directly aim at the receiver to improve transmission efficiency.
+Far-field or radiative region, power is transmitted by means of electromagnetic waves, like radio waves, microwaves, or light waves. When the operating frequency ($f$) is relatively low, wavelength $\lambda = c/f$, at this time the diameter of the antenna is much smaller than the wavelength, $D_{ant} \ll \lambda$, and the radiated power will be very small. When the diameter of antenna is about wavelength, $D_{ant} \approx \lambda$, radiate power will be efficient. When the diameter of antenna is much great than wavelength, $D_{ant} \gg \lambda$, we can using high-gain antennas to concentrate electromagnetic waves on a narrow beam and directly aim at the receiver to improve transmission efficiency.
 
-\begin{figure}[htbp]
+\begin{figure}[!t]
     \begin{subfigure}{0.5\textwidth}
         \centering
         \includegraphics[width=0.9\linewidth]{images/1_capacitive_power_transfer.png}
@@ -76,7 +76,7 @@ Far-field or radiative region, power is transmitted by means of electromagnetic 
 \end{figure}
 
 
-\begin{figure}[htbp]
+\begin{figure}[!t]
     \begin{subfigure}{0.5\textwidth}
         \centering
         \includegraphics[width=0.9\linewidth]{images/1_microwave_power_transfer.png}
@@ -124,7 +124,7 @@ In the seawater environment, we usually need to consider the following points.
 
 \subsection{Common UWPT systems}
 
-\begin{figure}[htbp]
+\begin{figure}[!t]
     \centering
     \includegraphics[width=0.7\linewidth]{images/1_stacked_UWPT_system.png}
     \caption{Stacked UWPT system \cite{Song}.}
@@ -133,7 +133,7 @@ In the seawater environment, we usually need to consider the following points.
 Figure \ref{fig:stacked UWPT system} shows a stacked UWPT system, this study was completed by Baowei Song et al \cite{Song}. They achieved a transmission efficiency of 72\% while maintaining 100w output power.
 They are using a saddle structure transmitter (Details as shown in figure \ref{fig:stacked UWPT system detail}) and a deformed cylindrical receiver. This structure is very convenient for AUT to park, but because there is no stable protection structure, it is also easy to shift when charging.
 
-\begin{figure}[htbp]
+\begin{figure}[!t]
     \centering
     \includegraphics[width=0.7\linewidth]{images/1_stacked_UWPT_system_details.png}
     \caption{The primary and secondary coils of stacked UWPT system \cite{Song}.}
@@ -141,7 +141,7 @@ They are using a saddle structure transmitter (Details as shown in figure \ref{f
 \end{figure}
 
 Figure \ref{fig:plug in UWPT system} shows the plug-in UPWT system. We can observe that the AUV needs to be moved into a hollow cylindrical structure transmitter, which makes it difficult to park. However, this structure can maintain the stability of the AUV during AUV charging, so that the system charging is more secure. Another advantage of this structure is that the receiving coil is relatively large, which can make the mutual inductance high. And we can use this system to transmit larger power. Therefore, our coil-array structure UWPT system is built on this structure.
-\begin{figure}[htbp]
+\begin{figure}[!t]
     \centering
     \includegraphics[width=0.7\linewidth]{images/1_plugin_UWPT_system.png}
     \caption{Plug-in UWPT system \cite{Wang}.}

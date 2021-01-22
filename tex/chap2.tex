@@ -6,7 +6,7 @@ This chapter will first introduce the principle of IPT technology from the physi
 \section{Inductive coupling model}
 Figure \ref{WPT} depicts the circuit model of IPT systems, where the transmitting coil L1 and the receiving coil L2 are directly connected to the power source and the load, respectively. Denote $M$ as the mutual inductance, $r_1$ and $r_2$ as the equivalent AC resistance of coils.
 
-\begin{figure}
+\begin{figure}[!b]
     \centering
     \begin{tikzpicture}[scale=1, every node/.style={scale=1}, american voltages]
         \draw
@@ -19,7 +19,7 @@ Figure \ref{WPT} depicts the circuit model of IPT systems, where the transmittin
         \draw (10,3.5) to [R, l=$r_2$,o-, f=$I_s$, current arrow scale=24] (6,3.5);
 
         % source
-        \node[below] at (5,3.5) {M};
+        \node[below] at (5,3.5) {$M$};
         \draw [{<->}](4.234,2.6428) arc (139.9978:40:1);
         \draw [->,thick] (0,0.5) -- (0,3);
         \node[below] at (0.5,2) {$V_p$};
@@ -36,7 +36,7 @@ Figure \ref{WPT} depicts the circuit model of IPT systems, where the transmittin
     \label{WPT}
 \end{figure}
 Therefore, the equivalent circuit can be expressed as figure \ref{equivalent circuit}. According to the Kirchhoff's circuit laws. The following formulas can be easily found.
-\begin{figure}
+\begin{figure}[!t]
     \centering
     \begin{tikzpicture}[scale=1, every node/.style={scale=1}, american voltages]
 
@@ -111,7 +111,7 @@ Here, the imaginary part of $Z_{11}$ ($j\omega L_1$) and $Z_{22}$ ($j\omega L_2$
 A compensation network is a network that makes some adjustments to compensate for system electrical defects. If capacitor compensation is used only on the primary or secondary side, it is called single-sided compensation topology; when capacitor compensation is used on both the primary and secondary sides at the same time, it is called double-sided compensation topology. The calculation of the capacitance value of single-sided compensation is relatively simple, but the actual effect is not as good as the double-sided compensation method. Therefore, this article only discusses bilateral compensation. As shown in the figure \ref{compensation network}, according to the different connection modes of the capacitors on both sides, common resonance compensation technologies can be divided into four structures: S-S, S-P, P-S, P-P (S denotes series and P denotes parallel). In addition, there are more complicated compensation networks such as CLC and LCC.
 
 Since only S-S topology and CLC-S topology are used in the following text, we only analyze these two compensation topologies in detail here.
-\begin{figure}
+\begin{figure}[!t]
     \centering
     \begin{tikzpicture} [scale=1, every node/.style={scale=1}, american voltages]
         % --------------- help positioning the draw in paper
@@ -126,31 +126,33 @@ Since only S-S topology and CLC-S topology are used in the following text, we on
 
         \draw
         (-0.5,0) to [short] (4,0)
-        to [L, l=$L_1$, mirror] (4,4)
+        to [L, l=$L_1$, /tikz/circuitikz/bipoles/length=1.8 cm, mirror] (4,4)
         to [short] (-0.5,4)
         to [sI, l_=$V_0$] (-0.5,0);
         % \draw[line width = 0.5mm, red, dashed](2,-1)--(5,-1)--(5,5)--(2,5)--cycle;
         \draw
-        (5,0) to [L, l_=$L_2$] (5,4)
-        to [short] (9.5,4)
-        to [R, l=$R$] (9.5,0)
-        to [short] (5,0);
+        (6,0) to [L, l_=$L_2$, /tikz/circuitikz/bipoles/length=1.8 cm] (6,4)
+        to [short] (10.5,4)
+        to [R, l=$R$] (10.5,0)
+        to [short] (6,0);
         \fill [color=white] (1,-0.5)rectangle(3,4.5);
         \draw(1,-0.5)rectangle(3,4.5) node [pos=0.5]{or};
-        \fill [color=white] (6,-0.5)rectangle(8,4.5);
-        \draw(6,-0.5)rectangle(8,4.5) node [pos=0.5]{or};
+        \fill [color=white] (7,-0.5)rectangle(9,4.5);
+        \draw(7,-0.5)rectangle(9,4.5) node [pos=0.5]{or};
         \draw (1.5,3.5) to [C] (2.5,3.5) ;
-        \draw (6.5,3.5) to [C] (7.5,3.5) ;
+        \draw (7.5,3.5) to [C] (8.5,3.5) ;
         \draw (2,1) to [C] (2,0) ;
-        \draw (7,0) to [C] (7,1) ;
+        \draw (8,0) to [C] (8,1) ;
         \draw (-0.5,4) to[short, f_=$I_p$, current arrow scale=24] ++(1.5,0) ;
-        \draw (8,4) to[short, f_=$I_s$, current arrow scale=24] ++(1.5,0) ;
+        %    \draw (-0.5,4) to[short, i=$I_p$] ++(1.5,0) ;
+        \draw (9,4) to[short, f_=$I_s$, current arrow scale=24] ++(1.5,0) ;
 
         \node[below] at (2,5.2) {Compensation Circuit};
-        \node[below] at (7,5.2) {Compensation Circuit};
+        \node[below] at (8,5.2) {Compensation Circuit};
 
-        \node[below] at (4.5,4.5) {M};
-        \draw [{<->}](4.117,3.8214) arc (139.9978:40:0.5);
+        \draw[line width=0.1mm, <->] (5.75,3) to [bend right=50]
+        node [above, rotate=0, xshift=0cm, yshift=0cm] {$M$}
+        (4.25,3);
 
     \end{tikzpicture}
     \caption{Compensation networks.}
@@ -160,7 +162,7 @@ Since only S-S topology and CLC-S topology are used in the following text, we on
 
 \subsection{S-S compensation topology}
 
-\begin{figure}[htbp]
+\begin{figure}[!t]
     \centering
     \includegraphics[width=0.7\linewidth]{images/2_ss_scheme.png}
     \caption{S-S structure.}
@@ -190,7 +192,7 @@ For any formed coil, we can measure its corresponding inductance value at a spec
 % 传输效率计算的式子
 
 \subsection{CLC-S compensation topology}
-\begin{figure}[htbp]
+\begin{figure}[!t]
     \centering
     \includegraphics[width=0.93\linewidth]{images/2_clc_s_scheme.png}
     \caption{CLC-S structure.}
@@ -200,13 +202,13 @@ For any formed coil, we can measure its corresponding inductance value at a spec
 
 
 \begin{equation}
-\begin{align}
-    V_S &= -jX_CI_S + j X_{L}I_L \\
-    V_0 &= (-jX_{C_0}+jX_{L_0}+r_0)I_0 + j\omega MI_1 \\
-    V_R &= j\omega I_0 +(-jX_{C_1}+jX_{L_1}+r_1)I_1 \\
-    V_R &= -RI_1 \\
-    I_S &= I_L+I_0
-\end{align}
+    \begin{align}
+        V_S & = -jX_CI_S + j X_{L}I_L                      \\
+        V_0 & = (-jX_{C_0}+jX_{L_0}+r_0)I_0 + j\omega MI_1 \\
+        V_R & = j\omega I_0 +(-jX_{C_1}+jX_{L_1}+r_1)I_1   \\
+        V_R & = -RI_1                                      \\
+        I_S & = I_L+I_0
+    \end{align}
 \end{equation}
 
 \begin{equation}
@@ -216,7 +218,7 @@ For any formed coil, we can measure its corresponding inductance value at a spec
 \section{Underwater WPT system model}
 
 % 海水环境下，海水作为传输介质其电气参数与空气中的相比有很大的区别，如表所示。因此，如式与式的常规互感模型无法反映出海水介质对传输的影响，不能完全、准确地描述海水下的传输行为。
-In the seawater environment, the electrical parameters of seawater as the transmission medium are quite different from those in the air, as shown in the table \ref{table:permittivity}. 
+In the seawater environment, the electrical parameters of seawater as the transmission medium are quite different from those in the air, as shown in the table \ref{table:permittivity}.
 \begin{table}[htbp]
     \centering
     \caption{The dielectric constant \& conductivity of some materials at 25$^\circ$C under 1kHz.}
@@ -241,24 +243,24 @@ It can be seen from table \ref{table:permittivity} that the relative permittivit
 \begin{figure}[htbp]
     \centering
     \resizebox*{.7\textwidth}{!}{
-    \begin{tikzpicture} [scale=1, every node/.style={scale=1}, american voltages]
-        
-        \draw
-        (0,6) to [R, l_=$R_{sea}$, o-] (3,6) to (4,6)
-        to [R, l=$R$] (4,3)
-        to [L, l=$L$] (4,0)
-        to [short, -o] (0,0);
-	\draw (3,6) to [C, l_=$C_{sea}$] (3,0);
+        \begin{tikzpicture} [scale=1, every node/.style={scale=1}, american voltages]
 
-   	\node[single arrow,draw=black,fill=black!10,minimum height=2.5cm,shape border rotate=0] at (6,3) {};
+            \draw
+            (0,6) to [R, l_=$R_{sea}$, o-] (3,6) to (4,6)
+            to [R, l=$R$] (4,3)
+            to [L, l=$L$] (4,0)
+            to [short, -o] (0,0);
+            \draw (3,6) to [C, l_=$C_{sea}$] (3,0);
 
-        \draw
-      (8,6) to [short, o-] (9.5,6)
-        to [R, l=$R_{eq}$] (9.5,3)
-        to [L, l=$L_{eq}$] (9.5,0)
-        to [short, -o] (8,0);
-	
-    \end{tikzpicture}
+            \node[single arrow,draw=black,fill=black!10,minimum height=2.5cm,shape border rotate=0] at (6,3) {};
+
+            \draw
+            (8,6) to [short, o-] (9.5,6)
+            to [R, l=$R_{eq}$] (9.5,3)
+            to [L, l=$L_{eq}$] (9.5,0)
+            to [short, -o] (8,0);
+
+        \end{tikzpicture}
     }
     \caption{Equivalent circuit of the coil under seawater.}
     \label{fig:coil under seawater}
