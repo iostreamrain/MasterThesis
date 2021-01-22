@@ -126,12 +126,12 @@ Since only S-S topology and CLC-S topology are used in the following text, we on
 
         \draw
         (-0.5,0) to [short] (4,0)
-        to [L, l=$L_1$, /tikz/circuitikz/bipoles/length=1.8 cm, mirror] (4,4)
+        to [L, l=$L_1$, mirror] (4,4)
         to [short] (-0.5,4)
         to [sI, l_=$V_0$] (-0.5,0);
         % \draw[line width = 0.5mm, red, dashed](2,-1)--(5,-1)--(5,5)--(2,5)--cycle;
         \draw
-        (6,0) to [L, l_=$L_2$, /tikz/circuitikz/bipoles/length=1.8 cm] (6,4)
+        (6,0) to [L, l_=$L_2$] (6,4)
         to [short] (10.5,4)
         to [R, l=$R$] (10.5,0)
         to [short] (6,0);
@@ -164,7 +164,36 @@ Since only S-S topology and CLC-S topology are used in the following text, we on
 
 \begin{figure}[!t]
     \centering
-    \includegraphics[width=0.7\linewidth]{images/2_ss_scheme.png}
+    % \includegraphics[width=0.7\linewidth]{images/2_ss_scheme.png}
+    \begin{tikzpicture}[scale=1, every node/.style={scale=1}, american voltages]
+        \draw
+        (0,3.5) to [C, l=$C_1$, f_=$I_p$] (2.5,3.5)
+        to [R, l=$r_1$, /tikz/circuitikz/bipoles/length=0.7 cm] (4,3.5)
+        to [L, l=$L_1$] (4,0)
+        to [short] (0,0)
+        to [sI, l=$V_s$] (0,3.5);
+        \draw
+        (6,3.5) to [L, l_=$L_2$, mirror] (6,0)
+        to [short] (10,0)
+        to [R, l_=$R$] (10,3.5)        ;
+        \draw (10,3.5) to [C, l_=$C_2$, f=$I_s$] (7.5,3.5)
+        to [R,  l_=$r_2$, /tikz/circuitikz/bipoles/length=0.7 cm]
+        (6,3.5);
+
+        % source
+        \node[below] at (5,3.5) {$M$};
+        \draw [{<->}](4.234,2.6428) arc (139.9978:40:1);
+        %  \draw [->,thick] (0,0.5) -- (0,3);
+        %\node[below] at (0.5,2) {$V_p$};
+        %\node[below] at (0.5,3) {+};
+        %\node[below] at (0.5,0.5) {–};
+
+        %  \draw [->,thick] (10,0.5) -- (10,3);
+        %\node[below] at (10.5,2) {$V_s$};
+        % \node[below] at (9.5,3) {+};
+        % \node[below] at (9.5,0.5) {–};
+
+    \end{tikzpicture}
     \caption{S-S structure.}
     \label{fig:ss topology}
 \end{figure}
@@ -194,7 +223,34 @@ For any formed coil, we can measure its corresponding inductance value at a spec
 \subsection{CLC-S compensation topology}
 \begin{figure}[!t]
     \centering
-    \includegraphics[width=0.93\linewidth]{images/2_clc_s_scheme.png}
+    % \includegraphics[width=0.93\linewidth]{images/2_clc_s_scheme.png}
+    \resizebox*{\textwidth}{!}{
+        \begin{tikzpicture}[scale=1, every node/.style={scale=1}, american voltages]
+            \draw
+            (-3.5,3.5) to [C, l=$C$, f_=$I_s$] (-0.5,3.5)
+            to [C, l=$C$,f_=$I_1$] (1.5,3.5)
+            to [C, l =$C_1$] (2.5,3.5)
+            to [R, l=$r_1$, /tikz/circuitikz/bipoles/length=0.7 cm] (4,3.5)
+            to [L, l=$L_1$] (4,0)
+            to [short] (-3.5,0)
+            to [sI, l=$V_s$] (-3.5,3.5);
+            \draw(-0.5,3.5) to [L,l=$L$,f_=$I_L$] (-0.5,0);
+            
+            \draw
+            (6,3.5) to [L, l_=$L_2$, mirror] (6,0)
+            to [short] (10,0)
+         to [R, l_=$R$] (10,3.5)        ;
+            \draw (10,3.5) to [C, l_=$C_2$, f=$I_2$] (7.5,3.5)
+            to [R,  l_=$r_2$, /tikz/circuitikz/bipoles/length=0.7 cm] 
+            (6,3.5);
+    
+            % source
+            \node[below] at (5,3.5) {$M$};
+            \draw [{<->}](4.234,2.6428) arc (139.9978:40:1);
+             \draw[line width=0.3mm,dashed,red](1.5,-0.5) rectangle(4.5,4.5);
+        \node[above] at (3,4.5) {$V_1$};
+        \end{tikzpicture}
+    }
     \caption{CLC-S structure.}
     \label{fig:clcs topology}
 \end{figure}
