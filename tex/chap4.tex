@@ -16,13 +16,14 @@ Through the explanation in the previous chapter, we know the basic performance o
     \begin{tabular}{ c|cc }
         \thickhline
         % \hline
-        \textbf{Items}                    & \textbf{Parameters}      \\
+        \textbf{Items}         & \textbf{Parameters}      \\
         \thickhline
-      
-        Tx coil diameter                  & 113mm                    \\ \hline
-        Rx coil diameter                  & 85mm                     \\ \hline
-        Turns (Inner coil and outer coil) & 10                       \\ \hline
-        Frequency                         & 200kHz                   \\ \hline
+        Tx coil diameter       & 160mm                    \\ \hline
+        Rx coil diameter       & 10mm                     \\ \hline
+        The number of Tx coils & 10                       \\ \hline
+        The number of Rx coils & 5                        \\ \hline
+        Coil connection        & In series                \\ \hline
+        Coil model             & WE 760308110 (Litz wire) \\ \hline
     \end{tabular}
     \label{table: coil array parameters}
 \end{table}
@@ -49,13 +50,13 @@ Figure \ref{fig:3_coil_array_uwpt} shows a schematic diagram of the UWPT system.
     \begin{subfigure}{0.5\textwidth}
         \centering
         \includegraphics[height=6.4cm]{images/4_coil_array_system.png}
-    \caption{Coil-array IPT structure.}
+        \caption{Coil-array IPT structure.}
         \label{fig:subim1}
     \end{subfigure}
     \begin{subfigure}{0.5\textwidth}
         \centering
         \includegraphics[height=6.4cm]{images/4_two_ring_system.png}
-    \caption{Two ring IPT structure.}
+        \caption{Two ring IPT structure.}
         \label{fig:subim2}
     \end{subfigure}
 
@@ -120,18 +121,18 @@ Figure \ref{fig:3_coil_array_uwpt} shows a schematic diagram of the UWPT system.
     \caption{Maximum power transfer efficiency of different coil arrangements.}
     \begin{tabular}{|>{\centering\arraybackslash}m{3.3cm}|>{\centering\arraybackslash}m{2.5cm}|>{\centering\arraybackslash}m{2.5cm}|>{\centering\arraybackslash}m{2.5cm}|>{\centering\arraybackslash}m{2.5cm}|}
         \hline
-        \textbf{Shift}                                    & \textbf{Numbers of coil (Outer - Inner)} & \textbf{Both coils with ferrite} & \textbf{Both coils without ferrite} & \textbf{Outer coils without ferrite, inner coils with ferrite} \\ \hline
-        \multirow{2}{3.3cm}{Inner coil in the center}         & 10 - 5                             & 78.41\%                          & 76.75\%                             & 84.95\%                            \\ \cline{2-5}
-                                                          & 10 - 6                             &                                  & 77.03\%                             &                                    \\ \hline
-        \multirow{2}{3.3cm}{Inner coil close to the one side} & 10 - 5                             &                                  & 88.26\%                             & 78.80\%                            \\ \cline{2-5}
-                                                          & 10 - 6                             &                                  & 91.13\%                             &                                    \\ \hline
+        \textbf{Shift}                                        & \textbf{Numbers of coil (Outer - Inner)} & \textbf{Both coils with ferrite} & \textbf{Both coils without ferrite} & \textbf{Outer coils without ferrite, inner coils with ferrite} \\ \hline
+        \multirow{2}{3.3cm}{Inner coil in the center}         & 10 - 5                                   & 78.41\%                          & 76.75\%                             & 84.95\%                                                        \\ \cline{2-5}
+                                                              & 10 - 6                                   &                                  & 77.03\%                             &                                                                \\ \hline
+        \multirow{2}{3.3cm}{Inner coil close to the one side} & 10 - 5                                   &                                  & 88.26\%                             & 78.80\%                                                        \\ \cline{2-5}
+                                                              & 10 - 6                                   &                                  & 91.13\%                             &                                                                \\ \hline
     \end{tabular}
 \end{table}
 
 \begin{itemize}
-\item When we increase the number of inner coils, the maximum PTE (Power transfer efficiency) will increase.
-\item If the numbers of outer and inner coils are the same, when outer coils without ferrite and inner coils with ferrite, we can get the maximum PTE.
-\item When there is no ferrite outside the inner coil, the PTE will increase if the inner coil deviates from the middle, and vice versa.
+    \item When we increase the number of inner coils, the maximum PTE (Power transfer efficiency) will increase.
+    \item If the numbers of outer and inner coils are the same, when outer coils without ferrite and inner coils with ferrite, we can get the maximum PTE.
+    \item When there is no ferrite outside the inner coil, the PTE will increase if the inner coil deviates from the middle, and vice versa.
 \end{itemize}
 
 
