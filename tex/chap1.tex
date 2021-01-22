@@ -36,9 +36,10 @@ Near-field means the area within about 1 wavelength ($\lambda$) of the antenna. 
     \item Mid-range, the distance between two antennas is less than 10 times the diameter of antenna:  $D_{range} \leq 10 D_{ant}$. In this range, energy is usually transferred through resonant capacitive or inductive coupling.
 \end{itemize} 
 
-\begin{table}[!b]
+\begin{table}[!t]
     \centering
     \caption{The different wireless power transmission technologies.}
+    \resizebox*{\textwidth}{!}{
     \begin{tabular}{ |c|c|c|m{3.5cm}<{\centering}|m{3.5cm}<{\centering}| }
         % \thickhline
         \hline
@@ -52,12 +53,13 @@ Capacitive          & cm – m         & kHz – MHz                  & Metal pl
 Inductive           & mm – m         & Hz – GHz                   & Tuned wire coils, lumped element resonators & Electric toothbrush, smartphone, electric vehicle
 \\ \hline
     \end{tabular}
+    }
     \label{table:differentWPT}
 \end{table}
 
-Far-field or radiative region, power is transmitted by means of electromagnetic waves, like radio waves, microwaves, or light waves. When the operating frequency ($f$) is relatively low, wavelength $\lambda = c/f$, at this time the diameter of the antenna is much smaller than the wavelength, $D_{ant} \ll \lambda$, and the radiated power will be very small. When the diameter of antenna is about wavelength, $D_{ant} \approx \lambda$, radiate power will be efficient. When the diameter of antenna is much great than wavelength, $D_{ant} \gg \lambda$, we can using high-gain antennas to concentrate electromagnetic waves on a narrow beam and directly aim at the receiver to improve transmission efficiency.
 
-\begin{figure}[!t]
+\begin{figure}[!b]
+    \resizebox*{\textwidth}{!}{
     \begin{subfigure}{0.5\textwidth}
         \centering
         \includegraphics[width=0.9\linewidth]{images/1_capacitive_power_transfer.png}
@@ -69,7 +71,7 @@ Far-field or radiative region, power is transmitted by means of electromagnetic 
         \includegraphics[width=0.9\linewidth]{images/1_inductive_power_transfer.png}
         \caption{Inductive power transfer \cite{Chun}.}
         \label{fig:subim2}
-    \end{subfigure}
+    \end{subfigure}}
 
     \caption{Near-field wireless power transfer.}
     \label{fig:near-fieldwpt}
@@ -77,6 +79,7 @@ Far-field or radiative region, power is transmitted by means of electromagnetic 
 
 
 \begin{figure}[!t]
+    \resizebox*{\textwidth}{!}{
     \begin{subfigure}{0.5\textwidth}
         \centering
         \includegraphics[width=0.9\linewidth]{images/1_microwave_power_transfer.png}
@@ -89,10 +92,14 @@ Far-field or radiative region, power is transmitted by means of electromagnetic 
         \caption{Laser power transfer \cite{Chun}.}
         \label{fig:subim2}
     \end{subfigure}
-
+    }
     \caption{Far-field wireless power transfer.}
     \label{fig:far-fieldwpt}
 \end{figure}
+
+
+Far-field or radiative region, power is transmitted by means of electromagnetic waves, like radio waves, microwaves, or light waves. When the operating frequency ($f$) is relatively low, wavelength $\lambda = c/f$, at this time the diameter of the antenna is much smaller than the wavelength, $D_{ant} \ll \lambda$, and the radiated power will be very small. When the diameter of antenna is about wavelength, $D_{ant} \approx \lambda$, radiate power will be efficient. When the diameter of antenna is much great than wavelength, $D_{ant} \gg \lambda$, we can using high-gain antennas to concentrate electromagnetic waves on a narrow beam and directly aim at the receiver to improve transmission efficiency.
+
 
 Therefore, near-field wireless power transfer systems mainly include inductive coupling power transfer and capacitive coupling power transfer (Figure \ref{fig:near-fieldwpt}). Far-field wireless power transfer systems mainly include microwave, optical, and acoustic power transfer (Figure \ref{fig:far-fieldwpt}).  The respective characteristics are shown in the table \ref{table:differentWPT}.
 

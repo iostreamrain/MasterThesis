@@ -56,12 +56,47 @@ By using LCR meter to measure this arrangement system, we can get the inductance
 
 \begin{figure}[!b]
     \centering
-    \includegraphics{images/3_mutual_inductance.png}
+    % \includegraphics{images/3_mutual_inductance.png}
+    \begin{tikzpicture}[scale=1, every node/.style={scale=1}, american voltages]
+        \draw
+        (1.5,3.5)
+        to [short, o-] (4,3.5)
+        to [L, l=$L_1$] (4,0)
+        to [short, -o] (1.5,0);
+        %\draw(-0.5,3.5) to [L,l=$M$] (-0.5,0);
+        
+        \draw
+        (6,3.5) to [L, l_=$L_2$, mirror] (6,0)
+        to [short, -o] (8.5,0)   ;
+        \draw (8.5,3.5) to [short, o-]  (6,3.5);
+
+        % source
+        \node[below] at (5,3.5) {$M$};
+        \draw [{<->}](4.234,2.6428) arc (139.9978:40:1);
+    \end{tikzpicture}
     \caption{Measurement of $L_s$.}
     \label{fig: Ls}
 \end{figure}
 
-% 从图1中，我们可以得到下面式子。
+\begin{figure}[!t]
+    \centering
+    % \includegraphics{images/3_mutual_inductance.png}
+    \begin{tikzpicture}[scale=1, every node/.style={scale=1}, american voltages]
+        \draw
+        (0.75,2.75)
+        to [L,l=$L_1-M$, *-] (4.5,2.75)
+        to [L, l=$M$] (4.5,-1)
+        to [short, -*] (0.75,-1);
+        \draw
+        (8.25,2.75) to [short] (8.25,-1)
+        to [short] (4.5,-1)   ;
+        \draw (4.5,2.75) to [L,l=$L_2-M$]  (8.25,2.75);
+    \end{tikzpicture}
+    \caption{Measurement of $L_s$.}
+    \label{fig: Ls eq}
+\end{figure}
+
+From figure \ref{fig: Ls eq}, we can get the following formula.
 \begin{equation}
     L_s = L_1 - M + \frac{M(L_2 - M)}{L_2}.
 \end{equation}
@@ -83,25 +118,28 @@ and,
 \end{equation}
 % 我们可以算出这个方案的最大传输效率为78.41%。
 
-\section{The other arrangements and comparison}
+\section{The other coil arrangements and comparison}
 % 接下来，我们通过增加线圈个数，改变Rx线圈在Tx线圈中的位置，来观察不同条件下系统的表现。结果如下图（）所示。
+Next, we will observe the performance of the system under different conditions by increasing the number of coils and changing the position of the Rx coil in the Tx coil. The result is shown in the figure.
+\begin{figure}[!t]
+    \centering
+    \includegraphics[width=0.65\textwidth]{images/4_coil_5_10_without_ferrite.png}
+    \caption{Coil-array IPT structure (Both sides without ferrite tile), inner coil in the center of the outer coil (Left), inner coil next to the outer coil (Right).}
+\end{figure}
 \begin{figure}[!b]
     \centering
-    \includegraphics[width=0.6\linewidth]{images/4_coil_5_10_without_ferrite.png}
+    \includegraphics[width=0.65\textwidth]{images/4_coil_6_10_without_ferrite.png}
     \caption{Coil-array IPT structure (Both sides without ferrite tile), inner coil in the center of the outer coil (Left), inner coil next to the outer coil (Right).}
 \end{figure}
-\begin{figure}[!t]
+\begin{figure}[!b]
     \centering
-    \includegraphics[width=0.6\linewidth]{images/4_coil_6_10_without_ferrite.png}
-    \caption{Coil-array IPT structure (Both sides without ferrite tile), inner coil in the center of the outer coil (Left), inner coil next to the outer coil (Right).}
-\end{figure}
-\begin{figure}[!t]
-    \centering
-    \includegraphics[width=0.6\linewidth]{images/4_coil_6_10_inner_with_ferrite.png}
+    \includegraphics[width=0.65\textwidth]{images/4_coil_6_10_inner_with_ferrite.png}
     \caption{Coil-array IPT structure (Inner small coils with ferrite tile, outer small coils without ferrite tile), inner coil in the center of the outer coil (Left), inner coil next to the outer coil (Right).}
 \end{figure}
 
 % 通过上面各个方案下的结果，我们可以将其汇总成表1，如下
+Through the results under each of the above scenarios, we can summarize them into Table 1, as follows
+
 From table \ref{table: comparison of the different coil arrangement}, we can get the following conclusions:
 \begin{itemize}
     \item When we increase the number of inner coils, the maximum PTE (Power transfer efficiency) will increase.
@@ -112,6 +150,7 @@ From table \ref{table: comparison of the different coil arrangement}, we can get
 \begin{table}[!b]
     \centering
     \caption{Maximum power transfer efficiency of different coil arrangements.}
+    \resizebox*{\textwidth}{!}{
     \begin{tabular}{|>{\centering\arraybackslash}m{3.3cm}|>{\centering\arraybackslash}m{2.5cm}|>{\centering\arraybackslash}m{2.5cm}|>{\centering\arraybackslash}m{2.5cm}|>{\centering\arraybackslash}m{2.5cm}|}
         \hline
         \textbf{Shift}                                        & \textbf{Numbers of coil (Outer - Inner)} & \textbf{Both coils with ferrite} & \textbf{Both coils without ferrite} & \textbf{Outer coils without ferrite, inner coils with ferrite} \\ \hline
@@ -119,7 +158,7 @@ From table \ref{table: comparison of the different coil arrangement}, we can get
                                                               & 10 - 6                                   &                                  & 77.03\%                             &                                                                \\ \hline
         \multirow{2}{3.3cm}{Inner coil close to the one side} & 10 - 5                                   &                                  & 88.26\%                             & 78.80\%                                                        \\ \cline{2-5}
                                                               & 10 - 6                                   &                                  & 91.13\%                             &                                                                \\ \hline
-    \end{tabular}
+    \end{tabular}}
     \label{table: comparison of the different coil arrangement}
 \end{table}
 
@@ -127,6 +166,7 @@ From table \ref{table: comparison of the different coil arrangement}, we can get
 
 \section{Megnetic field distribution}
 % 为了弄清coil-array结构的磁场分布，我们使用了Wipl-d电磁模拟软件。我们对以下两个结构进行了模拟，具体参数如下表。
+In order to clarify the magnetic field distribution of the coil-array structure, we used Wipl-d electromagnetic simulation software. We simulated the following two structures, and the specific parameters are as follows.
 
 \begin{figure}[!t]
     \begin{subfigure}{0.5\textwidth}
@@ -146,6 +186,7 @@ From table \ref{table: comparison of the different coil arrangement}, we can get
     \label{fig:3_two_ring_coil}
 \end{figure}
 % 因此，我们得到了两种线圈结构的磁场分布图，如下
+Therefore, we have obtained the magnetic field distribution diagrams of the two coil structures, as follows,
 
 \begin{figure}[!t]
     \centering
