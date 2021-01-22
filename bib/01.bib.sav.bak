@@ -25,7 +25,7 @@
   publisher = {The Royal Society},
 }
 
-@Book{2018,
+@Book{Nayyar,
   author    = {Anand Nayyar, Valentina Emilia Balas},
   publisher = {Springer-Verlag GmbH},
   title     = {International Conference on Innovative Computing and Communications},
@@ -37,7 +37,7 @@
   url       = {https://www.ebook.de/de/product/34849820/international_conference_on_innovative_computing_and_communications.html},
 }
 
-@Book{ChunT.Rim2017,
+@Book{Chun,
   author    = {Chun T. Rim, Chris Mi},
   publisher = {IEEE COMPUTER SOC PR},
   title     = {Wireless Power Transfer for Electric Vehicles and Mobile Devices},
@@ -49,7 +49,7 @@
   url       = {https://www.ebook.de/de/product/29045715/chun_t_rim_chris_mi_wireless_power_transfer_for_electric_vehicles_and_mobile_devices.html},
 }
 
-@Article{doi:10.1177/1687814018802563,
+@Article{Song,
   author   = {Baowei Song and Yushan Wang and Kehan Zhang and Zhaoyong Mao},
   journal  = {Advances in Mechanical Engineering},
   title    = {Research on wireless power transfer system for Torpedo autonomous underwater vehicles},
@@ -61,6 +61,17 @@
   doi      = {10.1177/1687814018802563},
   eprint   = {https://doi.org/10.1177/1687814018802563},
   url      = {https://doi.org/10.1177/1687814018802563},
+}
+
+@Article{article,
+  author  = {Wang, and Song, Rui and Mao,},
+  journal = {Journal of Marine Science and Engineering},
+  title   = {Application of Shielding Coils in Underwater Wireless Power Transfer Systems},
+  year    = {2019},
+  month   = {08},
+  pages   = {267},
+  volume  = {7},
+  doi     = {10.3390/jmse7080267},
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}
