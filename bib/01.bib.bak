@@ -215,4 +215,38 @@
   url    = {https://en.wikipedia.org/w/index.php?title=Wireless_power_transfer&oldid=1001183613},
 }
 
+@Article{Zhang2019,
+  author    = {Zhen Zhang and Hongliang Pang and Apostolos Georgiadis and Carlo Cecati},
+  journal   = {{IEEE} Transactions on Industrial Electronics},
+  title     = {Wireless Power Transfer{\textemdash}An Overview},
+  year      = {2019},
+  month     = {feb},
+  number    = {2},
+  pages     = {1044--1058},
+  volume    = {66},
+  doi       = {10.1109/tie.2018.2835378},
+  publisher = {Institute of Electrical and Electronics Engineers ({IEEE})},
+}
+
+@Article{Jiang2017,
+  author    = {Chaoqiang Jiang and K. T. Chau and Chunhua Liu and Christopher H. T. Lee},
+  journal   = {Energies},
+  title     = {An Overview of Resonant Circuits for Wireless Power Transfer},
+  year      = {2017},
+  month     = {jun},
+  number    = {7},
+  pages     = {894},
+  volume    = {10},
+  doi       = {10.3390/en10070894},
+  publisher = {{MDPI} {AG}},
+}
+
+@Misc{Wikipedia2020,
+  author = {{Wikipedia contributors}},
+  note   = {[Online; accessed 23-January-2021]},
+  title  = {Relative permittivity --- {Wikipedia}{,} The Free Encyclopedia},
+  year   = {2020},
+  url    = {https://en.wikipedia.org/w/index.php?title=Relative_permittivity&oldid=991278612},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}

@@ -108,7 +108,7 @@ Here, the imaginary part of $Z_{11}$ ($j\omega L_1$) and $Z_{22}$ ($j\omega L_2$
 \section{Compensation network technologies}
 % 补偿网络是进行一些调整以弥补系统缺陷的网络。如果只在初级或次级一侧使用电容补偿，称为单侧谐振补偿；在初、次级两侧同时使用电容补偿，称为双侧利、偿。单侧补偿的电容值计算较为简单，但是实际效果不如双侧补偿方式。因此本文仅针对双侧补偿展开讨论。如图所示，根据电容在两侧连接方式的不同，谐振补偿可分为初级串联次级串联、初级并联次级串联、初级串联次级并联以及切级并联次级并联四种结构。
 
-A compensation network is a network that makes some adjustments to compensate for system electrical defects. If capacitor compensation is used only on the primary or secondary side, it is called single-sided compensation topology; when capacitor compensation is used on both the primary and secondary sides at the same time, it is called double-sided compensation topology. The calculation of the capacitance value of single-sided compensation is relatively simple, but the actual effect is not as good as the double-sided compensation method. Therefore, this article only discusses bilateral compensation. As shown in the figure \ref{compensation network}, according to the different connection modes of the capacitors on both sides, common resonance compensation technologies can be divided into four structures: S-S, S-P, P-S, P-P (S denotes series and P denotes parallel). In addition, there are more complicated compensation networks such as CLC and LCC.
+A compensation network is a network that makes some adjustments to compensate for system electrical defects. If capacitor compensation is used only on the primary or secondary side, it is called single-sided compensation topology; when capacitor compensation is used on both the primary and secondary sides at the same time, it is called double-sided compensation topology. The calculation of the capacitance value of single-sided compensation is relatively simple, but the actual effect is not as good as the double-sided compensation method. Therefore, this article only discusses bilateral compensation. As shown in the figure \ref{compensation network}, according to the different connection modes of the capacitors on both sides, common resonance compensation technologies can be divided into four structures: S-S, S-P, P-S, P-P (S denotes series and P denotes parallel). In addition, there are more complicated compensation networks such as CLC and LCC \cite{Jiang2017}.
 
 Since only S-S topology and CLC-S topology are used in the following text, we only analyze these two compensation topologies in detail here.
 \begin{figure}[!t]
@@ -218,6 +218,10 @@ For any formed coil, we can measure its corresponding inductance value at a spec
     k=\frac{M}{\sqrt{L_1L_2}}
 \end{equation}
 
+\begin{equation}
+    V_R = \frac{j \omega MR}{(R+r_1)r_0 + \omega^2 M^2} V_s
+\end{equation}
+
 % 传输效率计算的式子
 
 \subsection{CLC-S compensation topology}
@@ -277,7 +281,7 @@ For any formed coil, we can measure its corresponding inductance value at a spec
 In the seawater environment, the electrical parameters of seawater as the transmission medium are quite different from those in the air, as shown in the table \ref{table:permittivity}.
 \begin{table}[htbp]
     \centering
-    \caption{The dielectric constant \& conductivity of some materials at 25$^\circ$C under 1kHz.}
+    \caption{The dielectric constant \& conductivity of some materials at 25$^\circ$C under 1kHz \cite{Wikipedia2020, Lenntech2021}.}
     \begin{tabular}{ |c|c|c|m{3.5cm}<{\centering}|m{3.5cm}<{\centering}| }
         % \thickhline
         \hline

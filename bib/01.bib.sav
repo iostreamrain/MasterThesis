@@ -228,4 +228,32 @@
   publisher = {Institute of Electrical and Electronics Engineers ({IEEE})},
 }
 
+@Article{Jiang2017,
+  author    = {Chaoqiang Jiang and K. T. Chau and Chunhua Liu and Christopher H. T. Lee},
+  journal   = {Energies},
+  title     = {An Overview of Resonant Circuits for Wireless Power Transfer},
+  year      = {2017},
+  month     = {jun},
+  number    = {7},
+  pages     = {894},
+  volume    = {10},
+  doi       = {10.3390/en10070894},
+  publisher = {{MDPI} {AG}},
+}
+
+@Misc{Wikipedia2020,
+  author = {{Wikipedia contributors}},
+  note   = {[Online; accessed 23-January-2021]},
+  title  = {Relative permittivity --- {Wikipedia}{,} The Free Encyclopedia},
+  year   = {2020},
+  url    = {https://en.wikipedia.org/w/index.php?title=Relative_permittivity&oldid=991278612},
+}
+
+@Article{Lenntech2021,
+  author = {Lenntech},
+  title  = {Water conductivity - Lenntech},
+  year   = {2021},
+  url    = {https://www.lenntech.com/applications/ultrapure/conductivity/water-conductivity.htm},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}
