@@ -73,9 +73,13 @@ When we use the VNA analyzer to place the coil in the air, tap water, or sea wat
     \end{aligned}
 \end{equation*}
 
-In the above measurement results, we can find that as the transmission medium changes (From air to tap-water to seawater), each corresponding value is increasing.
+In the above measurement results, we can find that as the transmission medium changes (from air to tap-water to seawater), each corresponding value is increasing.
+It illustrates that the internal resistances of the coils are small in the air.
+However, the internal resistances significantly increase when the coils are in tapwater or seawater.
+This may deteriorate the transmission efficiency as well as the load voltage stability.
+In addition, the mutual inductance between two coils becomes complex number and the self-inductances of the coils slightly increase. 
 
-\section{The system in different distance}
+\section{The system in different sizes of the coil}
 
 \begin{figure}[!t]
     \centering
@@ -147,7 +151,11 @@ After changing the medium between the coils and the distance between the coils, 
 % 在这个表格中，我们可以发现，在同种介质下，随着内部线圈减小，传输距离增加，我们可以看到Z11的虚部和Z22的虚部在增大，表明线圈的阻抗正在增大。
 
 In table \ref{table:Z-parameters in distance}, we can find that under the same medium, as the internal coil decreases, the transmission distance increases. We can see that the imaginary part of $Z_{11}$ and $Z_{22}$ are increasing, indicating that the impedance of the coil is increasing.
-% 观察Z21
+
+Table \ref{table:Z-parameters in distance} shows the measures of Z-parameter of the coupling network under several cases of coil sizes and distances in air, tap-water and seawater.
+In general, self-inductance of coil increases as coil size increases.
+The mutual inductance between two coils increases as the distance between them decreases.
+The internal resistances of the coils are small in air and larger in tapwater as well as seawater.
 
 \section{The system in different frequency}
 Earlier we have studied the z-parameter changes of the two ring coil structure under different media and different distances. In this section we will study how z-parameters changes at different frequencies. Table \ref{table:ring coil parameters - different frequencies} a shows the parameters of the experiment.
@@ -222,8 +230,13 @@ After using the above parameters, we got the following results (Table \ref{table
                 -0.0749 - 0.5333i & 0.0450 + 0.5985i
             \end{bmatrix}$ \Tstrut\Bstrut\\ \hline
     \end{tabular}
+    \label{table:ring Z-parameters - different frequencies}
 \end{table}
-\label{table:ring Z-parameters - different frequencies}
+
+Table \ref{table:ring Z-parameters - different frequencies} shows that the internal resitances of the coils are less than $1\si{\ohm}$ in the air when operating frequency changes from $100\si{\kilo\hertz}$ to $300\si{\kilo\hertz}$.
+However, under seawater environment, the internal resistances of the coils are smaller than $1\si{\ohm}$ when the operating frequency is under $200\si{\kilo\hertz}$.
+As the operating frequency is over $200\si{\kilo\hertz}$, the internal resistances of the coils significantly increase.
+
 
 \section{Conclusion}
 % 从3.1节，不同介质下的WPT系统，我们可以发现从空气到自来水到海水，Z-parameter的每个值都在增加。即表明海水导致发射端和接收端的内阻在增加。从3.2节不同传输距离下的结果可以看出。随着线圈间距离的增加，内部线圈的减小，在空气介质中各个参数的变化不是很明显，而海水下的Z参数变化幅度比较大。
