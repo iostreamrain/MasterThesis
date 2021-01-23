@@ -52,7 +52,7 @@ As shown in figure \ref{fig: 10-5 with ferrite}, a transmitter coil with a radiu
     \caption{Coil-array IPT structure (Both sides with ferrite tile), inner coil in the center or the outer coil.}
     \label{fig: 10-5 with ferrite}
 \end{figure}
-By using LCR meter to measure this arrangement system, we can get the inductance of the Tx's coil-array coil, $L_1 = 240.03 \mu H$, and quality factor $Q_1=$. And the incutance of Rx's coil-array coil, $L_2 = 125.01 \mu H$, and quality factor $Q_2=$. Then short-circuit the Rx coil and place it in the middle of the Tx coil, and measure the inductance of the Tx in this state (As shown in figure \ref{fig: Ls}), which is $L_s$, where $L_s = 240.65 \mu H$.
+By using LCR meter to measure this arrangement system, we can get the inductance of the Tx's coil-array coil, $L_1 = 241.03 \mu H$, and quality factor $Q_1=206.25$. And the incutance of Rx's coil-array coil, $L_2 = 125.01 \mu H$, and quality factor $Q_2=207$. Then short-circuit the Rx coil and place it in the middle of the Tx coil, and measure the inductance of the Tx in this state (As shown in figure \ref{fig: Ls}), which is $L_s$, where $L_s = 240.65 \mu H$.
 
 \begin{figure}[!b]
     \centering
@@ -92,60 +92,55 @@ By using LCR meter to measure this arrangement system, we can get the inductance
         to [short] (4.5,-1)   ;
         \draw (4.5,2.75) to [L,l=$L_2-M$]  (8.25,2.75);
     \end{tikzpicture}
-    \caption{Measurement of $L_s$.}
+    \caption{Equivalent circuit of two coil model.}
     \label{fig: Ls eq}
 \end{figure}
 
-From figure \ref{fig: Ls eq}, we can get the following formula.
+From equivalent circuit (Figure \ref{fig: Ls eq}), we can get the following formula.
 \begin{equation}
     L_s = L_1 - M + \frac{M(L_2 - M)}{L_2}.
 \end{equation}
-% 通过计算，互感，
+
+Move $M$ to the left side of the equation, the mutual inductance can be expressed as,
 \begin{equation}
-    M = \sqrt{L_2(L_1-L_s)}.
+    M = \sqrt{L_2(L_1-L_s)},
 \end{equation}
-% 耦合系数k
+and coupling coefficient,
 \begin{equation}
-    k = \frac{M}{L_1L_2}
+    k = \frac{M}{L_1L_2}.
 \end{equation}
-% 通过公式
+$kQ$ pruduct can be expressed as,
 \begin{equation}
-    kQ = k\sqrt{Q_1Q_2}
+    kQ = k\sqrt{Q_1Q_2}.
 \end{equation}
-and,
+$kQ$ product is an index showing the performance of a wireless transfer. The relationship between the maximum transmission efficiency $\eta_{max}$ and $kQ$ as follows \$ref{Li2015},
 \begin{equation}
     \eta_{max} = \frac{k^2Q_1Q_2}{(1+\sqrt{1+k^2Q_1Q_2})^2}.
 \end{equation}
-% 我们可以算出这个方案的最大传输效率为78.41%。
+According to the calculation of the above formula, we can get that the maximum transmission efficiency $\eta_{max}$ of this arrangement is $78.41\%$.
 
 \section{The other coil arrangements and comparison}
 % 接下来，我们通过增加线圈个数，改变Rx线圈在Tx线圈中的位置，来观察不同条件下系统的表现。结果如下图（）所示。
-Next, we will observe the performance of the system under different conditions by increasing the number of coils and changing the position of the Rx coil in the Tx coil. The result is shown in the figure.
-\begin{figure}[!t]
+Next, we will observe the performance of the system under different conditions by increasing the number of coils and changing the position of the Rx coil in the Tx coil. The result is shown in the figure \ref{fig: coil-array result1}, figure \ref{fig: coil-array result2}, and figure \ref{fig: coil-array result3}.
+\begin{figure}[!b]
     \centering
     \includegraphics[width=0.65\textwidth]{images/4_coil_5_10_without_ferrite.png}
     \caption{Coil-array IPT structure (Both sides without ferrite tile), inner coil in the center of the outer coil (Left), inner coil next to the outer coil (Right).}
+    \label{fig: coil-array result1}
 \end{figure}
-\begin{figure}[!b]
+\begin{figure}[!t]
     \centering
     \includegraphics[width=0.65\textwidth]{images/4_coil_6_10_without_ferrite.png}
     \caption{Coil-array IPT structure (Both sides without ferrite tile), inner coil in the center of the outer coil (Left), inner coil next to the outer coil (Right).}
+    \label{fig: coil-array result2}
 \end{figure}
-\begin{figure}[!b]
+\begin{figure}[!t]
     \centering
     \includegraphics[width=0.65\textwidth]{images/4_coil_6_10_inner_with_ferrite.png}
     \caption{Coil-array IPT structure (Inner small coils with ferrite tile, outer small coils without ferrite tile), inner coil in the center of the outer coil (Left), inner coil next to the outer coil (Right).}
+    \label{fig: coil-array result3}
 \end{figure}
 
-% 通过上面各个方案下的结果，我们可以将其汇总成表1，如下
-Through the results under each of the above scenarios, we can summarize them into Table 1, as follows
-
-From table \ref{table: comparison of the different coil arrangement}, we can get the following conclusions:
-\begin{itemize}
-    \item When we increase the number of inner coils, the maximum PTE (Power transfer efficiency) will increase.
-    \item If the numbers of outer and inner coils are the same, when outer coils without ferrite and inner coils with ferrite, we can get the maximum PTE.
-    \item When there is no ferrite outside the inner coil, the PTE will increase if the inner coil deviates from the middle, and vice versa.
-\end{itemize}
 
 \begin{table}[!b]
     \centering
@@ -162,7 +157,15 @@ From table \ref{table: comparison of the different coil arrangement}, we can get
     \label{table: comparison of the different coil arrangement}
 \end{table}
 
+% 通过上面各个方案下的结果，我们可以将其汇总成表1，如下
+Through the results under each of the above scenarios, we can summarize them into table \ref{table: comparison of the different coil arrangement}, as follows
 
+From table \ref{table: comparison of the different coil arrangement}, we can get the following conclusions:
+\begin{itemize}
+    \item When we increase the number of inner coils, the maximum PTE (Power transfer efficiency) will increase.
+    \item If the numbers of outer and inner coils are the same, when outer coils without ferrite and inner coils with ferrite, we can get the maximum PTE.
+    \item When there is no ferrite outside the inner coil, the PTE will increase if the inner coil deviates from the middle, and vice versa.
+\end{itemize}
 
 \section{Megnetic field distribution}
 % 为了弄清coil-array结构的磁场分布，我们使用了Wipl-d电磁模拟软件。我们对以下两个结构进行了模拟，具体参数如下表。

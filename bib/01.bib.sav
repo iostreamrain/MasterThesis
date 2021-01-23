@@ -172,4 +172,17 @@
   doi       = {10.1109/icpre51194.2020.9233211},
 }
 
+@Article{Li2015,
+  author    = {Siqi Li and Chunting Chris Mi},
+  journal   = {{IEEE} Journal of Emerging and Selected Topics in Power Electronics},
+  title     = {Wireless Power Transfer for Electric Vehicle Applications},
+  year      = {2015},
+  month     = {mar},
+  number    = {1},
+  pages     = {4--17},
+  volume    = {3},
+  doi       = {10.1109/jestpe.2014.2319453},
+  publisher = {Institute of Electrical and Electronics Engineers ({IEEE})},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}
