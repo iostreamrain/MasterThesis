@@ -63,7 +63,7 @@
   url      = {https://doi.org/10.1177/1687814018802563},
 }
 
-@Article{jmse7080267,
+@Article{Wang2019,
   author         = {Wang, Yushan and Song, Baowei and Mao, Zhaoyong},
   journal        = {Journal of Marine Science and Engineering},
   title          = {Application of Shielding Coils in Underwater Wireless Power Transfer Systems},
@@ -75,6 +75,79 @@
   article-number = {267},
   doi            = {10.3390/jmse7080267},
   url            = {https://www.mdpi.com/2077-1312/7/8/267},
+}
+
+@InProceedings{Randhawa2015,
+  author = {Randhawa, Jugraj},
+  title  = {Ocean Energy: The Future of Renewable Energy},
+  year   = {2015},
+  month  = {07},
+}
+
+@Article{Jurdak2006,
+  author  = {Jurdak, Raja and Lopes, Cristina and Baldi, Pierre},
+  journal = {IEEE Sensor Network Operations},
+  title   = {Battery Lifetime Estimation and Optimization for Underwater Sensor Networks},
+  year    = {2006},
+  month   = {05},
+}
+
+@InCollection{Wu2020,
+  author    = {Weili Wu and Zhao Zhang and Wonjun Lee and Ding-Zhu Du},
+  booktitle = {Optimal Coverage in Wireless Sensor Networks},
+  publisher = {Springer International Publishing},
+  title     = {Underwater Sensors},
+  year      = {2020},
+  pages     = {257--260},
+  doi       = {10.1007/978-3-030-52824-9_17},
+}
+
+@Article{Hwang2019,
+  author    = {Jimin Hwang and Neil Bose and Shuangshuang Fan},
+  journal   = {Applied Sciences},
+  title     = {{AUV} Adaptive Sampling Methods: A Review},
+  year      = {2019},
+  month     = {aug},
+  number    = {15},
+  pages     = {3145},
+  volume    = {9},
+  doi       = {10.3390/app9153145},
+  publisher = {{MDPI} {AG}},
+}
+
+@InCollection{Tran2020,
+  author    = {Ngoc-Huy Tran and Tan-Dat Huynh and Thien-Phuong Ton and Thai-Hoang Huynh},
+  booktitle = {Lecture Notes in Electrical Engineering},
+  publisher = {Springer International Publishing},
+  title     = {Design of Depth Control for Hybrid {AUV}},
+  year      = {2020},
+  month     = {aug},
+  pages     = {521--531},
+  doi       = {10.1007/978-3-030-53021-1_53},
+}
+
+@Article{Drew2009,
+  author    = {B Drew and A R Plummer and M N Sahinkaya},
+  journal   = {Proceedings of the Institution of Mechanical Engineers, Part A: Journal of Power and Energy},
+  title     = {A review of wave energy converter technology},
+  year      = {2009},
+  month     = {dec},
+  number    = {8},
+  pages     = {887--902},
+  volume    = {223},
+  doi       = {10.1243/09576509jpe782},
+  publisher = {{SAGE} Publications},
+}
+
+@InCollection{Capareda2019,
+  author    = {Sergio C. Capareda},
+  booktitle = {Introduction to Renewable Energy Conversions},
+  publisher = {{CRC} Press},
+  title     = {Tidal Energy},
+  year      = {2019},
+  month     = {aug},
+  pages     = {239--264},
+  doi       = {10.1201/9780429199103-9},
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}
