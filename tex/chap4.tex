@@ -364,39 +364,39 @@ Figure \ref{fig: PET in two directions} (b) shows the offset in the vertical dir
     \caption{The PET over shift in two different directions.}
     \label{fig: PET in two directions}
 \end{figure}
-% 我们可以发现当coil-array结构的中间磁场分布明显比two-ring结构要低。
-% 改变内部线圈的偏移，双方向下的偏移。
-\begin{figure}[!t]
-    \centering
-    \begin{tikzpicture}[scale=1, every node/.style={scale=1},anchor=south west]%, every node/.style={scale=1},anchor=south west]
-        \begin{axis}[xlabel={Resistance of load $[\si{\ohm}]$},ylabel={RF-RF efficiency $[\%]$},
-                legend style={
-                        at={(axis cs:9.5,0.3)},
-                        legend cell align={left},
-                        legend columns=1,
-                        /tikz/column 2/.style={column sep=15pt,},
-                    },
-                xmin=0, xmax=11, ymin=0, ymax=1,
-                xtick = {0, 2, 4,6,8,10},
-                ytick = {0,0.20,0.40,0.60,0.80,1},
-                grid=both,
-                grid style={line width=.1pt, draw=gray!20},
-                %minor x tick num=2,
-                %minor y tick num=4,
-                ylabel near ticks,
-                line width = 0.3mm,
-                % label style={font=\large},
-                % tick label style = {font=\large},
-                legend cell align={left},]
-            \addplot[red, mark = square*, line width = 0.5mm] table[x=R,y=PET] {data/PET_R.txt};
-            % \addplot[red, mark = square*, line width = 0.5mm] table[x=xshift,y=coilarray] {data/PET_xshift.txt};
-            % \addplot[red, mark = square*, line width = 0.5mm] table {../journaldata/eff_prop_3term_15turn_d150_d260.txt};
-            %\addplot[red, mark = square*, line width = 0.5mm] table {../data/eff_prop_3term_15turn_d150_d260_relay1coil.txt};
-            %\node [align = center] at (axis cs: 40,85) {proposed (2-coil relay)}; 
-            %\node [align = center] at (axis cs: 40,55) {[1]}; % \cite{Cheng2019}
-            %\draw[-latex]  (axis cs: 72,30) node [anchor=north] {proposed (1-coil relay)} --  (axis cs: 72,67) ;
-            % \legend{ two-ring structure}
-        \end{axis}
-    \end{tikzpicture}
-    \caption{The PET over different resistance of load (coil-array structure).}
-\end{figure}
+
+
+% \begin{figure}[!t]
+%     \centering
+%     \begin{tikzpicture}[scale=1, every node/.style={scale=1},anchor=south west]%, every node/.style={scale=1},anchor=south west]
+%         \begin{axis}[xlabel={Resistance of load $[\si{\ohm}]$},ylabel={RF-RF efficiency $[\%]$},
+%                 legend style={
+%                         at={(axis cs:9.5,0.3)},
+%                         legend cell align={left},
+%                         legend columns=1,
+%                         /tikz/column 2/.style={column sep=15pt,},
+%                     },
+%                 xmin=0, xmax=11, ymin=0, ymax=1,
+%                 xtick = {0, 2, 4,6,8,10},
+%                 ytick = {0,0.20,0.40,0.60,0.80,1},
+%                 grid=both,
+%                 grid style={line width=.1pt, draw=gray!20},
+%                 %minor x tick num=2,
+%                 %minor y tick num=4,
+%                 ylabel near ticks,
+%                 line width = 0.3mm,
+%                 % label style={font=\large},
+%                 % tick label style = {font=\large},
+%                 legend cell align={left},]
+%             \addplot[red, mark = square*, line width = 0.5mm] table[x=R,y=PET] {data/PET_R.txt};
+%             % \addplot[red, mark = square*, line width = 0.5mm] table[x=xshift,y=coilarray] {data/PET_xshift.txt};
+%             % \addplot[red, mark = square*, line width = 0.5mm] table {../journaldata/eff_prop_3term_15turn_d150_d260.txt};
+%             %\addplot[red, mark = square*, line width = 0.5mm] table {../data/eff_prop_3term_15turn_d150_d260_relay1coil.txt};
+%             %\node [align = center] at (axis cs: 40,85) {proposed (2-coil relay)}; 
+%             %\node [align = center] at (axis cs: 40,55) {[1]}; % \cite{Cheng2019}
+%             %\draw[-latex]  (axis cs: 72,30) node [anchor=north] {proposed (1-coil relay)} --  (axis cs: 72,67) ;
+%             % \legend{ two-ring structure}
+%         \end{axis}
+%     \end{tikzpicture}
+%     \caption{The PET over different resistance of load (coil-array structure).}
+% \end{figure}
