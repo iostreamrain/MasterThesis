@@ -249,4 +249,11 @@
   url    = {https://en.wikipedia.org/w/index.php?title=Relative_permittivity&oldid=991278612},
 }
 
+@Article{Lenntech2021,
+  author = {Lenntech},
+  title  = {Water conductivity - Lenntech},
+  year   = {2021},
+  url    = {https://www.lenntech.com/applications/ultrapure/conductivity/water-conductivity.htm},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}

@@ -171,6 +171,7 @@ From table \ref{table: comparison of the different coil arrangement}, we can get
 % 为了弄清coil-array结构的磁场分布，我们使用了Wipl-d电磁模拟软件。我们对以下两个结构进行了模拟，具体参数如下表。
 In order to clarify the magnetic field distribution of the coil-array structure, we used Wipl-d electromagnetic simulation software. We simulated the following two structures, and the specific parameters are as follows.
 
+
 \begin{figure}[!t]
     \resizebox*{\textwidth}{!}{
     \begin{subfigure}{0.5\textwidth}
@@ -189,34 +190,41 @@ In order to clarify the magnetic field distribution of the coil-array structure,
     \caption{Two kind of UWPT coil structure simulation diagram.}
     \label{fig:3_two_ring_coil}
 \end{figure}
-% 因此，我们得到了两种线圈结构的磁场分布图，如下
-Therefore, we have obtained the magnetic field distribution diagrams of the two coil structures, as follows,
+
+\subsection{Megnetic field distribution of two-ring strcture}
+\begin{figure}[!t]
+    \centering
+    \includegraphics[width=0.9\linewidth]{images/4_two_ring_near_field_distribution.JPG}
+    \caption{Magnetic field distribution of two ring IPT structure.}
+    \label{fig: magnetic distribution of two ring}
+\end{figure}
+
+\begin{figure}[!t]
+    \centering
+    \includegraphics[width=0.9\linewidth]{images/4_two_ring_near_field_distribution_cut.JPG}
+    \caption{Cross-sectional view of the magnetic field distribution of two ring IPT structure.}
+    \label{fig: magnetic distribution of two ring cut}
+\end{figure}
+
+
+\subsection{Megnetic field distribution of coil-array strcture}
 
 \begin{figure}[!t]
     \centering
     \includegraphics[width=0.9\linewidth]{images/4_coil_array_near_field_distribution.JPG}
     \caption{Magnetic field distribution of coil-array IPT structure.}
+    \label{fig: magnetic distribution of coil array}
 \end{figure}
 
 \begin{figure}[!t]
     \centering
     \includegraphics[width=0.9\linewidth]{images/4_coil_array_near_field_distribution_cut.JPG}
     \caption{Cross-sectional view of the magnetic field distribution of aoil-array IPT structure.}
+    \label{fig: magnetic distribution of coil array cut}
 \end{figure}
 
-\begin{figure}[!t]
-    \centering
-    \includegraphics[width=0.9\linewidth]{images/4_two_ring_near_field_distribution.JPG}
-    \caption{Magnetic field distribution of two ring IPT structure.}
-\end{figure}
-
-\begin{figure}[!t]
-    \centering
-    \includegraphics[width=0.9\linewidth]{images/4_two_ring_near_field_distribution_cut.JPG}
-    \caption{Cross-sectional view o f the magnetic field distribution of two ring IPT structure.}
-\end{figure}
-
-
+% 为了判断coil-array结构是否能够减小AUV系统内部磁场强度，我们首先对传统的two-ring系统进行了模拟。
+% 其结果如图1所示，我们可以看到
 \begin{figure}[!t]
     \centering
     \begin{tikzpicture}[scale=1, every node/.style={scale=1},anchor=south west]%, every node/.style={scale=1},anchor=south west]
