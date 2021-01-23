@@ -20,7 +20,7 @@ Through the explanation in the previous chapter, we know the basic performance o
         \textbf{Items}         & \textbf{Parameters}      \\
         \thickhline
         Tx coil diameter       & 160mm                    \\ \hline
-        Rx coil diameter       & 100mm                     \\ \hline
+        Rx coil diameter       & 100mm                    \\ \hline
         The number of Tx coils & 10                       \\ \hline
         The number of Rx coils & 5                        \\ \hline
         Coil connection        & In series                \\ \hline
@@ -65,7 +65,7 @@ By using LCR meter to measure this arrangement system, we can get the inductance
         to [L, l=$L_1$] (4,0)
         to [short, -o] (1.5,0);
         %\draw(-0.5,3.5) to [L,l=$M$] (-0.5,0);
-        
+
         \draw
         (6,3.5) to [L, l_=$L_2$, mirror] (6,0)
         to [short, -o] (8.5,0)   ;
@@ -147,14 +147,14 @@ Next, we will observe the performance of the system under different conditions b
     \centering
     \caption{Maximum power transfer efficiency of different coil arrangements.}
     \resizebox*{\textwidth}{!}{
-    \begin{tabular}{|>{\centering\arraybackslash}m{3.3cm}|>{\centering\arraybackslash}m{2.5cm}|>{\centering\arraybackslash}m{2.5cm}|>{\centering\arraybackslash}m{2.5cm}|>{\centering\arraybackslash}m{2.5cm}|}
-        \hline
-        \textbf{Shift}                                        & \textbf{Numbers of coil (Outer - Inner)} & \textbf{Both coils with ferrite} & \textbf{Both coils without ferrite} & \textbf{Outer coils without ferrite, inner coils with ferrite} \\ \hline
-        \multirow{2}{3.3cm}{Inner coil in the center}         & 10 - 5                                   & 78.41\%                          & 76.75\%                             & 84.95\%                                                        \\ \cline{2-5}
-                                                              & 10 - 6                                   &                                  & 77.03\%                             &                                                                \\ \hline
-        \multirow{2}{3.3cm}{Inner coil close to the one side} & 10 - 5                                   &                                  & 88.26\%                             & 78.80\%                                                        \\ \cline{2-5}
-                                                              & 10 - 6                                   &                                  & 91.13\%                             &                                                                \\ \hline
-    \end{tabular}}
+        \begin{tabular}{|>{\centering\arraybackslash}m{3.3cm}|>{\centering\arraybackslash}m{2.5cm}|>{\centering\arraybackslash}m{2.5cm}|>{\centering\arraybackslash}m{2.5cm}|>{\centering\arraybackslash}m{2.5cm}|}
+            \hline
+            \textbf{Shift}                                        & \textbf{Numbers of coil (Outer - Inner)} & \textbf{Both coils with ferrite} & \textbf{Both coils without ferrite} & \textbf{Outer coils without ferrite, inner coils with ferrite} \\ \hline
+            \multirow{2}{3.3cm}{Inner coil in the center}         & 10 - 5                                   & 78.41\%                          & 76.75\%                             & 84.95\%                                                        \\ \cline{2-5}
+                                                                  & 10 - 6                                   &                                  & 77.03\%                             &                                                                \\ \hline
+            \multirow{2}{3.3cm}{Inner coil close to the one side} & 10 - 5                                   &                                  & 88.26\%                             & 78.80\%                                                        \\ \cline{2-5}
+                                                                  & 10 - 6                                   &                                  & 91.13\%                             &                                                                \\ \hline
+        \end{tabular}}
     \label{table: comparison of the different coil arrangement}
 \end{table}
 
@@ -170,26 +170,46 @@ From table \ref{table: comparison of the different coil arrangement}, we can get
 
 \section{Megnetic field distribution}
 % 为了弄清coil-array结构的磁场分布，我们使用了Wipl-d电磁模拟软件。我们对以下两个结构进行了模拟，具体参数如下表。
-In order to clarify the magnetic field distribution of the coil-array structure, we used Wipl-d electromagnetic simulation software. We simulated the following two structures, and the specific parameters are as follows.
+In order to clarify the magnetic field distribution of the coil-array structure, we used Wipl-d electromagnetic simulation software. We simulated the following two structures as shown in figure \ref{fig: two strcture}, and the specific parameters are as table ***.
 
+\begin{table}[!t]
+    \centering
+    \caption{The parameters of two coil structure in simulation.}
+    \begin{tabular}{ c|c|c }
+        \thickhline
+        % \hline
+        \textbf{Items}         & \textbf{Coil-array structure} & \textbf{Two-ring structure} \\
+        \thickhline
+        Tx coil diameter       & 160mm                         & 160mm                       \\ \hline
+        Rx coil diameter       & 100mm                         & 100mm                       \\ \hline
+        The number of Tx coils & 12                            & 1                           \\ \hline
+        The number of Rx coils & 8                             & 1                           \\ \hline
+        Wire material          & Copper                        & Copper                      \\ \hline
+        Frequency              & 200kHz                        & 200kHz                      \\ \hline
+        Resistance of load     & $5 \si{\ohm}$                 & $5 \si{\ohm}$               \\ \hline
+        Voltage of source      & 6v                            & 64v                         \\ \hline
+        Output power           & 10w                           & 10w                         \\ \hline
+    \end{tabular}
+    \label{table: simulation parameters}
+\end{table}
 
 \begin{figure}[!t]
     \resizebox*{\textwidth}{!}{
-    \begin{subfigure}{0.5\textwidth}
-        \centering
-        \includegraphics[height=6.4cm]{images/4_coil_array_system.png}
-        \caption{Coil-array IPT structure.}
-        \label{fig:subim1}
-    \end{subfigure}
-    \begin{subfigure}{0.5\textwidth}
-        \centering
-        \includegraphics[height=6.4cm]{images/4_two_ring_system.png}
-        \caption{Two-ring IPT structure.}
-        \label{fig:subim2}
-    \end{subfigure}
+        \begin{subfigure}{0.5\textwidth}
+            \centering
+            \includegraphics[height=6.4cm]{images/4_coil_array_system.png}
+            \caption{Coil-array IPT structure.}
+            \label{fig:subim1}
+        \end{subfigure}
+        \begin{subfigure}{0.5\textwidth}
+            \centering
+            \includegraphics[height=6.4cm]{images/4_two_ring_system.png}
+            \caption{Two-ring IPT structure.}
+            \label{fig:subim2}
+        \end{subfigure}
     }
     \caption{Two kind of UWPT coil structure simulation diagram.}
-    \label{fig:3_two_ring_coil}
+    \label{fig: two strcture}
 \end{figure}
 
 \subsection{Megnetic field distribution of two-ring strcture}
@@ -231,40 +251,43 @@ The results are shown in figure \ref{fig: magnetic distribution of two ring} and
 \end{figure}
 
 % 在完成two-ring结构的磁场分布模拟后，我们对coil-array结构线圈做了同样的模拟，结果如图1和图2所示。
+% 图一中我们可以看到coil-array结构的磁场分布像一个火山，其中间部分磁感应强度低，周围磁感应强度高。磁感应强度最高的部分为两线圈之间，即在AUV外部，不会对AUV系统内部造成影响。通过图2我们可以看出AUV内部的磁场在50A/m左右，相比与two-ring结构降低了40%，并且其大磁感应强度低于70A/m，比two-ring结构的最高磁感应强度低了13A/m。
+After completing the simulation of the magnetic field distribution of the two-ring structure, we did the same simulation on the coil-array structure coil, and the results are shown in figure \ref{fig: magnetic distribution of coil array} and figure \ref{fig: magnetic distribution of coil array cut}.
+In figure \ref{fig: magnetic distribution of coil array}, we can see that the magnetic field distribution of the coil-array structure is like a volcano, with low magnetic induction in the middle part and high surrounding magnetic induction. The part with the highest magnetic induction is between the two coils, that is, outside the AUV, which will not affect the inside of the AUV system. From figure \ref{fig: magnetic distribution of coil array cut} we can see that the internal magnetic field of the AUV is around 50A/m, which is 40\% lower than the two-ring structure, and its large magnetic induction intensity is lower than 70A/m, which is lower than the highest magnetic induction intensity of the two-ring structure 13A/m.
 
 \begin{figure}[!t]
     \centering
     \begin{tikzpicture}[scale=1, every node/.style={scale=1},anchor=south west]%, every node/.style={scale=1},anchor=south west]
         \begin{axis}[xlabel={Horizontal shift $[\si{\milli\meter}]$},ylabel={RF-RF efficiency $[\%]$},
-        legend style={
-        at={(axis cs:97,0.7)},
-         legend cell align={left},
-         legend columns=1,
-          /tikz/column 2/.style={column sep=15pt,},
-        },
-        xmin=0, xmax=100, ymin=0, ymax=1,
-        xtick = {0, 20, 40,60,80,100}, 
-        ytick = {0,0.20,0.40,0.60,0.80,1}, 
-        grid=both,
-        grid style={line width=.1pt, draw=gray!20},
-        %minor x tick num=2,
-        %minor y tick num=4,
-        ylabel near ticks,
-        line width = 0.3mm,
-        % label style={font=\large},
-        % tick label style = {font=\large},
-        legend cell align={left},]
-        \addplot[blue, mark = *, line width = 0.5mm] table[x=yshift,y=tworing] {data/PET.txt};
-        \addplot[red, mark = square*, line width = 0.5mm] table[x=yshift,y=coilarray] {data/PET.txt};
-        % \addplot[red, mark = square*, line width = 0.5mm] table {../journaldata/eff_prop_3term_15turn_d150_d260.txt};
-        %\addplot[red, mark = square*, line width = 0.5mm] table {../data/eff_prop_3term_15turn_d150_d260_relay1coil.txt};
-        %\node [align = center] at (axis cs: 40,85) {proposed (2-coil relay)}; 
-        %\node [align = center] at (axis cs: 40,55) {[1]}; % \cite{Cheng2019}
-        %\draw[-latex]  (axis cs: 72,30) node [anchor=north] {proposed (1-coil relay)} --  (axis cs: 72,67) ;
-        \legend{ two-ring structure, coil-array structure}
+                legend style={
+                        at={(axis cs:97,0.7)},
+                        legend cell align={left},
+                        legend columns=1,
+                        /tikz/column 2/.style={column sep=15pt,},
+                    },
+                xmin=0, xmax=100, ymin=0, ymax=1,
+                xtick = {0, 20, 40,60,80,100},
+                ytick = {0,0.20,0.40,0.60,0.80,1},
+                grid=both,
+                grid style={line width=.1pt, draw=gray!20},
+                %minor x tick num=2,
+                %minor y tick num=4,
+                ylabel near ticks,
+                line width = 0.3mm,
+                % label style={font=\large},
+                % tick label style = {font=\large},
+                legend cell align={left},]
+            \addplot[blue, mark = *, line width = 0.5mm] table[x=yshift,y=tworing] {data/PET.txt};
+            \addplot[red, mark = square*, line width = 0.5mm] table[x=yshift,y=coilarray] {data/PET.txt};
+            % \addplot[red, mark = square*, line width = 0.5mm] table {../journaldata/eff_prop_3term_15turn_d150_d260.txt};
+            %\addplot[red, mark = square*, line width = 0.5mm] table {../data/eff_prop_3term_15turn_d150_d260_relay1coil.txt};
+            %\node [align = center] at (axis cs: 40,85) {proposed (2-coil relay)}; 
+            %\node [align = center] at (axis cs: 40,55) {[1]}; % \cite{Cheng2019}
+            %\draw[-latex]  (axis cs: 72,30) node [anchor=north] {proposed (1-coil relay)} --  (axis cs: 72,67) ;
+            \legend{ two-ring structure, coil-array structure}
         \end{axis}
-        \end{tikzpicture}
-        \caption{The PET over different horizntal shift.}
+    \end{tikzpicture}
+    \caption{The PET over different horizntal shift.}
 \end{figure}
 % 我们可以发现当coil-array结构的中间磁场分布明显比two-ring结构要低。
 % 改变内部线圈的偏移，双方向下的偏移。
@@ -272,35 +295,35 @@ The results are shown in figure \ref{fig: magnetic distribution of two ring} and
     \centering
     \begin{tikzpicture}[scale=1, every node/.style={scale=1},anchor=south west]%, every node/.style={scale=1},anchor=south west]
         \begin{axis}[xlabel={Vertical shift $[\si{\milli\meter}]$},ylabel={RF-RF efficiency $[\%]$},
-        legend style={
-        at={(axis cs:24.5,0.5)},
-         legend cell align={left},
-         legend columns=1,
-          /tikz/column 2/.style={column sep=15pt,},
-        },
-        xmin=0, xmax=25, ymin=0, ymax=1,
-        xtick = {0, 5, 10,15,20,25}, 
-        ytick = {0,0.20,0.40,0.60,0.80,1}, 
-        grid=both,
-        grid style={line width=.1pt, draw=gray!20},
-        %minor x tick num=2,
-        %minor y tick num=4,
-        ylabel near ticks,
-        line width = 0.3mm,
-        % label style={font=\large},
-        % tick label style = {font=\large},
-        legend cell align={left},]
-        \addplot[blue, mark = *, line width = 0.5mm] table[x=xshift,y=tworing] {data/PET_xshift.txt};
-        \addplot[red, mark = square*, line width = 0.5mm] table[x=xshift,y=coilarray] {data/PET_xshift.txt};
-        % \addplot[red, mark = square*, line width = 0.5mm] table {../journaldata/eff_prop_3term_15turn_d150_d260.txt};
-        %\addplot[red, mark = square*, line width = 0.5mm] table {../data/eff_prop_3term_15turn_d150_d260_relay1coil.txt};
-        %\node [align = center] at (axis cs: 40,85) {proposed (2-coil relay)}; 
-        %\node [align = center] at (axis cs: 40,55) {[1]}; % \cite{Cheng2019}
-        %\draw[-latex]  (axis cs: 72,30) node [anchor=north] {proposed (1-coil relay)} --  (axis cs: 72,67) ;
-        \legend{ two-ring structure, coil-array structure}
+                legend style={
+                        at={(axis cs:24.5,0.5)},
+                        legend cell align={left},
+                        legend columns=1,
+                        /tikz/column 2/.style={column sep=15pt,},
+                    },
+                xmin=0, xmax=25, ymin=0, ymax=1,
+                xtick = {0, 5, 10,15,20,25},
+                ytick = {0,0.20,0.40,0.60,0.80,1},
+                grid=both,
+                grid style={line width=.1pt, draw=gray!20},
+                %minor x tick num=2,
+                %minor y tick num=4,
+                ylabel near ticks,
+                line width = 0.3mm,
+                % label style={font=\large},
+                % tick label style = {font=\large},
+                legend cell align={left},]
+            \addplot[blue, mark = *, line width = 0.5mm] table[x=xshift,y=tworing] {data/PET_xshift.txt};
+            \addplot[red, mark = square*, line width = 0.5mm] table[x=xshift,y=coilarray] {data/PET_xshift.txt};
+            % \addplot[red, mark = square*, line width = 0.5mm] table {../journaldata/eff_prop_3term_15turn_d150_d260.txt};
+            %\addplot[red, mark = square*, line width = 0.5mm] table {../data/eff_prop_3term_15turn_d150_d260_relay1coil.txt};
+            %\node [align = center] at (axis cs: 40,85) {proposed (2-coil relay)}; 
+            %\node [align = center] at (axis cs: 40,55) {[1]}; % \cite{Cheng2019}
+            %\draw[-latex]  (axis cs: 72,30) node [anchor=north] {proposed (1-coil relay)} --  (axis cs: 72,67) ;
+            \legend{ two-ring structure, coil-array structure}
         \end{axis}
-        \end{tikzpicture}
-        \caption{The PET over different vertical shift.}
+    \end{tikzpicture}
+    \caption{The PET over different vertical shift.}
 \end{figure}
 
 
