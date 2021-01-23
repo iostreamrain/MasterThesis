@@ -185,4 +185,47 @@
   publisher = {Institute of Electrical and Electronics Engineers ({IEEE})},
 }
 
+@Article{Ohira2014,
+  author    = {Takashi Ohira},
+  journal   = {{IEICE} Electronics Express},
+  title     = {Extended k-Q product formulas for capacitive- and inductive-coupling wireless power transfer schemes},
+  year      = {2014},
+  number    = {9},
+  pages     = {20140147--20140147},
+  volume    = {11},
+  doi       = {10.1587/elex.11.20140147},
+  publisher = {Institute of Electronics, Information and Communications Engineers ({IEICE})},
+}
+
+@InProceedings{Wang2016,
+  author    = {Tianlei Wang and Dejun Li and Canjun Yang and Mingwei Lin and Tao Zhang},
+  booktitle = {{OCEANS} 2016 {MTS}/{IEEE} Monterey},
+  title     = {Non-contact wet mate connectors for subsea observation networks},
+  year      = {2016},
+  month     = {sep},
+  publisher = {{IEEE}},
+  doi       = {10.1109/oceans.2016.7760994},
+}
+
+@Misc{Wikipedia2021,
+  author = {{Wikipedia contributors}},
+  note   = {[Online; accessed 23-January-2021]},
+  title  = {Wireless power transfer --- {Wikipedia}{,} The Free Encyclopedia},
+  year   = {2021},
+  url    = {https://en.wikipedia.org/w/index.php?title=Wireless_power_transfer&oldid=1001183613},
+}
+
+@Article{Zhang2019,
+  author    = {Zhen Zhang and Hongliang Pang and Apostolos Georgiadis and Carlo Cecati},
+  journal   = {{IEEE} Transactions on Industrial Electronics},
+  title     = {Wireless Power Transfer{\textemdash}An Overview},
+  year      = {2019},
+  month     = {feb},
+  number    = {2},
+  pages     = {1044--1058},
+  volume    = {66},
+  doi       = {10.1109/tie.2018.2835378},
+  publisher = {Institute of Electrical and Electronics Engineers ({IEEE})},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}
