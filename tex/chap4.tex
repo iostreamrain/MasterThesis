@@ -1,4 +1,5 @@
-\chapter{Coil array WPT}\chaplab{result}
+\chapter{Coil-array WPT}
+% \chaplab{result}
 % 通过上一章节的讲解，我们知道了无线传输系统在水下的基本表现。这章将介绍我们设计出的水下线圈组wpt系统，通过将大型的双线圈结构降解为多个小线圈结构，这使得内部线圈里面的磁场大幅减小，从而实现对AUV系统内部的电磁保护。
 Through the explanation in the previous chapter, we know the basic performance of the wireless transmission system underwater. This chapter will introduce the underwater coil-array WPT system we designed, by degrading a large double coil structure into multiple small coil structures, as shown in figure \ref{fig:3_coil_array_structure}. This greatly reduces the magnetic field in the internal coil, thereby achieving electromagnetic protection inside the AUV system. Its detailed parameters are shown in table \ref{table: coil array parameters}.
 
@@ -183,7 +184,7 @@ In order to clarify the magnetic field distribution of the coil-array structure,
     \begin{subfigure}{0.5\textwidth}
         \centering
         \includegraphics[height=6.4cm]{images/4_two_ring_system.png}
-        \caption{Two ring IPT structure.}
+        \caption{Two-ring IPT structure.}
         \label{fig:subim2}
     \end{subfigure}
     }
@@ -192,20 +193,26 @@ In order to clarify the magnetic field distribution of the coil-array structure,
 \end{figure}
 
 \subsection{Megnetic field distribution of two-ring strcture}
+
 \begin{figure}[!t]
     \centering
     \includegraphics[width=0.9\linewidth]{images/4_two_ring_near_field_distribution.JPG}
-    \caption{Magnetic field distribution of two ring IPT structure.}
+    \caption{Magnetic field distribution of two-ring IPT structure.}
     \label{fig: magnetic distribution of two ring}
 \end{figure}
 
 \begin{figure}[!t]
     \centering
     \includegraphics[width=0.9\linewidth]{images/4_two_ring_near_field_distribution_cut.JPG}
-    \caption{Cross-sectional view of the magnetic field distribution of two ring IPT structure.}
+    \caption{Cross-sectional view of the magnetic field distribution of two-ring IPT structure.}
     \label{fig: magnetic distribution of two ring cut}
 \end{figure}
 
+% 为了判断coil-array结构是否能够减小AUV系统内部磁场强度，我们首先对传统的two-ring系统进行了模拟。
+% 其结果如图1和图2所示，图一显示了在三维空间中收发线圈之间的磁场分布。其中图示最高的顶峰为两线圈的正中间，即在AUV内部会产生如图1所示的磁场分布。图二为图一从侧面划开的剖面图，我们可以看到中间部分的磁感应强度到达了83.95A/m，其他部分逐步降低，如山峰状。
+
+In order to judge whether the coil-array structure can reduce the internal magnetic field strength of the AUV system, we first simulated the traditional two-ring system.
+The results are shown in figure \ref{fig: magnetic distribution of two ring} and figure \ref{fig: magnetic distribution of two ring cut}. figure \ref{fig: magnetic distribution of two ring} shows the magnetic field distribution between the transmitting and receiving coils in a three-dimensional space. The highest peak in the figure is the middle of the two coils, that is, the magnetic field distribution shown in figure \ref{fig: magnetic distribution of two ring} is generated inside the AUV. figure \ref{fig: magnetic distribution of two ring cut} is a cross-sectional view of figure \ref{fig: magnetic distribution of two ring} from the side. We can see that the magnetic induction intensity of the middle part has reached $83.95A/m$, and the other parts are gradually decreasing, like a mountain.
 
 \subsection{Megnetic field distribution of coil-array strcture}
 
@@ -223,8 +230,8 @@ In order to clarify the magnetic field distribution of the coil-array structure,
     \label{fig: magnetic distribution of coil array cut}
 \end{figure}
 
-% 为了判断coil-array结构是否能够减小AUV系统内部磁场强度，我们首先对传统的two-ring系统进行了模拟。
-% 其结果如图1所示，我们可以看到
+% 在完成two-ring结构的磁场分布模拟后，我们对coil-array结构线圈做了同样的模拟，结果如图1和图2所示。
+
 \begin{figure}[!t]
     \centering
     \begin{tikzpicture}[scale=1, every node/.style={scale=1},anchor=south west]%, every node/.style={scale=1},anchor=south west]
@@ -297,5 +304,5 @@ In order to clarify the magnetic field distribution of the coil-array structure,
 \end{figure}
 
 
-\section{Coil array WPT under seawater}
+\section{Coil-array WPT under seawater}
 
