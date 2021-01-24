@@ -197,16 +197,6 @@
   publisher = {Institute of Electronics, Information and Communications Engineers ({IEICE})},
 }
 
-@InProceedings{Wang2016,
-  author    = {Tianlei Wang and Dejun Li and Canjun Yang and Mingwei Lin and Tao Zhang},
-  booktitle = {{OCEANS} 2016 {MTS}/{IEEE} Monterey},
-  title     = {Non-contact wet mate connectors for subsea observation networks},
-  year      = {2016},
-  month     = {sep},
-  publisher = {{IEEE}},
-  doi       = {10.1109/oceans.2016.7760994},
-}
-
 @Misc{Wikipedia2021,
   author = {{Wikipedia contributors}},
   note   = {[Online; accessed 23-January-2021]},
@@ -266,6 +256,72 @@
   volume    = {26},
   doi       = {10.1109/48.972089},
   publisher = {Institute of Electrical and Electronics Engineers ({IEEE})},
+}
+
+@InProceedings{Shaw2006,
+  author    = {A. Shaw and A.i. Al-Shamma{\textquotesingle}a and S.R. Wylie and D. Toal},
+  booktitle = {2006 European Microwave Conference},
+  title     = {Experimental Investigations of Electromagnetic Wave Propagation in Seawater},
+  year      = {2006},
+  month     = {sep},
+  publisher = {{IEEE}},
+  doi       = {10.1109/eumc.2006.281456},
+}
+
+@Article{Taormina2018,
+  author    = {Bastien Taormina and Juan Bald and Andrew Want and G{\'{e}}rard Thouzeau and Morgane Lejart and Nicolas Desroy and Antoine Carlier},
+  journal   = {Renewable and Sustainable Energy Reviews},
+  title     = {A review of potential impacts of submarine power cables on the marine environment: Knowledge gaps, recommendations and future directions},
+  year      = {2018},
+  month     = {nov},
+  pages     = {380--391},
+  volume    = {96},
+  doi       = {10.1016/j.rser.2018.07.026},
+  publisher = {Elsevier {BV}},
+}
+
+@Article{Hahn2015,
+  author    = {Robert Hahn and Jan Mainert and Fabian Glaw and K.-D. Lang},
+  journal   = {Journal of Power Sources},
+  title     = {Sea water magnesium fuel cell power supply},
+  year      = {2015},
+  month     = {aug},
+  pages     = {26--35},
+  volume    = {288},
+  doi       = {10.1016/j.jpowsour.2015.04.119},
+  publisher = {Elsevier {BV}},
+}
+
+@Article{Wynn2014,
+  author    = {Russell B. Wynn and Veerle A.I. Huvenne and Timothy P. Le Bas and Bramley J. Murton and Douglas P. Connelly and Brian J. Bett and Henry A. Ruhl and Kirsty J. Morris and Jeffrey Peakall and Daniel R. Parsons and Esther J. Sumner and Stephen E. Darby and Robert M. Dorrell and James E. Hunt},
+  journal   = {Marine Geology},
+  title     = {Autonomous Underwater Vehicles ({AUVs}): Their past, present and future contributions to the advancement of marine geoscience},
+  year      = {2014},
+  month     = {jun},
+  pages     = {451--468},
+  volume    = {352},
+  doi       = {10.1016/j.margeo.2014.03.012},
+  publisher = {Elsevier {BV}},
+}
+
+@InProceedings{Painter2006,
+  author    = {Howard Painter and John Flynn},
+  booktitle = {{OCEANS} 2006},
+  title     = {Current and Future Wet-Mate Connector Technology Developments for Scientific Seabed Observatory Applications},
+  year      = {2006},
+  month     = {sep},
+  publisher = {{IEEE}},
+  doi       = {10.1109/oceans.2006.306829},
+}
+
+@InProceedings{Tianlei_Wang_2016,
+  author    = {Tianlei Wang and Dejun Li and Canjun Yang and Mingwei Lin and Tao Zhang},
+  booktitle = {{OCEANS} 2016 {MTS}/{IEEE} Monterey},
+  title     = {Non-contact wet mate connectors for subsea observation networks},
+  year      = {2016},
+  month     = {sep},
+  publisher = {{IEEE}},
+  doi       = {10.1109/oceans.2016.7760994},
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}
