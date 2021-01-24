@@ -258,16 +258,6 @@ In figure \ref{fig: magnetic distribution of coil array}, we can see that the ma
 
 \section{PET over shift in two directions}
 
-Since both the coil-array and the two-ring are hollow cylindrical structures transmitter, the rotation of the receiver coil will not have much impact on the system transmission efficiency. This section will explore the offset effect of these two structures in the horizontal direction and vertical direction.
-Suppose the horizontal offset and vertical offset are specified as shown in figure \ref{fig: direction}.
-
-We first offset the internal coils of the two structures from 0 to 100mm in the horizontal direction to obtain the result in figure \ref{fig: PET in two directions} (a). The red line part is the coil-array structure, and the blue part is the two-ring structure. From the figure, we can find that when Rx is in the center of Tx, the transmission efficiency of the two-ring structure is 95\%, while the transmission efficiency of the coil-array structure is 60\%. And when the horizontal offset increases, the transmission efficiency of the coil-array structure changes greatly, and when the offset is 100mm, the PTE is close to 0. The PTE of the two-ring structure remains basically unchanged.
-
-This is because the coupling of the coil-array structure is completed by small coils. When the horizontal offset exceeds the size of the coil, the opposite circular coil cannot be coupled 
-well, so the PET drops sharply. The coupling of the two-ring structure is the coupling between two hollow cylindrical coils, like two solenoids, so even when a large displacement occurs in the horizontal direction, the PTE can basically remain unchanged.
-
-Figure \ref{fig: PET in two directions} (b) shows the offset in the vertical direction. We can see that the red line representing the coil-array structure increases with the horizontal offset of the Rx coil, that is, the Tx coil and the Rx coil are getting closer, and the PTE of the system is also constantly increase. When the offset reaches 25mm, the PTE of the system is close to 90\%.
-
 \begin{figure}[!t]
     \centering
     % \includegraphics{images/3_mutual_inductance.png}
@@ -285,7 +275,19 @@ Figure \ref{fig: PET in two directions} (b) shows the offset in the vertical dir
     \label{fig: direction}
 \end{figure}
 
-\begin{figure}[!b]
+Since both the coil-array and the two-ring are hollow cylindrical structures transmitter, the rotation of the receiver coil will not have much impact on the system transmission efficiency. This section will explore the offset effect of these two structures in the horizontal direction and vertical direction.
+Suppose the horizontal offset and vertical offset are specified as shown in figure \ref{fig: direction}.
+
+We first offset the internal coils of the two structures from 0 to 100mm in the horizontal direction to obtain the result in figure \ref{fig: PET in two directions} (a). The red line part is the coil-array structure, and the blue part is the two-ring structure. From the figure, we can find that when Rx is in the center of Tx, the transmission efficiency of the two-ring structure is 95\%, while the transmission efficiency of the coil-array structure is 60\%. And when the horizontal offset increases, the transmission efficiency of the coil-array structure changes greatly, and when the offset is 100mm, the PTE is close to 0. The PTE of the two-ring structure remains basically unchanged.
+
+This is because the coupling of the coil-array structure is completed by small coils. When the horizontal offset exceeds the size of the coil, the opposite circular coil cannot be coupled 
+well, so the PET drops sharply. The coupling of the two-ring structure is the coupling between two hollow cylindrical coils, like two solenoids, so even when a large displacement occurs in the horizontal direction, the PTE can basically remain unchanged.
+
+Figure \ref{fig: PET in two directions} (b) shows the offset in the vertical direction. We can see that the red line representing the coil-array structure increases with the horizontal offset of the Rx coil, that is, the Tx coil and the Rx coil are getting closer, and the PTE of the system is also constantly increase. When the offset reaches 25mm, the PTE of the system is close to 90\%.
+
+Although we found that the system transmission efficiency and anti-offset ability of the coil-array structure is not as well as the two-ring structure, but in some specific occasions (hope that the internal components of the AUV system can get good electromagnetic protection), we prefer to use the coil-array structure for power transmission.
+
+\begin{figure}[!t]
     \centering
     \resizebox*{\textwidth}{!}{
         \begin{subfigure}[]{\textwidth}
