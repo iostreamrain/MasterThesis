@@ -1,10 +1,7 @@
 \chapter{Preliminary exploration of underwater IPT system}
 
 % 为了探究实际情况中海水环境下的无线能量传输系统与空气中的无线能量传输系统的异同，这里使用了简单的双线圈结构对水下环境的电气属性进行了探究。本章将介绍双线圈结构在海水中工作的表现。
-In order to explore the similarities and differences between the wireless energy transmission system in the seawater environment and the wireless energy transmission system in the air in the actual situation, a simple double-coil structure is used to explore the electrical properties of the underwater environment. This chapter will introduce the performance of the double coil structure working in sea water.
-
-
-
+In order to explore the similarities and differences between the wireless energy transmission system in the seawater environment and the wireless energy transmission system in the air in the actual situation, a simple double-coil structure is used to explore the electrical properties of the underwater environment. This chapter will introduce the performance of the double coil structure working in seawater.
 
 \section{The system in three different media}
 
@@ -27,7 +24,7 @@ In order to explore the similarities and differences between the wireless energy
     \label{fig:3_two_ring_coil}
 \end{figure}
 
-In order to design a wireless power transmission system suitable for underwater AUV, we will first use hollow cylindrical structure transmitter and cylindrical structure receiver to explore the performance of the UWPT system of this plug-in structure UWPT in water. For the convenience of writing, it will be referred to as a double ring structure in the following text. The coil structure as shown in figure \ref{fig:3_two_ring_coil}.
+In order to design a wireless power transmission system suitable for underwater AUV, we will first use a hollow cylindrical structure transmitter and cylindrical structure receiver to explore the performance of the UWPT system of this plug-in structure UWPT in water. For the convenience of writing, it will be referred to as a double ring structure in the following text. The coil structure as shown in figure \ref{fig:3_two_ring_coil}.
 
 Its detailed parameters are shown in Table \ref{table:ring coil parameters}.
 
@@ -52,7 +49,7 @@ Its detailed parameters are shown in Table \ref{table:ring coil parameters}.
 \end{table}
 
 % 当我们使用VNA分析仪将线圈放置在空气中，自来水中，海水中进行测量时，可以得到以下数据
-When we use the vector network analyzer (VNA) to place the coil in the air, tap water, or sea water for measurement, the following data can be obtained:
+When we use the vector network analyzer (VNA) to place the coil in the air, tap-water, or seawater for measurement, the following data can be obtained:
 \begin{equation*}
     \begin{aligned}
         Z_{air}       & =
@@ -77,7 +74,7 @@ In the above measurement results, we can find that as the transmission medium ch
 It illustrates that the internal resistances of the coils are small in the air.
 However, the internal resistances significantly increase when the coils are in tapwater or seawater.
 This may deteriorate the transmission efficiency as well as the load voltage stability.
-In addition, the mutual inductance between two coils becomes complex number and the self-inductances of the coils slightly increase. 
+In addition, the mutual inductance between two coils becomes a complex number and the self-inductances of the coils slightly increase. 
 
 \section{The system in different sizes of the coil}
 
@@ -152,13 +149,13 @@ After changing the medium between the coils and the distance between the coils, 
 
 In table \ref{table:Z-parameters in distance}, we can find that under the same medium, as the internal coil decreases, the transmission distance increases. We can see that the imaginary part of $Z_{11}$ and $Z_{22}$ are increasing, indicating that the impedance of the coil is increasing.
 
-Table \ref{table:Z-parameters in distance} shows the measures of Z-parameter of the coupling network under several cases of coil sizes and distances in air, tap-water and seawater.
-In general, self-inductance of coil increases as coil size increases.
+Table \ref{table:Z-parameters in distance} shows the measures of the Z-parameter of the coupling network under several cases of coil sizes and distances in air, tap-water, and seawater.
+In general, the self-inductance of the coil increases as coil size increases.
 The mutual inductance between two coils increases as the distance between them decreases.
-The internal resistances of the coils are small in air and larger in tapwater as well as seawater.
+The internal resistances of the coils are small in air and larger in tap-water as well as seawater.
 
 \section{The system in different frequency}
-Earlier we have studied the z-parameter changes of the two-ring coil structure under different media and different distances. In this section we will study how z-parameters changes at different frequencies. Table \ref{table:ring coil parameters - different frequencies} a shows the parameters of the experiment.
+Earlier we have studied the z-parameter changes of the two-ring coil structure under different media and different distances. In this section, we will study how z-parameters changes at different frequencies. Table \ref{table:ring coil parameters - different frequencies} shows the parameters of the experiment.
 
 \begin{table}[!t]
     \centering
@@ -234,16 +231,16 @@ After using the above parameters, we got the following results (Table \ref{table
 \end{table}
 
 Table \ref{table:ring Z-parameters - different frequencies} shows that the internal resitances of the coils are less than $1\si{\ohm}$ in the air when operating frequency changes from $100\si{\kilo\hertz}$ to $300\si{\kilo\hertz}$.
-However, under seawater environment, the internal resistances of the coils are smaller than $1\si{\ohm}$ when the operating frequency is under $200\si{\kilo\hertz}$.
+However, under the seawater environment, the internal resistances of the coils are smaller than $1\si{\ohm}$ when the operating frequency is under $200\si{\kilo\hertz}$.
 As the operating frequency is over $200\si{\kilo\hertz}$, the internal resistances of the coils significantly increase.
 
 
 \section{Conclusion}
 
-This section illustrated the measures of the coupling network in air, under tapwater and under seawater with different operating frequencies.
+This section illustrated the measures of the coupling network in the air, under tapwater, and under seawater with different operating frequencies.
 The measures indicated that the internal resistances of the coils would increase when the system operated under tapwater or seawater.
 This would reduce transmission efficiency.
-Moreoever, it could also make load voltage unstable against load variations even thougth CLC topology was employed.
+Moreover, it could also make load voltage unstable against load variations even though CLC topology was employed.
 The internal resistances increased significantly as the operating frequency increased over $200\si{\kilo\hertz}$.
 Therefore, the system should operate at the frequency of lower than $200\si{\kilo\hertz}$ under tapwater or seawater environment to restrict the loss caused by internal resistances.
 % 从3.1节，不同介质下的WPT系统，我们可以发现从空气到自来水到海水，Z-parameter的每个值都在增加。即表明海水导致发射端和接收端的内阻在增加。从3.2节不同传输距离下的结果可以看出。随着线圈间距离的增加，内部线圈的减小，在空气介质中各个参数的变化不是很明显，而海水下的Z参数变化幅度比较大。
