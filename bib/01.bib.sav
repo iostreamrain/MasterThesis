@@ -268,4 +268,14 @@
   publisher = {Institute of Electrical and Electronics Engineers ({IEEE})},
 }
 
+@InProceedings{Shaw2006,
+  author    = {A. Shaw and A.i. Al-Shamma{\textquotesingle}a and S.R. Wylie and D. Toal},
+  booktitle = {2006 European Microwave Conference},
+  title     = {Experimental Investigations of Electromagnetic Wave Propagation in Seawater},
+  year      = {2006},
+  month     = {sep},
+  publisher = {{IEEE}},
+  doi       = {10.1109/eumc.2006.281456},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}
