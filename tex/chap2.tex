@@ -217,14 +217,16 @@ For any formed coil, we can measure its corresponding inductance value at a spec
 % \begin{equation}
 %     k=\frac{M}{\sqrt{L_1L_2}}
 % \end{equation}
-
+The compensation network of S-S structure is shown in figure \ref{fig:ss topology}.
+The relationship between load voltage $V_R$ and power source voltage $V_s$ of SS topology shows below,
 \begin{equation}
-    V_R = \frac{j \omega MR}{(R+r_1)r_0 + \omega^2 M^2} V_s
+    V_R = \frac{j \omega MR}{(R+r_1)r_0 + \omega^2 M^2} V_s.
 \end{equation}
 
 % 传输效率计算的式子
 
 \subsection{CLC-S compensation topology}
+
 \begin{figure}[!t]
     \centering
     % \includegraphics[width=0.93\linewidth]{images/2_clc_s_scheme.png}
@@ -258,8 +260,9 @@ For any formed coil, we can measure its corresponding inductance value at a spec
     \caption{CLC-S structure.}
     \label{fig:clcs topology}
 \end{figure}
-% 这两个图换一下标注
 
+The compensation network of CLC-S structure is shown as in figure \ref{fig:clcs topology}.
+According to the Kirchhoff's circuit laws we can get the following equation.
 
 \begin{equation}
     \begin{align}
@@ -271,15 +274,16 @@ For any formed coil, we can measure its corresponding inductance value at a spec
     \end{align}
 \end{equation}
 
+The relationship between load voltage $V_R$ and power source voltage $V_s$ of CLC topology shows below,
 \begin{equation}
-    V_R = - \frac{R}{R+r_1}\cdot \frac{\omega M}{X_L}V_S
+    V_R = - \frac{R}{R+r_1}\cdot \frac{\omega M}{X_L}V_S.
 \end{equation}
 
 \section{Underwater WPT system model}
 
 % 海水环境下，海水作为传输介质其电气参数与空气中的相比有很大的区别，如表所示。因此，如式与式的常规互感模型无法反映出海水介质对传输的影响，不能完全、准确地描述海水下的传输行为。
 In the seawater environment, the electrical parameters of seawater as the transmission medium are quite different from those in the air, as shown in the table \ref{table:permittivity}.
-\begin{table}[htbp]
+\begin{table}[!b]
     \centering
     \caption{The dielectric constant \& conductivity of some materials at 25$^\circ$C under 1kHz \cite{Wikipedia2020, Lenntech2021}.}
     \begin{tabular}{ |c|c|c|m{3.5cm}<{\centering}|m{3.5cm}<{\centering}| }
