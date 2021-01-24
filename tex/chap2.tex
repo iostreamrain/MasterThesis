@@ -35,7 +35,7 @@ Figure \ref{WPT} depicts the circuit model of IPT systems, where the transmittin
     \caption{Inductive coupling model.}
     \label{WPT}
 \end{figure}
-Therefore, the equivalent circuit can be expressed as figure \ref{equivalent circuit}. According to the Kirchhoff's circuit laws. The following formulas can be easily found.
+Therefore, the equivalent circuit can be expressed as figure \ref{equivalent circuit}. According to Kirchhoff's circuit laws. The following formulas can be easily found.
 \begin{figure}[!t]
     \centering
     \begin{tikzpicture}[scale=1, every node/.style={scale=1}, american voltages]
@@ -65,7 +65,7 @@ Therefore, the equivalent circuit can be expressed as figure \ref{equivalent cir
         \node[below] at (9.5,0.5) {–};
 
     \end{tikzpicture}
-    \caption{Equivalent circuit of inductive coupling model.}
+    \caption{Equivalent circuit of inductive coupling model (T-model).}
     \label{equivalent circuit}
 \end{figure}
 
@@ -108,9 +108,9 @@ Here, the imaginary part of $Z_{11}$ ($j\omega L_1$) and $Z_{22}$ ($j\omega L_2$
 \section{Compensation network technologies}
 % 补偿网络是进行一些调整以弥补系统缺陷的网络。如果只在初级或次级一侧使用电容补偿，称为单侧谐振补偿；在初、次级两侧同时使用电容补偿，称为双侧利、偿。单侧补偿的电容值计算较为简单，但是实际效果不如双侧补偿方式。因此本文仅针对双侧补偿展开讨论。如图所示，根据电容在两侧连接方式的不同，谐振补偿可分为初级串联次级串联、初级并联次级串联、初级串联次级并联以及切级并联次级并联四种结构。
 
-A compensation network is a network that makes some adjustments to compensate for system electrical defects. If capacitor compensation is used only on the primary or secondary side, it is called single-sided compensation topology; when capacitor compensation is used on both the primary and secondary sides at the same time, it is called double-sided compensation topology. The calculation of the capacitance value of single-sided compensation is relatively simple, but the actual effect is not as good as the double-sided compensation method. Therefore, this article only discusses bilateral compensation. As shown in the figure \ref{compensation network}, according to the different connection modes of the capacitors on both sides, common resonance compensation technologies can be divided into four structures: S-S, S-P, P-S, P-P (S denotes series and P denotes parallel). In addition, there are more complicated compensation networks such as CLC and LCC \cite{Jiang2017}.
+A compensation network is a network that makes some adjustments to compensate for system electrical defects. If capacitor compensation is used only on the primary or secondary side, it is called single-sided compensation topology; when capacitor compensation is used on both the primary and secondary sides at the same time, it is called double-sided compensation topology. The calculation of the capacitance value of single-sided compensation is relatively simple, but the actual effect is not as good as the double-sided compensation method. Therefore, this article only discusses bilateral compensation. As shown in the figure \ref{compensation network}, according to the different connection modes of the capacitors on both sides, common resonance compensation technologies can be divided into four structures: S-S, S-P, P-S, P-P (S denotes series and P denotes parallel). In addition, there are more complicated compensation networks such as CLC and LCC \cite{Jiang2017, Zhang2016}.
 
-Since only S-S topology and CLC-S topology are used in the following text, we only analyze these two compensation topologies in detail here.
+Since only S-S topology and CLC-S topology are used in the following contents, we only analyze these two compensation topologies in detail here.
 \begin{figure}[!t]
     \centering
     \begin{tikzpicture} [scale=1, every node/.style={scale=1}, american voltages]
@@ -128,7 +128,7 @@ Since only S-S topology and CLC-S topology are used in the following text, we on
         (-0.5,0) to [short] (4,0)
         to [L, l=$L_1$, mirror] (4,4)
         to [short] (-0.5,4)
-        to [sI, l_=$V_0$] (-0.5,0);
+        to [sI, l_=$V_s$] (-0.5,0);
         % \draw[line width = 0.5mm, red, dashed](2,-1)--(5,-1)--(5,5)--(2,5)--cycle;
         \draw
         (6,0) to [L, l_=$L_2$] (6,4)
@@ -209,9 +209,10 @@ where $\omega$ represents the working frequency, $\omega _0$ represents the reso
     \omega _0 = \frac{1}{L_1C_1} = \frac{1}{L_2C_2}
 \end{equation}
 
-For any formed coil, we can measure its corresponding inductance value at a specified frequency. Thus, we can get the value of the compensation capacitor by formula \ref{formula:resonant frequency}.
+For any formed coil, we can measure its corresponding inductance value at a specified frequency. Thus, we can get the value of the compensation capacitor by formula \ref{formula: copensation capacitance}.
 \begin{equation}
     C = \frac{1}{\omega_0^2 L}
+    \label{formula: copensation capacitance}
 \end{equation}
 
 % \begin{equation}
@@ -266,18 +267,20 @@ According to the Kirchhoff's circuit laws we can get the following equations.
 
 \begin{equation}
     \begin{align}
-        V_S & = -jX_CI_S + j X_{L}I_L                      \\
+        V_s & = -jX_CI_s + j X_{L}I_L                      \\
         V_0 & = (-jX_{C_0}+jX_{L_0}+r_0)I_0 + j\omega MI_1 \\
         V_R & = j\omega I_0 +(-jX_{C_1}+jX_{L_1}+r_1)I_1   \\
         V_R & = -RI_1                                      \\
-        I_S & = I_L+I_0
+        I_s & = I_L+I_0
     \end{align}
 \end{equation}
 
 Therefore, the relationship between load voltage $V_R$ and power source voltage $V_s$ of CLC topology can be expressed as below,
 \begin{equation}
-    V_R = - \frac{R}{R+r_1}\cdot \frac{\omega M}{X_L}V_S.
+    V_R = - \frac{R}{R+r_1}\cdot \frac{\omega M}{X_L}V_s.
 \end{equation}
+
+Because $r_1$ is the internal resistance of the $L_1$ coil, its value is very small, and $\frac{\omega M}{X_L}$ is a constant value at a certain operating frequency. We can see that when $R \gg r_1$, $\frac{R}{R+r_1}\approx 1$, which means the voltage of load $V_R$ will not be affected by load resistance $R$.
 
 \section{Underwater WPT system model}
 

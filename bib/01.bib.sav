@@ -360,4 +360,17 @@
   publisher = {Institute of Electrical and Electronics Engineers ({IEEE})},
 }
 
+@Article{Zhang2016,
+  author    = {Wei Zhang and Chunting Chris Mi},
+  journal   = {{IEEE} Transactions on Vehicular Technology},
+  title     = {Compensation Topologies of High-Power Wireless Power Transfer Systems},
+  year      = {2016},
+  month     = {jun},
+  number    = {6},
+  pages     = {4768--4778},
+  volume    = {65},
+  doi       = {10.1109/tvt.2015.2454292},
+  publisher = {Institute of Electrical and Electronics Engineers ({IEEE})},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}

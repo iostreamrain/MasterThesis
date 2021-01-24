@@ -324,4 +324,40 @@
   doi       = {10.1109/oceans.2016.7760994},
 }
 
+@InProceedings{Yang2019,
+  author    = {Lei Yang and Ben Zhang and Minna Ju},
+  booktitle = {2019 14th {IEEE} Conference on Industrial Electronics and Applications ({ICIEA})},
+  title     = {A Fast Dynamic Response Regulation Method for Undersea Wireless Power Transfer System},
+  year      = {2019},
+  month     = {jun},
+  publisher = {{IEEE}},
+  doi       = {10.1109/iciea.2019.8834070},
+}
+
+@Article{Hasaba2019,
+  author    = {Ryosuke Hasaba and Katsuya Okamoto and Souichi Kawata and Kazuhiro Eguchi and Yoshio Koyanagi},
+  journal   = {{IEEE} Transactions on Microwave Theory and Techniques},
+  title     = {Magnetic Resonance Wireless Power Transfer Over 10 m With Multiple Coils Immersed in Seawater},
+  year      = {2019},
+  month     = {nov},
+  number    = {11},
+  pages     = {4505--4513},
+  volume    = {67},
+  doi       = {10.1109/tmtt.2019.2928291},
+  publisher = {Institute of Electrical and Electronics Engineers ({IEEE})},
+}
+
+@Article{Orekan2018,
+  author    = {Taofeek Orekan and Peng Zhang and Cyuansi Shih},
+  journal   = {{IEEE} Journal of Emerging and Selected Topics in Power Electronics},
+  title     = {Analysis, Design, and Maximum Power-Efficiency Tracking for Undersea Wireless Power Transfer},
+  year      = {2018},
+  month     = {jun},
+  number    = {2},
+  pages     = {843--854},
+  volume    = {6},
+  doi       = {10.1109/jestpe.2017.2735964},
+  publisher = {Institute of Electrical and Electronics Engineers ({IEEE})},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}
